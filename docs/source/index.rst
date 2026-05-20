@@ -8,3 +8,4 @@ MESA Summer School Urca Notebooks
 
    mesa-net-vis.ipynb
    mesa-missing-rates.ipynb
+   urca-shells.ipynb
