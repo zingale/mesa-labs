@@ -580,6 +580,15 @@
     <span class="n">es</span><span class="p">,</span> <span class="n">ps</span> <span class="o">=</span> <span class="n">eos</span><span class="o">.</span><span class="n">pe_state</span><span class="p">(</span><span class="n">rho</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="n">comp</span><span class="p">,</span> <span class="n">compute_derivs</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
     <span class="n">eta</span> <span class="o">=</span> <span class="n">es</span><span class="o">.</span><span class="n">eta</span>
     <span class="n">E_fermi</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">eta</span> <span class="o">*</span> <span class="n">kB</span> <span class="o">*</span> <span class="n">T</span>
+
+<span class="n">E_fermi</span> <span class="o">*=</span> <span class="n">erg2MeV</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">r2</span> <span class="o">=</span> <span class="mf">10.0</span><span class="o">**</span><span class="n">model2</span><span class="o">.</span><span class="n">logR</span>
 </pre></div>
 </div>
 </div>
@@ -587,16 +596,99 @@
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">semilogx</span><span class="p">(</span><span class="n">m2</span><span class="p">,</span> <span class="n">E_fermi</span> <span class="o">*</span> <span class="n">erg2MeV</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;mass&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">semilogx</span><span class="p">(</span><span class="n">r2</span><span class="p">,</span> <span class="n">E_fermi</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;radius ($R_\odot$)&quot;</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;$\mathcal</span><span class="si">{E}</span><span class="s2">_\mathrm</span><span class="si">{Fermi}</span><span class="s2">$ (MeV)&quot;</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">ls</span><span class="o">=</span><span class="s2">&quot;:&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/191385e43aeee2e5861ae0d95d005c3afd257f5518e2cbbbfec71b2ae1eed0a4.png" src="_images/191385e43aeee2e5861ae0d95d005c3afd257f5518e2cbbbfec71b2ae1eed0a4.png" />
+<img alt="_images/26cf675c92ae78899278e9dbbcb7a64ec7ce0d377f67d241f934f3627fb0cff0.png" src="_images/26cf675c92ae78899278e9dbbcb7a64ec7ce0d377f67d241f934f3627fb0cff0.png" />
+</div>
+</div>
+<p>Let’s overlay Na23 - Ne23</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X_na23</span> <span class="o">=</span> <span class="n">model2</span><span class="o">.</span><span class="n">na23</span>
+<span class="n">X_ne23</span> <span class="o">=</span> <span class="n">model2</span><span class="o">.</span><span class="n">ne23</span>
+<span class="n">scale</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">X_na23</span><span class="o">.</span><span class="n">max</span><span class="p">(),</span> <span class="n">X_ne23</span><span class="o">.</span><span class="n">max</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ax</span><span class="o">.</span><span class="n">semilogx</span><span class="p">(</span><span class="n">r2</span><span class="p">,</span> <span class="n">X_na23</span><span class="o">/</span><span class="n">scale</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">semilogx</span><span class="p">(</span><span class="n">r2</span><span class="p">,</span> <span class="n">X_ne23</span><span class="o">/</span><span class="n">scale</span><span class="p">)</span>
+<span class="n">fig</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/bc023cffd8da1a6f6a4a2254ccdf29c2c8d1d2a7c16bb0cd34502a3cb9f998a4.png" src="_images/bc023cffd8da1a6f6a4a2254ccdf29c2c8d1d2a7c16bb0cd34502a3cb9f998a4.png" />
+</div>
+</div>
+<p>Now let’s compute the Q-value of the reaction to figure out what Fermi energy should be the threshold</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Na23</span> <span class="o">=</span> <span class="n">pyna</span><span class="o">.</span><span class="n">Nucleus</span><span class="p">(</span><span class="s2">&quot;na23&quot;</span><span class="p">)</span>
+<span class="n">Ne23</span> <span class="o">=</span> <span class="n">pyna</span><span class="o">.</span><span class="n">Nucleus</span><span class="p">(</span><span class="s2">&quot;ne23&quot;</span><span class="p">)</span>
+<span class="n">Q</span> <span class="o">=</span> <span class="n">Ne23</span><span class="o">.</span><span class="n">mass</span> <span class="o">-</span> <span class="n">Na23</span><span class="o">.</span><span class="n">mass</span>
+<span class="n">Q</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4.375803499999165
+</pre></div>
+</div>
+</div>
+</div>
+<p>Do I need to remove the electron rest mass?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">m_e</span> <span class="o">=</span> <span class="n">pyna</span><span class="o">.</span><span class="n">constants</span><span class="o">.</span><span class="n">constants</span><span class="o">.</span><span class="n">m_e_MeV</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">E_thresh</span> <span class="o">=</span> <span class="n">Q</span> <span class="c1"># - m_e</span>
+<span class="n">E_thresh</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4.375803499999165
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now, where is this in our model?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">idx</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">E_fermi</span> <span class="o">&gt;</span> <span class="n">E_thresh</span><span class="p">)[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">idx</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.int64(373)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ax</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">r2</span><span class="p">[</span><span class="n">idx</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;0.5&quot;</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s2">&quot;--&quot;</span><span class="p">)</span>
+<span class="n">fig</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/1777f53f72c12748dd1c4461b2cb958e00385fdfb1b0854b3eda9545d1cb9d8a.png" src="_images/1777f53f72c12748dd1c4461b2cb958e00385fdfb1b0854b3eda9545d1cb9d8a.png" />
 </div>
 </div>
 </section>
