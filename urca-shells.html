@@ -146,6 +146,7 @@
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Exploring Models</span></p>
 <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="initial_model.html">Initial model</a></li>
 <li class="toctree-l1"><a class="reference internal" href="nets.html">Networks used in labs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="mesa-net-vis.html">Visualizing MESA reactions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="mesa-missing-rates.html">Finding other important rates</a></li>
@@ -380,7 +381,7 @@
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#build-a-network">Build a network</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#compute-the-curve-for-electron-capture-beta-decay">Compute the curve for electron-capture = beta-decay</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#na23-ne23-shell">Na23-Ne23 shell</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#na25-ne25-shell">Na25 - Ne25 shell</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#na25-ne25-shell">Na25-Ne25 shell</a></li>
 </ul>
 </li>
 </ul>
@@ -408,7 +409,7 @@
 <p>read in profile from lab 3</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">model</span> <span class="o">=</span> <span class="n">mr</span><span class="o">.</span><span class="n">MesaData</span><span class="p">(</span><span class="s2">&quot;profile2.data&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">model</span> <span class="o">=</span> <span class="n">mr</span><span class="o">.</span><span class="n">MesaData</span><span class="p">(</span><span class="s2">&quot;lab3/profile2.data&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -565,7 +566,7 @@ curve for the shell, <span class="math notranslate nohighlight">\(\lambda_\mathr
 </div>
 </section>
 <section id="na25-ne25-shell">
-<h3>Na25 - Ne25 shell<a class="headerlink" href="#na25-ne25-shell" title="Link to this heading">#</a></h3>
+<h3>Na25-Ne25 shell<a class="headerlink" href="#na25-ne25-shell" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">r_ec</span> <span class="o">=</span> <span class="n">net</span><span class="o">.</span><span class="n">get_rate_by_name</span><span class="p">(</span><span class="s2">&quot;na25(,)ne25&quot;</span><span class="p">)</span>
@@ -639,7 +640,7 @@ curve for the shell, <span class="math notranslate nohighlight">\(\lambda_\mathr
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#build-a-network">Build a network</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#compute-the-curve-for-electron-capture-beta-decay">Compute the curve for electron-capture = beta-decay</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#na23-ne23-shell">Na23-Ne23 shell</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#na25-ne25-shell">Na25 - Ne25 shell</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#na25-ne25-shell">Na25-Ne25 shell</a></li>
 </ul>
 </li>
 </ul>

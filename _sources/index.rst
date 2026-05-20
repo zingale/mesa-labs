@@ -6,6 +6,7 @@ MESA Summer School Urca Notebooks
    :caption: Exploring Models
    :hidden:
 
+   initial_model.ipynb
    nets.ipynb
    mesa-net-vis.ipynb
    mesa-missing-rates.ipynb
