@@ -7,6 +7,7 @@ MESA Summer School Urca Notebooks
    :hidden:
 
    initial_model.ipynb
+   degeneracy.ipynb
    nets.ipynb
    mesa-net-vis.ipynb
    mesa-missing-rates.ipynb
