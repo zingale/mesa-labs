@@ -381,7 +381,7 @@
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#read-in-the-mesa-model">Read in the MESA model</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-the-network-using-the-same-species-as-the-mesa-model">Create the network using the same species as the MESA model</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#full-networkm">Full networkm</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#full-network">Full network</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reduced-network">reduced network</a></li>
 </ul>
 </li>
@@ -443,8 +443,8 @@
 </section>
 <section id="create-the-network-using-the-same-species-as-the-mesa-model">
 <h2>Create the network using the same species as the MESA model<a class="headerlink" href="#create-the-network-using-the-same-species-as-the-mesa-model" title="Link to this heading">#</a></h2>
-<section id="full-networkm">
-<h3>Full networkm<a class="headerlink" href="#full-networkm" title="Link to this heading">#</a></h3>
+<section id="full-network">
+<h3>Full network<a class="headerlink" href="#full-network" title="Link to this heading">#</a></h3>
 <p>By default, <code class="docutils literal notranslate"><span class="pre">network_helper</span></code> will find all the rates connecting the nuclei, some of which were likely not used in the MESA simulation.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -734,7 +734,7 @@ Mg25 + e⁻ ⟶ Na25 + 𝜈           [Q =  -3.83 MeV] (Mg25 --&gt; Na25 &lt;wea
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">thresh</span> <span class="o">=</span> <span class="mf">0.2</span>
-<span class="n">ydot_cutoff</span> <span class="o">=</span> <span class="mf">1.e-20</span>
+<span class="n">ydot_cutoff</span> <span class="o">=</span> <span class="mf">1.e-15</span>
 </pre></div>
 </div>
 </div>
@@ -996,7 +996,7 @@ Mg25 + e⁻ ⟶ Na25 + 𝜈           [Q =  -3.83 MeV] (Mg25 --&gt; Na25 &lt;wea
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#read-in-the-mesa-model">Read in the MESA model</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-the-network-using-the-same-species-as-the-mesa-model">Create the network using the same species as the MESA model</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#full-networkm">Full networkm</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#full-network">Full network</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reduced-network">reduced network</a></li>
 </ul>
 </li>
