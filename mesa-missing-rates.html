@@ -730,10 +730,11 @@ Mg25 + e⁻ ⟶ Na25 + 𝜈           [Q =  -3.83 MeV] (Mg25 --&gt; Na25 &lt;wea
 </div>
 </div>
 </div>
-<p>We only consider a rate important if it is within this threshold for the fastest capture on the same nucleus</p>
+<p>We only consider a rate important if it is within this threshold for the fastest capture on the same nucleus.  Since some existing rates may be very small, we also put a floor, <code class="docutils literal notranslate"><span class="pre">ydot_cutoff</span></code> on the # of reactions / sec we care about</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">thresh</span> <span class="o">=</span> <span class="mf">0.2</span>
+<span class="n">ydot_cutoff</span> <span class="o">=</span> <span class="mf">1.e-20</span>
 </pre></div>
 </div>
 </div>
@@ -759,10 +760,10 @@ Mg25 + e⁻ ⟶ Na25 + 𝜈           [Q =  -3.83 MeV] (Mg25 --&gt; Na25 &lt;wea
         
         <span class="n">r_fastest</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">r_current</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">r_current</span><span class="o">.</span><span class="n">get</span><span class="p">)</span>
         <span class="n">lambda_fastest</span> <span class="o">=</span> <span class="n">r_current</span><span class="p">[</span><span class="n">r_fastest</span><span class="p">]</span>
-    
+
         <span class="c1"># now check if any missing rate is within the threshold</span>
         <span class="n">possibly_important</span> <span class="o">+=</span> <span class="p">[</span><span class="n">r</span> <span class="k">for</span> <span class="n">r</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">r_missing</span><span class="o">.</span><span class="n">items</span><span class="p">()</span>
-                               <span class="k">if</span> <span class="n">v</span> <span class="o">&gt;</span> <span class="n">thresh</span> <span class="o">*</span> <span class="n">lambda_fastest</span><span class="p">]</span>
+                               <span class="k">if</span> <span class="n">v</span> <span class="o">&gt;</span> <span class="nb">max</span><span class="p">(</span><span class="n">ydot_cutoff</span><span class="p">,</span> <span class="n">thresh</span> <span class="o">*</span> <span class="n">lambda_fastest</span><span class="p">)]</span>
 
 <span class="n">possibly_important</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">possibly_important</span><span class="p">)</span>
 </pre></div>
@@ -941,34 +942,6 @@ Mg25 + e⁻ ⟶ Na25 + 𝜈           [Q =  -3.83 MeV] (Mg25 --&gt; Na25 &lt;wea
 </div>
 <div class="cell_output docutils container">
 <img alt="_images/0446512f1632009e68236613e5cff0ab256bb336d71693bf467e5eac86f4da75.png" src="_images/0446512f1632009e68236613e5cff0ab256bb336d71693bf467e5eac86f4da75.png" />
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">new_net</span><span class="o">.</span><span class="n">get_rates</span><span class="p">():</span>
-    <span class="k">if</span> <span class="n">r</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">net_full</span><span class="o">.</span><span class="n">rates</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>O16 + O16 ⟶ Si28 + He4
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">new_net</span><span class="o">.</span><span class="n">get_rates</span><span class="p">():</span>
-    <span class="k">if</span> <span class="n">pyna</span><span class="o">.</span><span class="n">Nucleus</span><span class="p">(</span><span class="s2">&quot;o16&quot;</span><span class="p">)</span> <span class="ow">in</span> <span class="n">r</span><span class="o">.</span><span class="n">reactants</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>O16 + O16 ⟶ Si28 + He4
-</pre></div>
-</div>
 </div>
 </div>
 </section>
