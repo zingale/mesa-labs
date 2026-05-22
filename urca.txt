@@ -1,0 +1,43 @@
+# Astrophysical contexts
+
+We encounter Urca in:
+
+* neutron star cooling (Wang et al. arXiv:2102.06010, Lattimer et al 1991)
+* convective Urca in massive CO WDs (SN Ia progenitors?)
+  (see, e.g., Padsiadlowsky et al. 2008)
+* cooling in massive O/Ne WDs (Schwab 2021) perhaps in the
+  context of electron-capture supernovae (Wang et al. 2026)
+
+key aspect -- Urca can enhance cooling
+
+# Stellar evolution
+
+When do we get CO vs ONe WDs?
+
+
+# WDs
+
+* degeneracy, Fermi energy
+
+* WD mass-radius relation
+
+  * integrate WD structure?
+
+# ECSN
+
+* competition between cooling and O-ignition
+
+* do we collapse into a NS?
+
+
+# Reaction networks
+
+* strong rates
+
+* weak rates
+
+  * electron-capture threshold
+
+* sources for rates
+
+* integration
