@@ -2,11 +2,14 @@
 
 We encounter Urca in:
 
-* neutron star cooling (Wang et al. arXiv:2102.06010, Lattimer et al 1991)
-* convective Urca in massive CO WDs (SN Ia progenitors?)
-  (see, e.g., Padsiadlowsky et al. 2008)
-* cooling in massive O/Ne WDs (Schwab 2021) perhaps in the
-  context of electron-capture supernovae (Wang et al. 2026)
+* neutron star cooling (Wang et al. arXiv:2102.06010, Lattimer et al
+  1991)
+
+* convective Urca in massive CO WDs (SN Ia progenitors?)  (see, e.g.,
+  Padsiadlowsky et al. 2008)
+
+* cooling in massive O/Ne WDs (Schwab 2021) perhaps in the context of
+  electron-capture supernovae (Wang et al. 2026)
 
 key aspect -- Urca can enhance cooling
 
@@ -19,11 +22,15 @@ When do we get CO vs ONe WDs?
 
 * degeneracy, Fermi energy
 
+* interesting thermodynamic limits (T=0, fully NR)
+
 * WD mass-radius relation
 
   * integrate WD structure?
 
 # ECSN
+
+* what does our initial model look like?
 
 * competition between cooling and O-ignition
 
