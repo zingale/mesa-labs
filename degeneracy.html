@@ -384,6 +384,8 @@
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#transition-to-degeneracy">Transition to degeneracy</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#computing-eta">Computing <span class="math notranslate nohighlight">\(\eta\)</span></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#finding-the-trend-of-eta-with-rho-t">Finding the trend of <span class="math notranslate nohighlight">\(\eta\)</span> with <span class="math notranslate nohighlight">\(\rho, T\)</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pressure-at-zero-t">Pressure at zero-T</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exploring-the-transition-to-degeneracy">Exploring the transition to degeneracy</a></li>
 </ul>
             </nav>
         </div>
@@ -405,6 +407,13 @@
 <p>where <span class="math notranslate nohighlight">\(\mathcal{E}\)</span> is the kinetic energy of the electron, <span class="math notranslate nohighlight">\(T\)</span> is the temperature, and <span class="math notranslate nohighlight">\(\eta\)</span> is the <em>degeneracy parameter</em> which is related to the chemical potential, <span class="math notranslate nohighlight">\(\mu\)</span>, and the <a class="reference external" href="https://en.wikipedia.org/wiki/Fermi_energy">Fermi energy</a>, <span class="math notranslate nohighlight">\(\mathcal{E}_F\)</span>, as:</p>
 <div class="math notranslate nohighlight">
 \[\eta = \frac{\mu - m_e c^2}{k_B T} = \frac{\mathcal{E}_F}{k_B T}\]</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>At low density and high-temperature, electron-positron pairs can be produced,
+and we would need to consider the positron contribution to the EOS.  For the
+conditions we will be looking at in the white dwarf interior, these will not
+be important.</p>
+</div>
 </section>
 <section id="degeneracy">
 <h2>Degeneracy<a class="headerlink" href="#degeneracy" title="Link to this heading">#</a></h2>
@@ -534,27 +543,27 @@ we can solve for <span class="math notranslate nohighlight">\(\eta\)</span>.</p>
 </div>
 </div>
 </div>
+<p>We’ll store <span class="math notranslate nohighlight">\(\eta\)</span> and <span class="math notranslate nohighlight">\(P\)</span> for a range of densities at a few different temperatures.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rhos</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">logspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">75</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rhos</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">logspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
 
 <span class="n">etas</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="n">ps</span> <span class="o">=</span> <span class="p">{}</span>
 <span class="k">for</span> <span class="n">T</span> <span class="ow">in</span> <span class="p">[</span><span class="mf">1.e6</span><span class="p">,</span> <span class="mf">1.e7</span><span class="p">,</span> <span class="mf">1.e8</span><span class="p">]:</span>
     <span class="n">etas</span><span class="p">[</span><span class="n">T</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">ps</span><span class="p">[</span><span class="n">T</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="k">for</span> <span class="n">rho</span> <span class="ow">in</span> <span class="n">rhos</span><span class="p">:</span>
-        <span class="n">ee</span><span class="p">,</span> <span class="n">pe</span> <span class="o">=</span> <span class="n">eos</span><span class="o">.</span><span class="n">pe_state</span><span class="p">(</span><span class="n">rho</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="n">comp</span><span class="p">)</span>
+        <span class="c1"># by default, this gives both the electron and</span>
+        <span class="c1"># positron contributions.  We&#39;ll ignore the positrons</span>
+        <span class="n">ee</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">eos</span><span class="o">.</span><span class="n">pe_state</span><span class="p">(</span><span class="n">rho</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="n">comp</span><span class="p">)</span>
         <span class="n">etas</span><span class="p">[</span><span class="n">T</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">ee</span><span class="o">.</span><span class="n">eta</span><span class="p">)</span>
+        <span class="n">ps</span><span class="p">[</span><span class="n">T</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">ee</span><span class="o">.</span><span class="n">p</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
-</pre></div>
-</div>
-</div>
-</div>
+<p>Let’s visualize <span class="math notranslate nohighlight">\(\eta\)</span></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
@@ -572,9 +581,90 @@ we can solve for <span class="math notranslate nohighlight">\(\eta\)</span>.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/c4aa324b3f3c179a6f54a496f38ca9eaaf6ff84eb38aeec8bef5e2dd015c9545.png" src="_images/c4aa324b3f3c179a6f54a496f38ca9eaaf6ff84eb38aeec8bef5e2dd015c9545.png" />
+<img alt="_images/989f16d933b502324548e9182f4ef57c12575a7eed5cf38feb68aa35ce6f1c19.png" src="_images/989f16d933b502324548e9182f4ef57c12575a7eed5cf38feb68aa35ce6f1c19.png" />
 </div>
 </div>
+</section>
+<section id="pressure-at-zero-t">
+<h2>Pressure at zero-T<a class="headerlink" href="#pressure-at-zero-t" title="Link to this heading">#</a></h2>
+<p>At zero-temperature, the distribution function is a step function, and then integrals become straightforward.</p>
+<p>The number density is just:</p>
+<div class="math notranslate nohighlight">
+\[n_e = \frac{8\pi}{h^3} \int_0^{\mathcal{p}_F} p^2 dp = \frac{8\pi}{3 h^3} p_F^3\]</div>
+<p>or, the Fermi momentum is:</p>
+<div class="math notranslate nohighlight">
+\[p_F = \left (\frac{3 h^3}{8\pi} \right )^{1/3} n_e^{1/3}\]</div>
+<p>For the pressure, we need <span class="math notranslate nohighlight">\(v(p)\)</span>, which from mechanics is:</p>
+<div class="math notranslate nohighlight">
+\[v(p) = \frac{p}{m_e} \left [ 1 + \left (\frac{p}{m_e c} \right )^2 \right ]^{-1/2}\]</div>
+<p>and taking <span class="math notranslate nohighlight">\(T \rightarrow 0\)</span>, our pressure integral becomes:</p>
+<div class="math notranslate nohighlight">
+\[P = \frac{8\pi}{3 h^3} \int_0^{p_F} p v(p) p^2 dp\]</div>
+<p>Performing this integral, we find:</p>
+<div class="math notranslate nohighlight">
+\[P(x) = \frac{\pi}{3} \left (\frac{m_e c}{h} \right )^3 m_e c^2 \left [ x (2x^2 - 3) (1 + x^2)^{1/2} + 3 \sinh^{-1}x \right ]\]</div>
+<p>where <span class="math notranslate nohighlight">\(x\)</span> is the dimensionless Fermi energy:</p>
+<div class="math notranslate nohighlight">
+\[x = \left (\frac{3}{8\pi} \right )^{1/3} \frac{h}{m_e c} n_e^{1/3}\]</div>
+</section>
+<section id="exploring-the-transition-to-degeneracy">
+<h2>Exploring the transition to degeneracy<a class="headerlink" href="#exploring-the-transition-to-degeneracy" title="Link to this heading">#</a></h2>
+<p>We can compare the exact expression to this zero-T expression to see when
+the transition to degeneracy occurs.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">m_u</span> <span class="o">=</span> <span class="n">pyna</span><span class="o">.</span><span class="n">constants</span><span class="o">.</span><span class="n">constants</span><span class="o">.</span><span class="n">m_u</span>
+<span class="n">h_planck</span> <span class="o">=</span> <span class="n">pyna</span><span class="o">.</span><span class="n">constants</span><span class="o">.</span><span class="n">constants</span><span class="o">.</span><span class="n">h</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">pyna</span><span class="o">.</span><span class="n">constants</span><span class="o">.</span><span class="n">constants</span><span class="o">.</span><span class="n">c_light</span>
+<span class="n">m_e</span> <span class="o">=</span> <span class="n">pyna</span><span class="o">.</span><span class="n">constants</span><span class="o">.</span><span class="n">constants</span><span class="o">.</span><span class="n">m_e</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">p_zero_temp</span><span class="p">(</span><span class="n">rho</span><span class="p">,</span> <span class="n">Ye</span><span class="o">=</span><span class="mf">0.5</span><span class="p">):</span>
+    
+    <span class="c1"># find number density</span>
+    <span class="n">n_e</span> <span class="o">=</span> <span class="n">rho</span> <span class="o">*</span> <span class="n">Ye</span> <span class="o">/</span> <span class="n">m_u</span>
+    
+    <span class="c1"># find Fermi momentum</span>
+    <span class="n">x_F</span> <span class="o">=</span> <span class="p">(</span><span class="mi">3</span> <span class="o">/</span> <span class="p">(</span><span class="mi">8</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">))</span><span class="o">**</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="mi">3</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">h_planck</span> <span class="o">/</span> <span class="p">(</span><span class="n">m_e</span> <span class="o">*</span> <span class="n">c</span><span class="p">))</span> <span class="o">*</span> <span class="n">n_e</span><span class="o">**</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="mi">3</span><span class="p">)</span>
+    
+    <span class="n">P</span> <span class="o">=</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mi">3</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">m_e</span> <span class="o">*</span> <span class="n">c</span> <span class="o">/</span> <span class="n">h_planck</span><span class="p">)</span><span class="o">**</span><span class="mi">3</span> <span class="o">*</span> <span class="n">m_e</span> <span class="o">*</span> <span class="n">c</span><span class="o">**</span><span class="mi">2</span> <span class="o">*</span> <span class="p">(</span><span class="n">x_F</span> <span class="o">*</span> <span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">x_F</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="mi">3</span><span class="p">)</span> <span class="o">*</span>
+                                                            <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">x_F</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="mi">3</span> <span class="o">*</span>
+                                                            <span class="n">np</span><span class="o">.</span><span class="n">arcsinh</span><span class="p">(</span><span class="n">x_F</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">P</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+
+<span class="k">for</span> <span class="n">T</span> <span class="ow">in</span> <span class="n">ps</span><span class="p">:</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">loglog</span><span class="p">(</span><span class="n">rhos</span><span class="p">,</span> <span class="n">ps</span><span class="p">[</span><span class="n">T</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;T = </span><span class="si">{</span><span class="n">T</span><span class="si">:</span><span class="s2">5.2g</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">loglog</span><span class="p">(</span><span class="n">rhos</span><span class="p">,</span> <span class="n">p_zero_temp</span><span class="p">(</span><span class="n">rhos</span><span class="p">),</span> <span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;:&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;0.5&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;zero-T&quot;</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;$\rho$&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;$P$&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">ls</span><span class="o">=</span><span class="s2">&quot;:&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7f837129ee40&gt;
+</pre></div>
+</div>
+<img alt="_images/53689570f6d41bef767aa28537e270a094f54727efacb9b3e83e915f69048d15.png" src="_images/53689570f6d41bef767aa28537e270a094f54727efacb9b3e83e915f69048d15.png" />
+</div>
+</div>
+<p>We see that at high density, the pressure matches the zero-T approximation well.
+At lower densities, the electrons break from the zero-T curve and act as an
+ideal gas.</p>
 </section>
 </section>
 
@@ -630,6 +720,8 @@ we can solve for <span class="math notranslate nohighlight">\(\eta\)</span>.</p>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#transition-to-degeneracy">Transition to degeneracy</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#computing-eta">Computing <span class="math notranslate nohighlight">\(\eta\)</span></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#finding-the-trend-of-eta-with-rho-t">Finding the trend of <span class="math notranslate nohighlight">\(\eta\)</span> with <span class="math notranslate nohighlight">\(\rho, T\)</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pressure-at-zero-t">Pressure at zero-T</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exploring-the-transition-to-degeneracy">Exploring the transition to degeneracy</a></li>
 </ul>
   </nav></div>
 
