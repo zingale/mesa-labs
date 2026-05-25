@@ -389,6 +389,10 @@
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mass-and-molar-fractions">Mass and molar fractions</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#o-burning">O-burning</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#electron-capture-beta-decay">Electron-capture / <span class="math notranslate nohighlight">\(\beta\)</span>-decay</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sources-for-rates">Sources for rates</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#integration-methods">Integration methods</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#one-zone-burn">One-zone burn</a></li>
 </ul>
             </nav>
         </div>
@@ -437,7 +441,11 @@ physics, masses are measured as the atomic mass excess:</p>
 <p>General form of a rate:</p>
 <div class="math notranslate nohighlight">
 \[r = (n_a v) (n_X \sigma)\]</div>
-<p>Note:</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><span class="math notranslate nohighlight">\(r\)</span> has units of # of reactions / volume / time</p>
+</div>
+<p>Notice:</p>
 <ul class="simple">
 <li><p>v is the relative velocity between <span class="math notranslate nohighlight">\(X\)</span> and <span class="math notranslate nohighlight">\(a\)</span></p></li>
 <li><p><span class="math notranslate nohighlight">\(\sigma\)</span> will be energy dependent, <span class="math notranslate nohighlight">\(\sigma(v)\)</span></p></li>
@@ -455,41 +463,164 @@ then the relative   velocity does too.</p></li>
 \[r = \frac{n_a n_X}{1 + \delta_{aX}} \int_0^\infty v \sigma(v) \phi(v) dv \equiv \frac{n_a n_X}{1+ \delta_{aX}} \langle \sigma v \rangle\]</div>
 </li>
 </ul>
+<p>Note, all of the nuclear physics is contained in <span class="math notranslate nohighlight">\(\sigma\)</span>.</p>
+<p>The quantity <span class="math notranslate nohighlight">\(\sigma v\)</span> depends only on temperature.</p>
+<p>The evolution of nucleus <span class="math notranslate nohighlight">\(X\)</span> is given as:</p>
+<div class="math notranslate nohighlight">
+\[\frac{dn_X}{dt} = -r = -n_a n_X \langle \sigma v \rangle\]</div>
+<p>where the <span class="math notranslate nohighlight">\(-\)</span>  indicates that <span class="math notranslate nohighlight">\(X\)</span> is being destroyed.</p>
 </section>
 </section>
 <section id="mass-and-molar-fractions">
 <h2>Mass and molar fractions<a class="headerlink" href="#mass-and-molar-fractions" title="Link to this heading">#</a></h2>
+<p>We define the mass fraction of species <span class="math notranslate nohighlight">\(k\)</span> as:</p>
+<div class="math notranslate nohighlight">
+\[X_k = \frac{\rho_k}{\rho}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\rho_k\)</span> is the mass density of species <span class="math notranslate nohighlight">\(k\)</span>.  Note that by conservation of mass,</p>
+<div class="math notranslate nohighlight">
+\[\sum_k X_k = 1\]</div>
+<p>We can express the mass density of species <span class="math notranslate nohighlight">\(k\)</span> as:</p>
+<div class="math notranslate nohighlight">
+\[\rho_k = A_k m_u n_k\]</div>
+<p>where <span class="math notranslate nohighlight">\(A_k m_u\)</span> represents the mass of a single nucleus.  This then shows that</p>
+<div class="math notranslate nohighlight">
+\[n_k = \frac{\rho_k}{A_k m_u} = \frac{\rho X_k}{A_k m_u}\]</div>
+<p>We define the molar fraction of species <span class="math notranslate nohighlight">\(k\)</span> as:</p>
+<div class="math notranslate nohighlight">
+\[Y_k = \frac{X_k}{A_k}\]</div>
+<p>then we have:</p>
+<div class="math notranslate nohighlight">
+\[n_k = \frac{\rho Y_k}{m_u}\]</div>
+<p>it is common to take <span class="math notranslate nohighlight">\(N_A = 1/m_u\)</span> (in CGS), and write this as:</p>
+<div class="math notranslate nohighlight">
+\[n_k = \rho N_A Y_k\]</div>
+<p>With this definition, our evolution equation becomes:</p>
+<div class="math notranslate nohighlight">
+\[\frac{dY(X)}{dt} = -\rho Y(a) Y(X) N_A \langle \sigma v \rangle\]</div>
+<p>Reaction rate libraries typically provide <span class="math notranslate nohighlight">\(N_A \langle \sigma v \rangle\)</span>.</p>
 </section>
 <section id="o-burning">
 <h2>O-burning<a class="headerlink" href="#o-burning" title="Link to this heading">#</a></h2>
+<p>Oxygen burning primarily takes place via:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{split}{}^{16}\mathrm{O} + {}^{16}\mathrm{O} \rightarrow \begin{cases}
+       {}^{28}\mathrm{Si} + \alpha \\
+       {}^{31}\mathrm{P} + p \\
+       {}^{31}\mathrm{S} + n \end{cases}
+\end{split}\end{split}\]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## Electron-capture / $\beta$-decay</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pynucastro</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pyna</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## Sources for rates</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rl</span> <span class="o">=</span> <span class="n">pyna</span><span class="o">.</span><span class="n">ReacLibLibrary</span><span class="p">()</span>
+<span class="n">rates</span> <span class="o">=</span> <span class="n">rl</span><span class="o">.</span><span class="n">get_rate_by_name</span><span class="p">([</span><span class="s2">&quot;o16(o16,a)si28&quot;</span><span class="p">,</span>
+                             <span class="s2">&quot;o16(o16,p)p31&quot;</span><span class="p">,</span>
+                             <span class="s2">&quot;o16(o16,n)s31&quot;</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## Integration methods</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## One-zone burn</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">r</span><span class="o">.</span><span class="n">pretty_string</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">r</span><span class="o">.</span><span class="n">pretty_string</span>
+
+<span class="ne">NameError</span>: name &#39;r&#39; is not defined
 </pre></div>
 </div>
 </div>
 </div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">Ts</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">logspace</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="mf">9.5</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">rates</span><span class="p">:</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">loglog</span><span class="p">(</span><span class="n">Ts</span><span class="p">,</span> <span class="p">[</span><span class="n">r</span><span class="o">.</span><span class="n">eval</span><span class="p">(</span><span class="n">T</span><span class="p">)</span> <span class="k">for</span> <span class="n">T</span> <span class="ow">in</span> <span class="n">Ts</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">r</span><span class="o">.</span><span class="n">pretty_string</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">ls</span><span class="o">=</span><span class="s2">&quot;:&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7fdbd5bc0050&gt;
+</pre></div>
+</div>
+<img alt="_images/1b89fc150164cd0660e2dffe8bb63f016e442df37eb86c55a901f02ccaae6ec5.png" src="_images/1b89fc150164cd0660e2dffe8bb63f016e442df37eb86c55a901f02ccaae6ec5.png" />
+</div>
+</div>
+<p>Notice that the branching that emits a neutron is the slowest.  It is also the least energetic</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">rates</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">r</span><span class="si">!s:</span><span class="s2">30</span><span class="si">}</span><span class="s2"> : </span><span class="si">{</span><span class="n">r</span><span class="o">.</span><span class="n">Q</span><span class="si">}</span><span class="s2"> MeV&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>O16 + O16 ⟶ He4 + Si28         : 9.593 MeV
+O16 + O16 ⟶ p + P31            : 7.678 MeV
+O16 + O16 ⟶ n + S31            : 1.5 MeV
+</pre></div>
+</div>
+</div>
+</div>
+<p>for this reason, it is often neglected.</p>
+<p>We can also check the temperature sensitivity, by expressing the rate as:</p>
+<div class="math notranslate nohighlight">
+\[r = r_0 \left ( \frac{T}{T_0} \right )^\nu\]</div>
+<p>exploring various <span class="math notranslate nohighlight">\(T_0\)</span>, we find:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">T0</span> <span class="ow">in</span> <span class="p">[</span><span class="mf">5.e8</span><span class="p">,</span> <span class="mf">1.e9</span><span class="p">,</span> <span class="mf">2.e9</span><span class="p">,</span> <span class="mf">4.e9</span><span class="p">]:</span>
+    <span class="n">nu</span> <span class="o">=</span> <span class="n">rates</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">get_rate_exponent</span><span class="p">(</span><span class="n">T0</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">T0</span><span class="si">:</span><span class="s2">6.2g</span><span class="si">}</span><span class="s2"> : </span><span class="si">{</span><span class="n">nu</span><span class="si">:</span><span class="s2">5.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 5e+08 : 55.96
+ 1e+09 : 43.64
+ 2e+09 : 33.24
+ 4e+09 : 23.75
+</pre></div>
+</div>
+</div>
+</div>
+<p>This is extremely temperature sensitive.</p>
+</section>
+<section id="electron-capture-beta-decay">
+<h2>Electron-capture / <span class="math notranslate nohighlight">\(\beta\)</span>-decay<a class="headerlink" href="#electron-capture-beta-decay" title="Link to this heading">#</a></h2>
+</section>
+<section id="sources-for-rates">
+<h2>Sources for rates<a class="headerlink" href="#sources-for-rates" title="Link to this heading">#</a></h2>
+</section>
+<section id="integration-methods">
+<h2>Integration methods<a class="headerlink" href="#integration-methods" title="Link to this heading">#</a></h2>
+</section>
+<section id="one-zone-burn">
+<h2>One-zone burn<a class="headerlink" href="#one-zone-burn" title="Link to this heading">#</a></h2>
 </section>
 </section>
 
@@ -548,6 +679,10 @@ then the relative   velocity does too.</p></li>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mass-and-molar-fractions">Mass and molar fractions</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#o-burning">O-burning</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#electron-capture-beta-decay">Electron-capture / <span class="math notranslate nohighlight">\(\beta\)</span>-decay</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sources-for-rates">Sources for rates</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#integration-methods">Integration methods</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#one-zone-burn">One-zone burn</a></li>
 </ul>
   </nav></div>
 
