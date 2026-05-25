@@ -8,6 +8,7 @@ MESA Summer School Urca Notebooks
 
    degeneracy.ipynb
    wd_structure.ipynb
+   reactions.ipynb
    initial_model.ipynb
    nets.ipynb
    mesa-net-vis.ipynb
