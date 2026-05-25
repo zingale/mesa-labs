@@ -389,9 +389,11 @@
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mass-and-molar-fractions">Mass and molar fractions</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#o-burning">O-burning</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#approximate-o-burning">Approximate O burning</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#electron-capture-beta-decay">Electron-capture / <span class="math notranslate nohighlight">\(\beta\)</span>-decay</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sources-for-rates">Sources for rates</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#integration-methods">Integration methods</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#timescales">Timescales</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#one-zone-burn">One-zone burn</a></li>
 </ul>
             </nav>
@@ -564,7 +566,7 @@ then the relative   velocity does too.</p></li>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7fdbd5bc0050&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7fe45ef50050&gt;
 </pre></div>
 </div>
 <img alt="_images/1b89fc150164cd0660e2dffe8bb63f016e442df37eb86c55a901f02ccaae6ec5.png" src="_images/1b89fc150164cd0660e2dffe8bb63f016e442df37eb86c55a901f02ccaae6ec5.png" />
@@ -610,6 +612,88 @@ O16 + O16 ⟶ n + S31            : 1.5 MeV
 </div>
 <p>This is extremely temperature sensitive.</p>
 </section>
+<section id="approximate-o-burning">
+<h2>Approximate O burning<a class="headerlink" href="#approximate-o-burning" title="Link to this heading">#</a></h2>
+<p>We can approximate O-burning by assuming that the <span class="math notranslate nohighlight">\({}^{31}\mathrm{P}\)</span> nucleus is in equilibrium.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">net</span> <span class="o">=</span> <span class="n">pyna</span><span class="o">.</span><span class="n">network_helper</span><span class="p">([</span><span class="s2">&quot;p&quot;</span><span class="p">,</span> <span class="s2">&quot;he4&quot;</span><span class="p">,</span> <span class="s2">&quot;o16&quot;</span><span class="p">,</span> <span class="s2">&quot;si28&quot;</span><span class="p">,</span> <span class="s2">&quot;p31&quot;</span><span class="p">,</span> <span class="s2">&quot;s32&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span> <span class="o">=</span> <span class="n">net</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">rotated</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">1000</span><span class="p">,</span> <span class="mi">400</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/37a34b16edfb9080dd7f71521b269aa24888602fcaa2901d1e9e2c95b3011c52.png" src="_images/37a34b16edfb9080dd7f71521b269aa24888602fcaa2901d1e9e2c95b3011c52.png" />
+</div>
+</div>
+<p>The idea is to take <span class="math notranslate nohighlight">\(dY({}^{31}\mathrm{P})/dt = 0\)</span></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dydt</span> <span class="o">=</span> <span class="n">net</span><span class="o">.</span><span class="n">full_ydot_string</span><span class="p">(</span><span class="n">pyna</span><span class="o">.</span><span class="n">Nucleus</span><span class="p">(</span><span class="s2">&quot;p31&quot;</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">dydt</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>dYdt[jp31] = (
+      ( -rho*Y[jp]*Y[jp31]*rate_eval.p_P31_to_S32_reaclib +Y[js32]*rate_eval.S32_to_p_P31_derived ) +
+      ( +5.00000000000000e-01*rho*Y[jo16]**2*rate_eval.O16_O16_to_p_P31_reaclib -rho*Y[jp]*Y[jp31]*rate_eval.p_P31_to_O16_O16_derived ) +
+      ( -rho*Y[jp]*Y[jp31]*rate_eval.p_P31_to_He4_Si28_reaclib +rho*Y[jhe4]*Y[jsi28]*rate_eval.He4_Si28_to_p_P31_derived )
+   )
+</pre></div>
+</div>
+</div>
+</div>
+<p>we can solve for the equilibrium abundance of <span class="math notranslate nohighlight">\(Y({}^{31}\mathrm{P})\)</span> and approximate it out.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">net</span><span class="o">.</span><span class="n">make_CO_burning_approx</span><span class="p">(</span><span class="s2">&quot;O&quot;</span><span class="p">)</span>
+<span class="n">net</span><span class="o">.</span><span class="n">remove_nuclei</span><span class="p">([</span><span class="s2">&quot;p31&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span> <span class="o">=</span> <span class="n">net</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">rotated</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">1000</span><span class="p">,</span> <span class="mi">400</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/6526e2a1e2048e650ebddf74495df8d0878d93bb13d5e168bc539c96dc9334ab.png" src="_images/6526e2a1e2048e650ebddf74495df8d0878d93bb13d5e168bc539c96dc9334ab.png" />
+</div>
+</div>
+<p>We’ll use the approximate rate for <span class="math notranslate nohighlight">\({}^{16}\mathrm{O}({}^{16}\mathrm{O},\alpha){}^{28}\mathrm{Si}\)</span></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">r1616</span> <span class="o">=</span> <span class="n">net</span><span class="o">.</span><span class="n">get_rate_by_name</span><span class="p">(</span><span class="s2">&quot;o16(o16,a)si28&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">r1616</span><span class="o">.</span><span class="n">function_string_py</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>@numba.njit()
+def O16_O16_to_Si28_He4_approx(rate_eval, tf):
+    r_pY = rate_eval.p_P31_to_O16_O16_derived
+    r_pa = rate_eval.p_P31_to_He4_Si28_reaclib
+    r_pg = rate_eval.p_P31_to_S32_reaclib
+    denom = r_pY + r_pa + r_pg
+    r_Ya = rate_eval.O16_O16_to_He4_Si28_reaclib
+    r_Yp = rate_eval.O16_O16_to_p_P31_reaclib
+    rate = r_Ya + r_Yp * r_pa / denom
+    rate_eval.O16_O16_to_Si28_He4_approx = rate
+</pre></div>
+</div>
+</div>
+</div>
+<p>This combines <span class="math notranslate nohighlight">\({}^{16}\mathrm{O}({}^{16}\mathrm{O},\alpha){}^{28}\mathrm{Si}\)</span> + <span class="math notranslate nohighlight">\({}^{16}\mathrm{O}({}^{16}\mathrm{O},p){}^{31}\mathrm{P}(p,\alpha){}^{28}\mathrm{Si}\)</span></p>
+</section>
 <section id="electron-capture-beta-decay">
 <h2>Electron-capture / <span class="math notranslate nohighlight">\(\beta\)</span>-decay<a class="headerlink" href="#electron-capture-beta-decay" title="Link to this heading">#</a></h2>
 </section>
@@ -618,6 +702,61 @@ O16 + O16 ⟶ n + S31            : 1.5 MeV
 </section>
 <section id="integration-methods">
 <h2>Integration methods<a class="headerlink" href="#integration-methods" title="Link to this heading">#</a></h2>
+</section>
+<section id="timescales">
+<h2>Timescales<a class="headerlink" href="#timescales" title="Link to this heading">#</a></h2>
+<p>We can compute the timescale for burning as</p>
+<div class="math notranslate nohighlight">
+\[\tau \sim \frac{1}{|\dot{X}|}\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">net</span> <span class="o">=</span> <span class="n">pyna</span><span class="o">.</span><span class="n">PythonNetwork</span><span class="p">(</span><span class="n">rates</span><span class="o">=</span><span class="p">[</span><span class="n">r1616</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rhos</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">logspace</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span>
+<span class="n">Ts</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">logspace</span><span class="p">(</span><span class="mf">8.5</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">31</span><span class="p">)</span>
+
+<span class="n">comp</span> <span class="o">=</span> <span class="n">pyna</span><span class="o">.</span><span class="n">Composition</span><span class="p">(</span><span class="n">net</span><span class="o">.</span><span class="n">unique_nuclei</span><span class="p">)</span>
+<span class="n">comp</span><span class="o">.</span><span class="n">X</span><span class="p">[</span><span class="n">pyna</span><span class="o">.</span><span class="n">Nucleus</span><span class="p">(</span><span class="s2">&quot;o16&quot;</span><span class="p">)]</span> <span class="o">=</span> <span class="mf">0.5</span>
+<span class="n">comp</span><span class="o">.</span><span class="n">X</span><span class="p">[</span><span class="n">pyna</span><span class="o">.</span><span class="n">Nucleus</span><span class="p">(</span><span class="s2">&quot;ne20&quot;</span><span class="p">)]</span> <span class="o">=</span> <span class="mf">0.5</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">o16</span> <span class="o">=</span> <span class="n">pyna</span><span class="o">.</span><span class="n">Nucleus</span><span class="p">(</span><span class="s2">&quot;o16&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+
+<span class="k">for</span> <span class="n">rho</span> <span class="ow">in</span> <span class="n">rhos</span><span class="p">:</span>
+    <span class="n">xdots</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">net</span><span class="o">.</span><span class="n">evaluate_ydots</span><span class="p">(</span><span class="n">rho</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="n">comp</span><span class="p">,</span>
+                                         <span class="n">screen_func</span><span class="o">=</span><span class="n">pyna</span><span class="o">.</span><span class="n">screening</span><span class="o">.</span><span class="n">screen</span><span class="o">.</span><span class="n">chugunov_2007</span><span class="p">)[</span><span class="n">o16</span><span class="p">]</span> <span class="o">*</span> <span class="n">o16</span><span class="o">.</span><span class="n">A</span>
+                      <span class="k">for</span> <span class="n">T</span> <span class="ow">in</span> <span class="n">Ts</span><span class="p">])</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">loglog</span><span class="p">(</span><span class="n">Ts</span><span class="p">,</span> <span class="mf">1.0</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">xdots</span><span class="p">),</span> <span class="n">label</span><span class="o">=</span><span class="sa">rf</span><span class="s2">&quot;$\rho = </span><span class="si">{</span><span class="n">rho</span><span class="si">:</span><span class="s2">6.2g</span><span class="si">}</span><span class="s2">$&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">ls</span><span class="o">=</span><span class="s2">&quot;:&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;T [K]&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;$\tau$ [s]&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7fe44e8a52b0&gt;
+</pre></div>
+</div>
+<img alt="_images/6dc746b910c29987d24282f838211777d4c91b5c48a2a0f1bf6c1c2131a4730e.png" src="_images/6dc746b910c29987d24282f838211777d4c91b5c48a2a0f1bf6c1c2131a4730e.png" />
+</div>
+</div>
 </section>
 <section id="one-zone-burn">
 <h2>One-zone burn<a class="headerlink" href="#one-zone-burn" title="Link to this heading">#</a></h2>
@@ -679,9 +818,11 @@ O16 + O16 ⟶ n + S31            : 1.5 MeV
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mass-and-molar-fractions">Mass and molar fractions</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#o-burning">O-burning</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#approximate-o-burning">Approximate O burning</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#electron-capture-beta-decay">Electron-capture / <span class="math notranslate nohighlight">\(\beta\)</span>-decay</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sources-for-rates">Sources for rates</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#integration-methods">Integration methods</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#timescales">Timescales</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#one-zone-burn">One-zone burn</a></li>
 </ul>
   </nav></div>
