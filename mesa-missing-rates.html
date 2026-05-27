@@ -145,11 +145,19 @@
 </button></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
-        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Exploring Models</span></p>
-<ul class="current nav bd-sidenav">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">White Dwarfs</span></p>
+<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="degeneracy.html">Degeneracy and White Dwarfs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="wd_structure.html">White dwarf star structure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wd-composition.html">White Dwarf Composition</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Reactions</span></p>
+<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="reactions.html">Reaction networks</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Urca Lab</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="urca-intro.html">Urca Process</a></li>
 <li class="toctree-l1"><a class="reference internal" href="initial_model.html">Initial model</a></li>
 <li class="toctree-l1"><a class="reference internal" href="nets.html">Networks used in labs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="mesa-net-vis.html">Visualizing MESA reactions</a></li>
@@ -625,12 +633,8 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">18</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">_</span><span class="p">,</span> <span class="n">missing_rates</span> <span class="o">=</span> <span class="n">net</span><span class="o">.</span><span class="n">validate</span><span class="p">(</span><span class="n">full_library</span><span class="p">,</span> <span class="n">return_dict</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-
-<span class="ne">TypeError</span>: RateCollection.validate() got an unexpected keyword argument &#39;return_dict&#39;
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>validation: Si28 produced in O16 + O16 ⟶ Si28 + He4 never consumed.
+validation: He4 produced in O16 + O16 ⟶ Si28 + He4 never consumed.
 </pre></div>
 </div>
 </div>
@@ -642,12 +646,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">19</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="nb">len</span><span class="p">(</span><span class="n">missing_rates</span><span class="p">)</span>
-
-<span class="ne">NameError</span>: name &#39;missing_rates&#39; is not defined
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>82
 </pre></div>
 </div>
 </div>
@@ -659,16 +658,6 @@
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">20</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">lib</span> <span class="o">=</span> <span class="n">pyna</span><span class="o">.</span><span class="n">Library</span><span class="p">(</span><span class="n">rates</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="n">missing_rates</span><span class="o">.</span><span class="n">keys</span><span class="p">()))</span>
-
-<span class="ne">NameError</span>: name &#39;missing_rates&#39; is not defined
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -677,21 +666,88 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>O16 + O16 ⟶ Si28 + He4         [Q =   9.59 MeV] (O16 + O16 --&gt; Si28 + He4 &lt;approx&gt;)
-O20 ⟶ F20 + e⁻ + 𝜈             [Q =   3.81 MeV] (O20 --&gt; F20 &lt;weaktab_suzuki&gt;)
-F20 ⟶ Ne20 + e⁻ + 𝜈            [Q =   7.02 MeV] (F20 --&gt; Ne20 &lt;weaktab_suzuki&gt;)
-Ne23 ⟶ Na23 + e⁻ + 𝜈           [Q =   4.38 MeV] (Ne23 --&gt; Na23 &lt;weaktab_suzuki&gt;)
-Ne24 ⟶ Na24 + e⁻ + 𝜈           [Q =   2.47 MeV] (Ne24 --&gt; Na24 &lt;weaktab_suzuki&gt;)
-Ne25 ⟶ Na25 + e⁻ + 𝜈           [Q =   7.32 MeV] (Ne25 --&gt; Na25 &lt;weaktab_suzuki&gt;)
-Na24 ⟶ Mg24 + e⁻ + 𝜈           [Q =   5.52 MeV] (Na24 --&gt; Mg24 &lt;weaktab_suzuki&gt;)
-Na25 ⟶ Mg25 + e⁻ + 𝜈           [Q =   3.83 MeV] (Na25 --&gt; Mg25 &lt;weaktab_suzuki&gt;)
-F20 + e⁻ ⟶ O20 + 𝜈             [Q =  -3.81 MeV] (F20 --&gt; O20 &lt;weaktab_suzuki&gt;)
-Ne20 + e⁻ ⟶ F20 + 𝜈            [Q =  -7.02 MeV] (Ne20 --&gt; F20 &lt;weaktab_suzuki&gt;)
-Na23 + e⁻ ⟶ Ne23 + 𝜈           [Q =  -4.38 MeV] (Na23 --&gt; Ne23 &lt;weaktab_suzuki&gt;)
-Na24 + e⁻ ⟶ Ne24 + 𝜈           [Q =  -2.47 MeV] (Na24 --&gt; Ne24 &lt;weaktab_suzuki&gt;)
-Na25 + e⁻ ⟶ Ne25 + 𝜈           [Q =  -7.32 MeV] (Na25 --&gt; Ne25 &lt;weaktab_suzuki&gt;)
-Mg24 + e⁻ ⟶ Na24 + 𝜈           [Q =  -5.52 MeV] (Mg24 --&gt; Na24 &lt;weaktab_suzuki&gt;)
-Mg25 + e⁻ ⟶ Na25 + 𝜈           [Q =  -3.83 MeV] (Mg25 --&gt; Na25 &lt;weaktab_suzuki&gt;)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>O16 + He4 ⟶ Ne20 + 𝛾           [Q =   4.73 MeV] (O16 + He4 --&gt; Ne20 &lt;reaclib_co10&gt;)
+O16 + O16 ⟶ p + P31            [Q =   7.68 MeV] (O16 + O16 --&gt; p + P31 &lt;reaclib_cf88&gt;)
+O16 + O16 ⟶ n + S31            [Q =   1.50 MeV] (O16 + O16 --&gt; n + S31 &lt;reaclib_cf88&gt;)
+O20 + He4 ⟶ n + Ne23           [Q =   3.30 MeV] (O20 + He4 --&gt; n + Ne23 &lt;reaclib_rpsm&gt;)
+O20 + He4 ⟶ Ne24 + 𝛾           [Q =  12.17 MeV] (O20 + He4 --&gt; Ne24 &lt;reaclib_rpsm&gt;)
+F20 + He4 ⟶ p + Ne23           [Q =   0.27 MeV] (F20 + He4 --&gt; p + Ne23 &lt;reaclib_rpsm&gt;)
+F20 + He4 ⟶ n + Na23           [Q =   3.87 MeV] (F20 + He4 --&gt; n + Na23 &lt;reaclib_rpsm&gt;)
+F20 + He4 ⟶ Na24 + 𝛾           [Q =  10.82 MeV] (F20 + He4 --&gt; Na24 &lt;reaclib_rpsm&gt;)
+Ne20 + He4 ⟶ Mg24 + 𝛾          [Q =   9.32 MeV] (Ne20 + He4 --&gt; Mg24 &lt;reaclib_il10&gt;)
+Ne23 + He4 ⟶ n + Mg26          [Q =   5.42 MeV] (Ne23 + He4 --&gt; n + Mg26 &lt;reaclib_rath&gt;)
+Ne23 + He4 ⟶ Mg27 + 𝛾          [Q =  11.86 MeV] (Ne23 + He4 --&gt; Mg27 &lt;reaclib_rath&gt;)
+Ne24 + He4 ⟶ n + Mg27          [Q =   2.99 MeV] (Ne24 + He4 --&gt; n + Mg27 &lt;reaclib_rath&gt;)
+Ne24 + He4 ⟶ Mg28 + 𝛾          [Q =  11.50 MeV] (Ne24 + He4 --&gt; Mg28 &lt;reaclib_rath&gt;)
+Ne25 + He4 ⟶ n + Mg28          [Q =   7.31 MeV] (Ne25 + He4 --&gt; n + Mg28 &lt;reaclib_rath&gt;)
+Ne25 + He4 ⟶ Mg29 + 𝛾          [Q =  11.03 MeV] (Ne25 + He4 --&gt; Mg29 &lt;reaclib_rath&gt;)
+Na23 + He4 ⟶ p + Mg26          [Q =   1.82 MeV] (Na23 + He4 --&gt; p + Mg26 &lt;reaclib_ths8&gt;)
+Na23 + He4 ⟶ Al27 + 𝛾          [Q =  10.09 MeV] (Na23 + He4 --&gt; Al27 &lt;reaclib_ths8&gt;)
+Na24 + He4 ⟶ p + Mg27          [Q =   1.30 MeV] (Na24 + He4 --&gt; p + Mg27 &lt;reaclib_rath&gt;)
+Na24 + He4 ⟶ n + Al27          [Q =   3.13 MeV] (Na24 + He4 --&gt; n + Al27 &lt;reaclib_rath&gt;)
+Na24 + He4 ⟶ Al28 + 𝛾          [Q =  10.86 MeV] (Na24 + He4 --&gt; Al28 &lt;reaclib_rath&gt;)
+Na25 + He4 ⟶ p + Mg28          [Q =   0.80 MeV] (Na25 + He4 --&gt; p + Mg28 &lt;reaclib_rath&gt;)
+Na25 + He4 ⟶ n + Al28          [Q =   1.85 MeV] (Na25 + He4 --&gt; n + Al28 &lt;reaclib_rath&gt;)
+Na25 + He4 ⟶ Al29 + 𝛾          [Q =  11.28 MeV] (Na25 + He4 --&gt; Al29 &lt;reaclib_rath&gt;)
+Mg24 + He4 ⟶ Si28 + 𝛾          [Q =   9.98 MeV] (Mg24 + He4 --&gt; Si28 &lt;reaclib_st08&gt;)
+Mg25 + He4 ⟶ n + Si28          [Q =   2.65 MeV] (Mg25 + He4 --&gt; n + Si28 &lt;reaclib_nacr&gt;)
+Mg25 + He4 ⟶ Si29 + 𝛾          [Q =  11.13 MeV] (Mg25 + He4 --&gt; Si29 &lt;reaclib_cf88&gt;)
+Si28 + He4 ⟶ S32 + 𝛾           [Q =   6.95 MeV] (Si28 + He4 --&gt; S32 &lt;reaclib_ths8&gt;)
+He4 + He4 ⟶ p + Li7            [Q = -17.35 MeV] (He4 + He4 --&gt; p + Li7 &lt;reaclib_de04&gt;)
+He4 + He4 ⟶ n + Be7            [Q = -18.99 MeV] (He4 + He4 --&gt; n + Be7 &lt;reaclib_wag&gt;)
+O16 + He4 ⟶ p + F19            [Q =  -8.11 MeV] (O16 + He4 --&gt; p + F19 &lt;reaclib_nacr&gt;)
+O16 + He4 ⟶ n + Ne19           [Q = -12.13 MeV] (O16 + He4 --&gt; n + Ne19 &lt;reaclib_ths8&gt;)
+O20 + He4 ⟶ p + F23            [Q =  -4.40 MeV] (O20 + He4 --&gt; p + F23 &lt;reaclib_rpsm&gt;)
+O20 ⟶ n + O19                  [Q =  -7.61 MeV] (O20 --&gt; n + O19 &lt;reaclib_wies&gt;)
+F20 ⟶ p + O19                  [Q = -10.64 MeV] (F20 --&gt; p + O19 &lt;reaclib_rpsm&gt;)
+F20 ⟶ n + F19                  [Q =  -6.60 MeV] (F20 --&gt; n + F19 &lt;reaclib_ks03&gt;)
+Ne20 + He4 ⟶ C12 + C12         [Q =  -4.62 MeV] (Ne20 + He4 --&gt; C12 + C12 &lt;reaclib_cf88&gt;)
+Ne20 + He4 ⟶ p + Na23          [Q =  -2.38 MeV] (Ne20 + He4 --&gt; p + Na23 &lt;reaclib_il10&gt;)
+Ne20 + He4 ⟶ n + Mg23          [Q =  -7.21 MeV] (Ne20 + He4 --&gt; n + Mg23 &lt;reaclib_ths8&gt;)
+Ne20 ⟶ He4 + O16               [Q =  -4.73 MeV] (Ne20 --&gt; He4 + O16 &lt;reaclib_co10&gt;)
+Ne20 ⟶ p + F19                 [Q = -12.84 MeV] (Ne20 --&gt; p + F19 &lt;reaclib_nacr&gt;)
+Ne20 ⟶ n + Ne19                [Q = -16.86 MeV] (Ne20 --&gt; n + Ne19 &lt;reaclib_ths8&gt;)
+Ne20 ⟶ Na20 + e⁻ + 𝜈           [Q = -13.89 MeV] (Ne20 --&gt; Na20 &lt;weaktab_oda&gt;)
+Ne23 + He4 ⟶ p + Na26          [Q =  -3.12 MeV] (Ne23 + He4 --&gt; p + Na26 &lt;reaclib_rath&gt;)
+Ne23 ⟶ He4 + O19               [Q = -10.91 MeV] (Ne23 --&gt; He4 + O19 &lt;reaclib_rpsm&gt;)
+Ne23 ⟶ p + F22                 [Q = -15.24 MeV] (Ne23 --&gt; p + F22 &lt;reaclib_rpsm&gt;)
+Ne23 + e⁻ ⟶ F23 + 𝜈            [Q =  -8.44 MeV] (Ne23 --&gt; F23 &lt;weaktab_oda&gt;)
+Ne23 ⟶ n + Ne22                [Q =  -5.20 MeV] (Ne23 --&gt; n + Ne22 &lt;reaclib_ks03&gt;)
+Ne24 + He4 ⟶ p + Na27          [Q =  -5.23 MeV] (Ne24 + He4 --&gt; p + Na27 &lt;reaclib_rath&gt;)
+Ne24 ⟶ He4 + O20               [Q = -12.17 MeV] (Ne24 --&gt; He4 + O20 &lt;reaclib_rpsm&gt;)
+Ne24 ⟶ p + F23                 [Q = -16.57 MeV] (Ne24 --&gt; p + F23 &lt;reaclib_rpsm&gt;)
+Ne24 ⟶ n + Ne23                [Q =  -8.87 MeV] (Ne24 --&gt; n + Ne23 &lt;reaclib_wies&gt;)
+Ne25 + He4 ⟶ p + Na28          [Q =  -5.89 MeV] (Ne25 + He4 --&gt; p + Na28 &lt;reaclib_rath&gt;)
+Ne25 ⟶ He4 + O21               [Q = -12.54 MeV] (Ne25 --&gt; He4 + O21 &lt;reaclib_rpsm&gt;)
+Ne25 ⟶ p + F24                 [Q = -16.89 MeV] (Ne25 --&gt; p + F24 &lt;reaclib_rpsm&gt;)
+Ne25 ⟶ n + Ne24                [Q =  -4.28 MeV] (Ne25 --&gt; n + Ne24 &lt;reaclib_wies&gt;)
+Na23 + He4 ⟶ n + Al26          [Q =  -2.97 MeV] (Na23 + He4 --&gt; n + Al26 &lt;reaclib_ol11&gt;)
+Na23 ⟶ He4 + F19               [Q = -10.47 MeV] (Na23 --&gt; He4 + F19 &lt;reaclib_rpsm&gt;)
+Na23 ⟶ p + Ne22                [Q =  -8.79 MeV] (Na23 --&gt; p + Ne22 &lt;reaclib_ke17&gt;)
+Na23 ⟶ n + Na22                [Q = -12.42 MeV] (Na23 --&gt; n + Na22 &lt;reaclib_ths8&gt;)
+Na23 ⟶ Mg23 + e⁻ + 𝜈           [Q =  -4.06 MeV] (Na23 --&gt; Mg23 &lt;weaktab_oda&gt;)
+Na24 ⟶ He4 + F20               [Q = -10.82 MeV] (Na24 --&gt; He4 + F20 &lt;reaclib_rpsm&gt;)
+Na24 ⟶ p + Ne23                [Q = -10.55 MeV] (Na24 --&gt; p + Ne23 &lt;reaclib_rath&gt;)
+Na24 ⟶ n + Na23                [Q =  -6.96 MeV] (Na24 --&gt; n + Na23 &lt;reaclib_ks03&gt;)
+Na25 ⟶ He4 + F21               [Q = -11.73 MeV] (Na25 --&gt; He4 + F21 &lt;reaclib_rpsm&gt;)
+Na25 ⟶ p + Ne24                [Q = -10.70 MeV] (Na25 --&gt; p + Ne24 &lt;reaclib_rath&gt;)
+Na25 ⟶ n + Na24                [Q =  -9.01 MeV] (Na25 --&gt; n + Na24 &lt;reaclib_rath&gt;)
+Mg24 + He4 ⟶ C12 + O16         [Q =  -6.77 MeV] (Mg24 + He4 --&gt; C12 + O16 &lt;reaclib_cf88&gt;)
+Mg24 + He4 ⟶ p + Al27          [Q =  -1.60 MeV] (Mg24 + He4 --&gt; p + Al27 &lt;reaclib_il10&gt;)
+Mg24 + He4 ⟶ n + Si27          [Q =  -7.20 MeV] (Mg24 + He4 --&gt; n + Si27 &lt;reaclib_ths8&gt;)
+Mg24 ⟶ He4 + Ne20              [Q =  -9.32 MeV] (Mg24 --&gt; He4 + Ne20 &lt;reaclib_il10&gt;)
+Mg24 ⟶ p + Na23                [Q = -11.69 MeV] (Mg24 --&gt; p + Na23 &lt;reaclib_il10&gt;)
+Mg24 ⟶ n + Mg23                [Q = -16.53 MeV] (Mg24 --&gt; n + Mg23 &lt;reaclib_ths8&gt;)
+Mg24 ⟶ Al24 + e⁻ + 𝜈           [Q = -13.88 MeV] (Mg24 --&gt; Al24 &lt;weaktab_oda&gt;)
+Mg25 + He4 ⟶ p + Al28          [Q =  -1.21 MeV] (Mg25 + He4 --&gt; p + Al28 &lt;reaclib_cf88&gt;)
+Mg25 ⟶ He4 + Ne21              [Q =  -9.88 MeV] (Mg25 --&gt; He4 + Ne21 &lt;reaclib_cf88&gt;)
+Mg25 ⟶ p + Na24                [Q = -12.06 MeV] (Mg25 --&gt; p + Na24 &lt;reaclib_rath&gt;)
+Mg25 ⟶ n + Mg24                [Q =  -7.33 MeV] (Mg25 --&gt; n + Mg24 &lt;reaclib_ks03&gt;)
+Mg25 ⟶ Al25 + e⁻ + 𝜈           [Q =  -4.28 MeV] (Mg25 --&gt; Al25 &lt;weaktab_oda&gt;)
+Si28 + He4 ⟶ O16 + O16         [Q =  -9.59 MeV] (Si28 + He4 --&gt; O16 + O16 &lt;reaclib_cf88&gt;)
+Si28 + He4 ⟶ C12 + Ne20        [Q = -12.02 MeV] (Si28 + He4 --&gt; C12 + Ne20 &lt;reaclib_rolf&gt;)
+Si28 + He4 ⟶ p + P31           [Q =  -1.92 MeV] (Si28 + He4 --&gt; p + P31 &lt;reaclib_il10&gt;)
+Si28 + He4 ⟶ n + S31           [Q =  -8.09 MeV] (Si28 + He4 --&gt; n + S31 &lt;reaclib_ths8&gt;)
 </pre></div>
 </div>
 </div>
@@ -771,23 +827,6 @@ Mg25 + e⁻ ⟶ Na25 + 𝜈           [Q =  -3.83 MeV] (Mg25 --&gt; Na25 &lt;wea
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">26</span><span class="p">],</span> <span class="n">line</span> <span class="mi">12</span>
-<span class="g g-Whitespace">      </span><span class="mi">8</span>                      <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">net</span><span class="o">.</span><span class="n">get_rates</span><span class="p">()</span> <span class="k">if</span> <span class="n">nuc</span> <span class="o">==</span> <span class="nb">max</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">reactants</span><span class="p">)}</span>
-<span class="g g-Whitespace">      </span><span class="mi">9</span> 
-<span class="g g-Whitespace">     </span><span class="mi">10</span>         <span class="c1"># evaluate all missing rates working with this nucleus</span>
-<span class="g g-Whitespace">     </span><span class="mi">11</span>         <span class="n">r_missing</span> <span class="o">=</span> <span class="p">{</span><span class="n">r</span> <span class="p">:</span> <span class="n">r</span><span class="o">.</span><span class="n">eval_full_rate</span><span class="p">(</span><span class="n">rho</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="n">comp</span><span class="p">,</span> <span class="n">screen_func</span><span class="o">=</span><span class="n">chugunov_2007</span><span class="p">)</span>
-<span class="ne">---&gt; </span><span class="mi">12</span>                      <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">missing_rates</span> <span class="k">if</span> <span class="n">nuc</span> <span class="o">==</span> <span class="nb">max</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">reactants</span><span class="p">)}</span>
-<span class="g g-Whitespace">     </span><span class="mi">13</span> 
-<span class="g g-Whitespace">     </span><span class="mi">14</span>         <span class="c1"># compute the fastest (abs value) current rate consuming this nucleus</span>
-<span class="g g-Whitespace">     </span><span class="mi">15</span>         <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="n">r_current</span> <span class="ow">and</span> <span class="n">r_missing</span><span class="p">):</span>
-
-<span class="ne">NameError</span>: name &#39;missing_rates&#39; is not defined
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -796,7 +835,31 @@ Mg25 + e⁻ ⟶ Na25 + 𝜈           [Q =  -3.83 MeV] (Mg25 --&gt; Na25 &lt;wea
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{O16 + He4 ⟶ Ne20 + 𝛾,
+ O16 + O16 ⟶ p + P31,
+ O16 + O16 ⟶ n + S31,
+ O20 + He4 ⟶ p + F23,
+ O20 + He4 ⟶ n + Ne23,
+ O20 + He4 ⟶ Ne24 + 𝛾,
+ F20 + He4 ⟶ p + Ne23,
+ F20 + He4 ⟶ n + Na23,
+ F20 + He4 ⟶ Na24 + 𝛾,
+ Ne20 + He4 ⟶ p + Na23,
+ Ne20 + He4 ⟶ Mg24 + 𝛾,
+ Ne23 + He4 ⟶ p + Na26,
+ Ne23 + He4 ⟶ Mg27 + 𝛾,
+ Ne23 + e⁻ ⟶ F23 + 𝜈,
+ Ne23 ⟶ n + Ne22,
+ Ne23 + He4 ⟶ n + Mg26,
+ Ne24 + He4 ⟶ n + Mg27,
+ Ne24 + He4 ⟶ Mg28 + 𝛾,
+ Ne25 + He4 ⟶ n + Mg28,
+ Ne25 ⟶ n + Ne24,
+ Ne25 + He4 ⟶ Mg29 + 𝛾,
+ Na23 + He4 ⟶ p + Mg26,
+ Na25 + He4 ⟶ p + Mg28,
+ Na25 + He4 ⟶ n + Al28,
+ Na25 + He4 ⟶ Al29 + 𝛾}
 </pre></div>
 </div>
 </div>
@@ -825,7 +888,12 @@ Mg25 + e⁻ ⟶ Na25 + 𝜈           [Q =  -3.83 MeV] (Mg25 --&gt; Na25 &lt;wea
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[O20 + He4 ⟶ Ne24 + 𝛾,
+ F20 + He4 ⟶ p + Ne23,
+ O16 + He4 ⟶ Ne20 + 𝛾,
+ Ne20 + He4 ⟶ Mg24 + 𝛾,
+ Ne20 + He4 ⟶ p + Na23,
+ F20 + He4 ⟶ Na24 + 𝛾]
 </pre></div>
 </div>
 </div>
@@ -856,21 +924,21 @@ Mg25 + e⁻ ⟶ Na25 + 𝜈           [Q =  -3.83 MeV] (Mg25 --&gt; Na25 &lt;wea
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Network summary
 ---------------
-  explicitly carried nuclei: 14
-  approximated-out nuclei: 1
+  explicitly carried nuclei: 27
+  approximated-out nuclei: 0
   inert nuclei (included in carried): 0
 
   NSE compatible? False
 
-  total number of rates: 22
+  total number of rates: 46
 
-  rates explicitly connecting nuclei: 15
-  hidden rates: 7
+  rates explicitly connecting nuclei: 40
+  hidden rates: 6
 
-  reaclib rates: 7
+  reaclib rates: 30
   starlib rates: 0
   temperature tabular rates: 0
-  weak tabular rates: 14
+  weak tabular rates: 15
   approximate rates: 1
   derived rates: 0
   modified rates: 0
@@ -886,7 +954,7 @@ Mg25 + e⁻ ⟶ Na25 + 𝜈           [Q =  -3.83 MeV] (Mg25 --&gt; Na25 &lt;wea
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/0446512f1632009e68236613e5cff0ab256bb336d71693bf467e5eac86f4da75.png" src="_images/0446512f1632009e68236613e5cff0ab256bb336d71693bf467e5eac86f4da75.png" />
+<img alt="_images/f03aedf36c6f06f7f9062ae1461f8201364ba68d391184d7dbb95ae03651b95d.png" src="_images/f03aedf36c6f06f7f9062ae1461f8201364ba68d391184d7dbb95ae03651b95d.png" />
 </div>
 </div>
 <p>what if we restrict it to just the rates that use the same nuclei?</p>
@@ -913,18 +981,18 @@ Mg25 + e⁻ ⟶ Na25 + 𝜈           [Q =  -3.83 MeV] (Mg25 --&gt; Na25 &lt;wea
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Network summary
 ---------------
-  explicitly carried nuclei: 14
+  explicitly carried nuclei: 15
   approximated-out nuclei: 1
   inert nuclei (included in carried): 0
 
   NSE compatible? False
 
-  total number of rates: 22
+  total number of rates: 28
 
-  rates explicitly connecting nuclei: 15
+  rates explicitly connecting nuclei: 21
   hidden rates: 7
 
-  reaclib rates: 7
+  reaclib rates: 13
   starlib rates: 0
   temperature tabular rates: 0
   weak tabular rates: 14
@@ -943,7 +1011,7 @@ Mg25 + e⁻ ⟶ Na25 + 𝜈           [Q =  -3.83 MeV] (Mg25 --&gt; Na25 &lt;wea
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/0446512f1632009e68236613e5cff0ab256bb336d71693bf467e5eac86f4da75.png" src="_images/0446512f1632009e68236613e5cff0ab256bb336d71693bf467e5eac86f4da75.png" />
+<img alt="_images/a944896261e6e2c5390ca10acfc17cfc94157cb2a2b41ccbec97b8382a73b357.png" src="_images/a944896261e6e2c5390ca10acfc17cfc94157cb2a2b41ccbec97b8382a73b357.png" />
 </div>
 </div>
 </section>
