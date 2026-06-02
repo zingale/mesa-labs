@@ -25,6 +25,7 @@ MESA Summer School Urca Notebooks
 
    urca-intro
    initial_model.ipynb
+   A24.ipynb
    nets.ipynb
    mesa-net-vis.ipynb
    mesa-missing-rates.ipynb
