@@ -144,6 +144,9 @@ html_theme_options = {
     "use_edit_page_button": True,
     "use_source_button": True,
     "repository_branch": "main",
+    "launch_buttons": {
+        "colab_url": "https://colab.research.google.com",
+    },
     "path_to_docs": "docs/source",
     "logo": {
         "text": f"MESA Summer School Urca Labs",
