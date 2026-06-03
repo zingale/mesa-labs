@@ -429,6 +429,7 @@
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#degeneracy-vs-ideal-gas">Degeneracy vs. Ideal gas</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ideal-gas-vs-radiation">Ideal gas vs. radiation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#crystallization">Crystallization</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#plotting-the-boundaries">Plotting the boundaries</a></li>
 </ul>
             </nav>
@@ -547,14 +548,17 @@ so we will use the full <span class="math notranslate nohighlight">\(\mu\)</span
 </div>
 </div>
 </div>
-<p>Finally, at low temperatures and high densities, the ions can crystalize.  The comparison where is the thermal energy to the Coulomb energy:</p>
+</section>
+<section id="crystallization">
+<h2>Crystallization<a class="headerlink" href="#crystallization" title="Link to this heading">#</a></h2>
+<p>Finally, at low temperatures and high densities, the ions can crystallize.  The comparison where is the thermal energy to the Coulomb energy:</p>
 <div class="math notranslate nohighlight">
 \[\Gamma = \frac{kT}{Z^2 e^2 / a}\]</div>
-<p>where we take <span class="math notranslate nohighlight">\(\Gamma = 170\)</span> as the point where crystalization sets in.</p>
+<p>where we take <span class="math notranslate nohighlight">\(\Gamma = 170\)</span> as the point where crystallization sets in.</p>
 <p>The separation between ions, <span class="math notranslate nohighlight">\(a\)</span> is found via:</p>
 <div class="math notranslate nohighlight">
 \[V = n_I^{-1} = \frac{\mu_I m_u}{\rho} = \frac{4\pi}{3} a^3\]</div>
-<p>Putting this together, the expression for the boundary of crystalization is computed below</p>
+<p>Putting this together, the expression for the boundary of crystallization is computed below</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">crystallization</span><span class="p">(</span><span class="n">rho</span><span class="p">):</span>
@@ -660,6 +664,7 @@ so we will use the full <span class="math notranslate nohighlight">\(\mu\)</span
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#degeneracy-vs-ideal-gas">Degeneracy vs. Ideal gas</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ideal-gas-vs-radiation">Ideal gas vs. radiation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#crystallization">Crystallization</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#plotting-the-boundaries">Plotting the boundaries</a></li>
 </ul>
   </nav></div>
