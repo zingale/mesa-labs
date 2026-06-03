@@ -34,6 +34,7 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="_static/myfile.css?v=15ab05d9" />
   
   <!-- So that users can add custom icons -->
@@ -48,6 +49,7 @@
     <script src="_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="_static/copybutton.js?v=eaa7b67c"></script>
     <script src="_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
@@ -145,7 +147,10 @@
 </button></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
-        <p aria-level="2" class="caption" role="heading"><span class="caption-text">White Dwarfs</span></p>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="using.html">Playing Along With These Notes</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">White Dwarfs</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="degeneracy.html">Degeneracy and White Dwarfs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="wd_structure.html">White dwarf star structure</a></li>
@@ -878,16 +883,16 @@ Si28 + He4 ⟶ n + S31           [Q =  -8.09 MeV] (Si28 + He4 --&gt; n + S31 &lt
  F20 + He4 ⟶ Na24 + 𝛾,
  Ne20 + He4 ⟶ p + Na23,
  Ne20 + He4 ⟶ Mg24 + 𝛾,
- Ne23 + He4 ⟶ n + Mg26,
- Ne23 + He4 ⟶ Mg27 + 𝛾,
- Ne23 + e⁻ ⟶ F23 + 𝜈,
- Ne23 ⟶ n + Ne22,
  Ne23 + He4 ⟶ p + Na26,
+ Ne23 + He4 ⟶ n + Mg26,
+ Ne23 + e⁻ ⟶ F23 + 𝜈,
+ Ne23 + He4 ⟶ Mg27 + 𝛾,
+ Ne23 ⟶ n + Ne22,
  Ne24 + He4 ⟶ n + Mg27,
  Ne24 + He4 ⟶ Mg28 + 𝛾,
- Ne25 ⟶ n + Ne24,
  Ne25 + He4 ⟶ n + Mg28,
  Ne25 + He4 ⟶ Mg29 + 𝛾,
+ Ne25 ⟶ n + Ne24,
  Na23 + He4 ⟶ p + Mg26,
  Na25 + He4 ⟶ p + Mg28,
  Na25 + He4 ⟶ n + Al28,
@@ -920,11 +925,11 @@ Si28 + He4 ⟶ n + S31           [Q =  -8.09 MeV] (Si28 + He4 --&gt; n + S31 &lt
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[O20 + He4 ⟶ Ne24 + 𝛾,
- F20 + He4 ⟶ Na24 + 𝛾,
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[F20 + He4 ⟶ Na24 + 𝛾,
  O16 + He4 ⟶ Ne20 + 𝛾,
- F20 + He4 ⟶ p + Ne23,
+ O20 + He4 ⟶ Ne24 + 𝛾,
  Ne20 + He4 ⟶ p + Na23,
+ F20 + He4 ⟶ p + Ne23,
  Ne20 + He4 ⟶ Mg24 + 𝛾]
 </pre></div>
 </div>
@@ -986,7 +991,7 @@ Si28 + He4 ⟶ n + S31           [Q =  -8.09 MeV] (Si28 + He4 --&gt; n + S31 &lt
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/f03aedf36c6f06f7f9062ae1461f8201364ba68d391184d7dbb95ae03651b95d.png" src="_images/f03aedf36c6f06f7f9062ae1461f8201364ba68d391184d7dbb95ae03651b95d.png" />
+<img alt="_images/bdd6c1661e562f5a8c4a050359bdf84d531806e83e2374790798410c5dd2fecc.png" src="_images/bdd6c1661e562f5a8c4a050359bdf84d531806e83e2374790798410c5dd2fecc.png" />
 </div>
 </div>
 <p>what if we restrict it to just the rates that use the same nuclei?</p>
