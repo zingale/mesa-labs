@@ -1,6 +1,11 @@
 MESA Summer School Urca Notebooks
 =================================
 
+.. toctree::
+   :maxdepth: 1
+   :hidden:
+
+   using.rst
 
 .. toctree::
    :maxdepth: 1
