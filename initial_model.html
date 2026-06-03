@@ -153,6 +153,7 @@
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">White Dwarfs</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="degeneracy.html">Degeneracy and White Dwarfs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="eos-regimes.html">EOS regimes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="wd_structure.html">White dwarf star structure</a></li>
 <li class="toctree-l1"><a class="reference internal" href="wd-composition.html">White Dwarf Composition</a></li>
 </ul>
@@ -427,6 +428,7 @@
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-lab-1-profiles">Using Lab 1 profiles</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#eos-regimes">EOS regimes</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fermi-energy">Fermi energy</a></li>
 </ul>
             </nav>
@@ -442,6 +444,7 @@
   <section class="tex2jax_ignore mathjax_ignore" id="initial-model">
 <h1>Initial model<a class="headerlink" href="#initial-model" title="Link to this heading">#</a></h1>
 <p>We’ll look at the structure of the initial model we begin with in lab 1.</p>
+<p>You can download this as <a class="reference download internal" download="" href="_downloads/52f9e2a8cd9a0e50cca912f5c992d111/1.1Msun_ONe.mod"><code class="xref download docutils literal notranslate"><span class="pre">1.1Msun_ONe.mod</span></code></a>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">mesa_reader</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">mr</span>
@@ -486,7 +489,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7fc4b983be00&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7f0fc4f4fe00&gt;
 </pre></div>
 </div>
 <img alt="_images/0dae88b1ab7c1d604e4d2565e55b64176e84be01716063e05d93225a4d66bccb.png" src="_images/0dae88b1ab7c1d604e4d2565e55b64176e84be01716063e05d93225a4d66bccb.png" />
@@ -494,7 +497,8 @@
 </div>
 <section id="using-lab-1-profiles">
 <h2>Using Lab 1 profiles<a class="headerlink" href="#using-lab-1-profiles" title="Link to this heading">#</a></h2>
-<p>we can instead use the profiles that are output from Lab 1 at the start and end of the simulation.</p>
+<p>We can instead use the profiles that are output from Lab 1 at the start and end of the simulation.
+You can download these as <a class="reference download internal" download="" href="_downloads/3f69d1de1369c4a0d16fb89dadd528fc/profile1.data"><code class="xref download docutils literal notranslate"><span class="pre">lab1/profile1.data</span></code></a> and <a class="reference download internal" download="" href="_downloads/a3018308cee9aed3cfc26753e293b41b/profile2.data"><code class="xref download docutils literal notranslate"><span class="pre">lab1/profile2.data</span></code></a>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">model1</span> <span class="o">=</span> <span class="n">mr</span><span class="o">.</span><span class="n">MesaData</span><span class="p">(</span><span class="s2">&quot;lab1/profile1.data&quot;</span><span class="p">)</span>
@@ -543,6 +547,46 @@
 </div>
 </div>
 <p>Notice that the final model is smaller in radius—white dwarfs shrink as they grow in mass.</p>
+</section>
+<section id="eos-regimes">
+<h2>EOS regimes<a class="headerlink" href="#eos-regimes" title="Link to this heading">#</a></h2>
+<p>Let’s see where these models lay in our EOS regimes diagram.  The functions from that notebooks
+are available in <a class="reference download internal" download="" href="_downloads/89f381b7748b21632abc04067aafcd7a/regimes.py"><code class="xref download docutils literal notranslate"><span class="pre">regimes.py</span></code></a>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">regimes</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">loglog</span><span class="p">(</span><span class="n">rho1</span><span class="p">,</span> <span class="n">T1</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;initial&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">loglog</span><span class="p">(</span><span class="n">rho2</span><span class="p">,</span> <span class="n">T2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;final&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;$\rho$&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;T&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">ls</span><span class="o">=</span><span class="s2">&quot;:&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="mf">1.e-5</span><span class="p">,</span> <span class="mf">1.e11</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="mf">1.e4</span><span class="p">,</span> <span class="mf">1.e10</span><span class="p">)</span>
+
+<span class="n">rhos</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">logspace</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">loglog</span><span class="p">(</span><span class="n">rhos</span><span class="p">,</span> <span class="n">regimes</span><span class="o">.</span><span class="n">rad_ideal</span><span class="p">(</span><span class="n">rhos</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;0.5&quot;</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s2">&quot;--&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">loglog</span><span class="p">(</span><span class="n">rhos</span><span class="p">,</span> <span class="n">regimes</span><span class="o">.</span><span class="n">deg_ideal</span><span class="p">(</span><span class="n">rhos</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;0.5&quot;</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s2">&quot;--&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">loglog</span><span class="p">(</span><span class="n">rhos</span><span class="p">,</span> <span class="n">regimes</span><span class="o">.</span><span class="n">crystallization</span><span class="p">(</span><span class="n">rhos</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;0.5&quot;</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s2">&quot;--&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f0fc44a9a90&gt;]
+</pre></div>
+</div>
+<img alt="_images/4982de4aaf1d9057c2759e107aef39378d8be3c21f254f8943cb871e721f3821.png" src="_images/4982de4aaf1d9057c2759e107aef39378d8be3c21f254f8943cb871e721f3821.png" />
+</div>
+</div>
+<p>We see that our model is far from crystallizaton or radiation being important.</p>
 </section>
 <section id="fermi-energy">
 <h2>Fermi energy<a class="headerlink" href="#fermi-energy" title="Link to this heading">#</a></h2>
@@ -751,6 +795,7 @@ And it is &gt; 7 MeV, which is large comparable to the typical binding energy
   <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-lab-1-profiles">Using Lab 1 profiles</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#eos-regimes">EOS regimes</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fermi-energy">Fermi energy</a></li>
 </ul>
   </nav></div>

@@ -12,7 +12,7 @@ Working on your own computer
 Clicking on the :octicon:`download` icon in the upper right let's you
 download the raw notebook so you can run it on your local computer.
 
-You'll need to install [pynucastro](https://pynucastro.github.io) and [mesa_reader](https://github.com/wmwolf/py_mesa_reader).
+You'll need to install `pynucastro <https://pynucastro.github.io>`_ and `mesa_reader <https://github.com/wmwolf/py_mesa_reader>`_.
 This can be done via pip as:
 
 .. code:: bash
