@@ -434,7 +434,11 @@
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#degeneracy">Degeneracy</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#transition-to-degeneracy">Transition to degeneracy</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#transition-to-degeneracy">Transition to degeneracy</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fermi-momentum">Fermi momentum</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#zero-t-limit">Zero-T limit</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#computing-eta">Computing <span class="math notranslate nohighlight">\(\eta\)</span></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#finding-the-trend-of-eta-with-rho-t">Finding the trend of <span class="math notranslate nohighlight">\(\eta\)</span> with <span class="math notranslate nohighlight">\(\rho, T\)</span></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pressure-at-zero-t">Pressure at zero-T</a></li>
@@ -532,18 +536,15 @@ be important.</p>
 <p>and then</p>
 <div class="math notranslate nohighlight">
 \[\eta = \frac{\mu - m_e c^2}{k_B T} = \frac{\mathcal{E}_F}{k_B T}\]</div>
-<p>Conceptually:</p>
-<ul class="simple">
-<li><p>At <span class="math notranslate nohighlight">\(T = 0\)</span>, the Fermi energy is the energy of the highest occupied state in the distribution function.</p></li>
-<li><p>Even for non-zero <span class="math notranslate nohighlight">\(T\)</span>, we can still think of <span class="math notranslate nohighlight">\(\mathcal{E}_F\)</span> as being the energy of the most energetic
-electrons.</p></li>
-<li><p>We can think of <span class="math notranslate nohighlight">\(\eta\)</span> as (roughly) the ratio of the Fermi energy to the thermal energy</p></li>
-</ul>
 </section>
 </section>
 <section id="degeneracy">
 <h2>Degeneracy<a class="headerlink" href="#degeneracy" title="Link to this heading">#</a></h2>
-<p>The electrons are degenerate when <span class="math notranslate nohighlight">\(\eta \gg 1\)</span>, which means that the Fermi energy is much greater than the thermal energy.  The electrons behave as an ideal gas when <span class="math notranslate nohighlight">\(-\eta \gg 1\)</span> (in this case, the <span class="math notranslate nohighlight">\(+1\)</span> in the denominator of <span class="math notranslate nohighlight">\(n(p)\)</span> is insignificant and we get the Maxwell-Boltzmann distribution).</p>
+<p>We can understand the behavior of the electrons in terms of <span class="math notranslate nohighlight">\(\eta\)</span>:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(-\eta \gg 1\)</span> : the electrons behave as an ideal gas.  In this case, the <span class="math notranslate nohighlight">\(+1\)</span> in the denominator of <span class="math notranslate nohighlight">\(n(p)\)</span> is insignificant and we get the Maxwell-Boltzmann distribution.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\eta \gg 1\)</span> : the electrons are degenerate (Fermi energy is much greater than the thermal energy).</p></li>
+</ul>
 </section>
 <section id="transition-to-degeneracy">
 <h2>Transition to degeneracy<a class="headerlink" href="#transition-to-degeneracy" title="Link to this heading">#</a></h2>
@@ -598,15 +599,41 @@ electrons.</p></li>
 <img alt="_images/3a62a6a7d06b00d1b115b985bc8bf296d9b0a56dd6d9cb832d663ae422fb14e1.png" src="_images/3a62a6a7d06b00d1b115b985bc8bf296d9b0a56dd6d9cb832d663ae422fb14e1.png" />
 </div>
 </div>
-<p>As we see, as <span class="math notranslate nohighlight">\(\eta \rightarrow \infty\)</span>, the distribution, <span class="math notranslate nohighlight">\(F(\mathcal{E})\)</span> becomes a step function.  This is the limit of complete degeneracy, and we have:</p>
+<p>In the limit that <span class="math notranslate nohighlight">\(T \rightarrow 0\)</span> (complete degeneracy), then we have:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}F(\mathcal{E}) = \left \{ \begin{array}{cc} 1 &amp; \mathcal{E} &lt; \mathcal{E}_F \\
                                               0 &amp; \mathcal{E} &gt; \mathcal{E}_F \end{array} \right .\end{split}\]</div>
-<p>We can alternately use the Fermi momentum, <span class="math notranslate nohighlight">\(p_F\)</span> to describe the location of the step.</p>
-<p>With this form, the integral for number density is trivial:</p>
+<p>So the distrbution function tends to a step-function when we are really degenerate <em>and</em>
+the most energetic electrons have a kinetic energy = Fermi energy.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Conceptually:</p>
+<ul class="simple">
+<li><p>At <span class="math notranslate nohighlight">\(T = 0\)</span>, the Fermi energy is the energy of the highest occupied state in the distribution function.</p></li>
+<li><p>Since electrons have a non-zero energy / momentum, even at <span class="math notranslate nohighlight">\(T = 0\)</span>, there will be a pressure
+even in the limit <span class="math notranslate nohighlight">\(T \rightarrow 0\)</span>!</p></li>
+<li><p>Even for non-zero <span class="math notranslate nohighlight">\(T\)</span>, as long as <span class="math notranslate nohighlight">\(\eta \gg 1\)</span>, we can still think of <span class="math notranslate nohighlight">\(\mathcal{E}_F\)</span> as being (roughly) the energy of the most energetic
+electrons.</p></li>
+<li><p>We can think of <span class="math notranslate nohighlight">\(\eta\)</span> as (roughly) the ratio of the Fermi energy to the thermal energy</p></li>
+</ul>
+</div>
+<section id="fermi-momentum">
+<h3>Fermi momentum<a class="headerlink" href="#fermi-momentum" title="Link to this heading">#</a></h3>
+<p>We can alternately use the Fermi momentum, <span class="math notranslate nohighlight">\(p_F\)</span> to describe the location of the step.  Two important limits are:</p>
 <div class="math notranslate nohighlight">
-\[n_e = \frac{8\pi}{h^3} \int_0^{\mathcal{p}_F} p^2 dp\]</div>
+\[\begin{split}\mathcal{E}_F = \begin{cases} \frac{p_F^2}{2 m_e} &amp; \mbox{non-relativisitic} \\
+                                p_F c &amp; \mbox{extremely relativisitic} \end{cases}\end{split}\]</div>
+</section>
+<section id="zero-t-limit">
+<h3>Zero-T limit<a class="headerlink" href="#zero-t-limit" title="Link to this heading">#</a></h3>
+<p>For <span class="math notranslate nohighlight">\(T \rightarrow 0\)</span>, the integral for number density is trivial:</p>
+<div class="math notranslate nohighlight">
+\[n_e = \frac{2}{h^3} \int_0^{p_F} d^3p = \frac{8\pi}{h^3} \int_0^{p_F} p^2 dp\]</div>
 <p>where we switched to spherical coordinates in momentum space: <span class="math notranslate nohighlight">\(d^3p \rightarrow 4\pi p^2 dp\)</span>.</p>
+<p>Performing this integral, we get the Fermi momentum in terms of the number density of electrons:</p>
+<div class="math notranslate nohighlight">
+\[n_e = \frac{8\pi}{3h^3} p_F^3 \rightarrow p_F = \left (\frac{3}{8\pi} \right)^{1/3} h n_e^{1/3}\]</div>
+</section>
 </section>
 <section id="computing-eta">
 <h2>Computing <span class="math notranslate nohighlight">\(\eta\)</span><a class="headerlink" href="#computing-eta" title="Link to this heading">#</a></h2>
@@ -628,6 +655,12 @@ we can solve for <span class="math notranslate nohighlight">\(\eta\)</span>.</p>
 <div class="math notranslate nohighlight">
 \[\mathcal{E} = \frac{p^2}{2m_e}\]</div>
 <p>Once we have <span class="math notranslate nohighlight">\(\eta\)</span>, we can then find the pressure and energy of the gas.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>We normally express these integrals in terms of energy.  These integrals can be computed
+via pynucastro (see https://pynucastro.github.io/pynucastro/fermi-integrals.html)</p>
+<p>A C++ code that computes these at very high precision is available at https://github.com/zingale/electron_positron_cxx</p>
 </div>
 </section>
 <section id="finding-the-trend-of-eta-with-rho-t">
@@ -774,7 +807,7 @@ the transition to degeneracy occurs.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7f234ec2b380&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7f5f8d74f380&gt;
 </pre></div>
 </div>
 <img alt="_images/53689570f6d41bef767aa28537e270a094f54727efacb9b3e83e915f69048d15.png" src="_images/53689570f6d41bef767aa28537e270a094f54727efacb9b3e83e915f69048d15.png" />
@@ -840,7 +873,11 @@ ideal gas.</p>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#degeneracy">Degeneracy</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#transition-to-degeneracy">Transition to degeneracy</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#transition-to-degeneracy">Transition to degeneracy</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fermi-momentum">Fermi momentum</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#zero-t-limit">Zero-T limit</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#computing-eta">Computing <span class="math notranslate nohighlight">\(\eta\)</span></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#finding-the-trend-of-eta-with-rho-t">Finding the trend of <span class="math notranslate nohighlight">\(\eta\)</span> with <span class="math notranslate nohighlight">\(\rho, T\)</span></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pressure-at-zero-t">Pressure at zero-T</a></li>
