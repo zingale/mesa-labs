@@ -38,21 +38,36 @@ Environments where Urca is at play
 We will focus on cooling in massive O/Ne WDs.  Some background (and inspiration
 for these labs) can be found in:
 
+* `The importance of Urca-process cooling in accreting ONe white
+  dwarfs <https://academic.oup.com/mnras/article/472/3/3390/4093085>`_
+  (Schwab et al. 2017)
+
+  This is the main inspiration for these labs
+
+* `The Formation of Electron-capture Supernovae: A Review <https://arxiv.org/abs/2509.25915v2>`_ (Wang et al. 2025)
+
+  This discusses electron-capture supernova, where Urca in the O/Ne core can also be important.
+
+
 
 Beyond the setup in this lab, we can encounter Urca in other contexts:
 
+* Convective Urca in massive C/O WDs (possible SN Ia progenitors?)
+  See:
 
-* Neutron star cooling (Wang et al. arXiv:2102.06010, Lattimer et al
-  1991)
+  * `The nuclear diversity of Type Ia supernova explosions
+    <https://ui.adsabs.harvard.edu/abs/2008NewAR..52..381P/abstract>`_
+    (Podsiadlowski et al. 2008)
 
-* convective Urca in massive CO WDs (SN Ia progenitors?)  (see, e.g.,
-  Podsiadlowsky et al. 2008)
+  * `Some Thoughts on the Convective Urca Process <https://arxiv.org/abs/2111.00132>`_ (Schwab 2021)
 
-* cooling in massive O/Ne WDs (Schwab 2021) perhaps in the context of
-  electron-capture supernovae (Wang et al. 2026)
+  * `Exploring the Carbon Simmering Phase: Reaction Rates, Mixing, and the Convective Urca Process <https://iopscience.iop.org/article/10.3847/1538-4357/aa9a3c>`_ (Schwab et al. 2017)
 
-  See `The Formation of Electron-capture Supernovae: A Review <https://arxiv.org/abs/2509.25915v2>`_ for
-  a discussion on the progenitor systems.
 
-key aspect -- Urca can enhance cooling
+* Neutron star cooling
+
+  * `Direct URCA process in neutron stars <https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.66.2701>`_ (Lattimer et al. 1991)
+
+  * `Urca Cooling in Neutron Star Crusts and Oceans: Effects of Nuclear Excitations <https://arxiv.org/abs/2102.06010>`_ (Wang et al. 2021)
+
 
