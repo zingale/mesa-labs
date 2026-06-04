@@ -22,7 +22,7 @@ This can be done via pip as:
 Using Google Colab
 ==================
 
-Clicking on the :octicon:`rocket` icon in the upper right will allow
+Clicking on the :octicon:`rocket` icon in the upper right (on pages that are notebooks) will allow
 launch the notebook directly in the cloud.
 
 As with the local install, you'll need pynucastro and mesa_reader.  These

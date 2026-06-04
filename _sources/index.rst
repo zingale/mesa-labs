@@ -6,6 +6,7 @@ MESA Summer School Urca Notebooks
    :hidden:
 
    using.rst
+   urca-intro
 
 .. toctree::
    :maxdepth: 1
@@ -29,7 +30,6 @@ MESA Summer School Urca Notebooks
    :caption: Urca Lab
    :hidden:
 
-   urca-intro
    initial_model.ipynb
    A24.ipynb
    nets.ipynb

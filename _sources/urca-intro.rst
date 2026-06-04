@@ -1,27 +1,48 @@
-************
-Urca Process
-************
+*********
+Lab Goals
+*********
+
+Our goal is to model nuclear processes in an accreting O/Ne white dwarf to understand
+temporal evolution (and ultimately whether the white dwarf can explode).
+
+We need to understand some concepts from astronomy:
+
+* Electron degeneracy and the equation of state
+* The structure of white dwarfs
+* Nuclear reactions, including strong-mediated and weak-interactions (like electron-capture and $\beta$-decay.
+
+We'll start with a framing of the problem and then discuss the concepts.
 
 Urca intro
 ==========
 
-Inside a white dwarf, we can encounter high densities where electron-capture is favored
-and low(er) densities where $\beta$-decay occurs.  So both processes can operate
-in the star.
+We will consider the competition of different nuclear processes.  For weak interactions, we have:
 
-This means that a nucleus might $\beta$-decay when near the surface, but as accretion
-pushes it to higher densities, it will be able to electron capture.
+* Electron-capture: a nucleus captures an electron, converting a proton to a neutron.
+* $\beta$-decay: a neutron in a nucleus decays into a proton + electron
 
-In stellar environments, convection will carry a nucleus through these regions
-many times.
+Each of these processes emits a neutrino, which carries energy out of the star---this can
+lead to cooling.
+
+The Urca process is when the electron-capture and $\beta$-decay competes, converting a nucleus back and forth,
+and robbing the star of energy.
+
+The high densities inside a white dwarf can inhibit these processes, so we need to understand
+how electrons behave at white dwarf densities.
+
 
 
 Environments where Urca is at play
 ==================================
 
-We encounter Urca in:
+We will focus on cooling in massive O/Ne WDs.  Some background (and inspiration
+for these labs) can be found in:
 
-* neutron star cooling (Wang et al. arXiv:2102.06010, Lattimer et al
+
+Beyond the setup in this lab, we can encounter Urca in other contexts:
+
+
+* Neutron star cooling (Wang et al. arXiv:2102.06010, Lattimer et al
   1991)
 
 * convective Urca in massive CO WDs (SN Ia progenitors?)  (see, e.g.,
