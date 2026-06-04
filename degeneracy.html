@@ -427,7 +427,12 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#distribution-function">Distribution function</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-equation-of-state">The Equation of State</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fermi-dirac-statistics">Fermi-Dirac statistics</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#thermodynamic-quantities">Thermodynamic quantities</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fermi-energy">Fermi energy</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#degeneracy">Degeneracy</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#transition-to-degeneracy">Transition to degeneracy</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#computing-eta">Computing <span class="math notranslate nohighlight">\(\eta\)</span></a></li>
@@ -447,14 +452,60 @@
                   
   <section class="tex2jax_ignore mathjax_ignore" id="degeneracy-and-white-dwarfs">
 <h1>Degeneracy and White Dwarfs<a class="headerlink" href="#degeneracy-and-white-dwarfs" title="Link to this heading">#</a></h1>
-<section id="distribution-function">
-<h2>Distribution function<a class="headerlink" href="#distribution-function" title="Link to this heading">#</a></h2>
-<p>The distribution function describes the properties of the electrons, and has the following meaning: <span class="math notranslate nohighlight">\(n(p) d^3 x d^3 p\)</span> is the number of particles with momentum <span class="math notranslate nohighlight">\(p\)</span> in a volume <span class="math notranslate nohighlight">\(d^3x\)</span>.  Our distribution function is:</p>
+<section id="the-equation-of-state">
+<h2>The Equation of State<a class="headerlink" href="#the-equation-of-state" title="Link to this heading">#</a></h2>
+<p>Inside of a star, once <span class="math notranslate nohighlight">\(T \sim 10^4~\mathrm{K}\)</span>, atoms are fully ionized, so we treat ions
+and electrons separately.  We also need to consider radiation pressure.  We can write the
+total pressure in a star as:</p>
+<div class="math notranslate nohighlight">
+\[P = P_\mathrm{ion} + P_e + P_\gamma\]</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For stellar atmospheres, we are not in LTE (photons and matter don’t have the same temperature), photons
+are not trapped, and atoms may be only partially ionized.</p>
+<p>We are only worrying about the stellar interior in this lab, so we can neglect these complications.</p>
+</div>
+<p>For stellar interiors we can describe these components as:</p>
+<ul>
+<li><p>ions : these behave as an ideal gas (until we get to neutron stars), so we take:</p>
+<div class="math notranslate nohighlight">
+\[P_\mathrm{ion} = \frac{\rho k_B T}{\mu_I m_u}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\mu_I\)</span> is the mean molecular weight of the ions and <span class="math notranslate nohighlight">\(m_u\)</span> is the atomic mass unit.</p>
+</li>
+<li><p>radiation : photons are in equilibrium with matter and the mean free path is short compared
+to any scales we care about in the star, so we can treat them as a blackbody:</p>
+<div class="math notranslate nohighlight">
+\[P_\gamma = \frac{1}{3} a T^4\]</div>
+<p>where <span class="math notranslate nohighlight">\(a\)</span> is the radiation constant.</p>
+</li>
+<li><p>electrons : these are tricky</p>
+<ul class="simple">
+<li><p>at low densities / high temperatures, electrons behave as an ideal gas</p></li>
+<li><p>at high densities / low temperatures, quantum mechanical effects become important.
+Because we are confining the electrons to a small volume, the Pauli exclusion principle
+comes into play, and says that the electrons need to take on high momentum.  This
+gives rise to a quantum mechanical pressure we call <em>degeneracy pressure</em>.</p></li>
+</ul>
+</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>We usually include an additional contribution, <em>Coulomb corrections</em>, to the pressure.
+This accounts for the non-ideal nature of the ions (due to their electric charge) at high densities,
+and lowers the pressure.</p>
+</div>
+</section>
+<section id="fermi-dirac-statistics">
+<h2>Fermi-Dirac statistics<a class="headerlink" href="#fermi-dirac-statistics" title="Link to this heading">#</a></h2>
+<p>We describe the statistics of particles through a distribution function:</p>
+<div class="math notranslate nohighlight">
+\[n(p) d^3 x d^3 p = \mbox{\# of particles with momentum $p$ to $p + dp$ in a volume $d^3x$}\]</div>
+<p>For electrons, the distribution function is the <a class="reference external" href="https://en.wikipedia.org/wiki/Fermi%E2%80%93Dirac_statistics">Fermi-Dirac distribution</a>.</p>
 <div class="math notranslate nohighlight">
 \[n(p) = \frac{2}{h^3} \frac{1}{e^{\mathcal{E}(p)/{k_B T} - \eta} + 1}\]</div>
-<p>where <span class="math notranslate nohighlight">\(\mathcal{E}\)</span> is the kinetic energy of the electron, <span class="math notranslate nohighlight">\(T\)</span> is the temperature, and <span class="math notranslate nohighlight">\(\eta\)</span> is the <em>degeneracy parameter</em> which is related to the chemical potential, <span class="math notranslate nohighlight">\(\mu\)</span>, and the <a class="reference external" href="https://en.wikipedia.org/wiki/Fermi_energy">Fermi energy</a>, <span class="math notranslate nohighlight">\(\mathcal{E}_F\)</span>, as:</p>
+<p>where <span class="math notranslate nohighlight">\(\mathcal{E}\)</span> is the kinetic energy of the electron, <span class="math notranslate nohighlight">\(T\)</span> is the temperature, and <span class="math notranslate nohighlight">\(\eta\)</span> is the <em>degeneracy parameter</em> which is related to the <a class="reference external" href="https://en.wikipedia.org/wiki/Chemical_potential">chemical potential</a>, <span class="math notranslate nohighlight">\(\mu\)</span>, via:</p>
 <div class="math notranslate nohighlight">
-\[\eta = \frac{\mu - m_e c^2}{k_B T} = \frac{\mathcal{E}_F}{k_B T}\]</div>
+\[\eta = \frac{\mu - m_e c^2}{k_B T}\]</div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>At low density and high-temperature, electron-positron pairs can be produced,
@@ -462,10 +513,8 @@ and we would need to consider the positron contribution to the EOS.  For the
 conditions we will be looking at in the white dwarf interior, these will not
 be important.</p>
 </div>
-</section>
-<section id="degeneracy">
-<h2>Degeneracy<a class="headerlink" href="#degeneracy" title="Link to this heading">#</a></h2>
-<p>The electrons are degenerate when <span class="math notranslate nohighlight">\(\eta \gg 1\)</span>, which means that the Fermi energy is much greater than the thermal energy.  The electrons behave as an ideal gas when <span class="math notranslate nohighlight">\(-\eta \gg 1\)</span> (in this case, the <span class="math notranslate nohighlight">\(+1\)</span> in the denominator of <span class="math notranslate nohighlight">\(n(p)\)</span> is insignificant and we get the Maxwell-Boltzmann distribution).</p>
+<section id="thermodynamic-quantities">
+<h3>Thermodynamic quantities<a class="headerlink" href="#thermodynamic-quantities" title="Link to this heading">#</a></h3>
 <p>To get the <em>number density</em>, we integrate over all momenta:</p>
 <div class="math notranslate nohighlight">
 \[n = \int n(p) d^3 p\]</div>
@@ -474,6 +523,27 @@ be important.</p>
 \[P = \frac{1}{3} \int n(p) v(p) p d^3 p\]</div>
 <div class="math notranslate nohighlight">
 \[\rho e = \int n(p) \mathcal{E}(p) d^3 p\]</div>
+</section>
+<section id="fermi-energy">
+<h3>Fermi energy<a class="headerlink" href="#fermi-energy" title="Link to this heading">#</a></h3>
+<p>We define <a class="reference external" href="https://en.wikipedia.org/wiki/Fermi_energy">Fermi energy</a>, <span class="math notranslate nohighlight">\(\mathcal{E}_F\)</span>, as:</p>
+<div class="math notranslate nohighlight">
+\[\mathcal{E}_F = \mu - m_e c^2\]</div>
+<p>and then</p>
+<div class="math notranslate nohighlight">
+\[\eta = \frac{\mu - m_e c^2}{k_B T} = \frac{\mathcal{E}_F}{k_B T}\]</div>
+<p>Conceptually:</p>
+<ul class="simple">
+<li><p>At <span class="math notranslate nohighlight">\(T = 0\)</span>, the Fermi energy is the energy of the highest occupied state in the distribution function.</p></li>
+<li><p>Even for non-zero <span class="math notranslate nohighlight">\(T\)</span>, we can still think of <span class="math notranslate nohighlight">\(\mathcal{E}_F\)</span> as being the energy of the most energetic
+electrons.</p></li>
+<li><p>We can think of <span class="math notranslate nohighlight">\(\eta\)</span> as (roughly) the ratio of the Fermi energy to the thermal energy</p></li>
+</ul>
+</section>
+</section>
+<section id="degeneracy">
+<h2>Degeneracy<a class="headerlink" href="#degeneracy" title="Link to this heading">#</a></h2>
+<p>The electrons are degenerate when <span class="math notranslate nohighlight">\(\eta \gg 1\)</span>, which means that the Fermi energy is much greater than the thermal energy.  The electrons behave as an ideal gas when <span class="math notranslate nohighlight">\(-\eta \gg 1\)</span> (in this case, the <span class="math notranslate nohighlight">\(+1\)</span> in the denominator of <span class="math notranslate nohighlight">\(n(p)\)</span> is insignificant and we get the Maxwell-Boltzmann distribution).</p>
 </section>
 <section id="transition-to-degeneracy">
 <h2>Transition to degeneracy<a class="headerlink" href="#transition-to-degeneracy" title="Link to this heading">#</a></h2>
@@ -704,7 +774,7 @@ the transition to degeneracy occurs.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7f1d47c4f380&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7f234ec2b380&gt;
 </pre></div>
 </div>
 <img alt="_images/53689570f6d41bef767aa28537e270a094f54727efacb9b3e83e915f69048d15.png" src="_images/53689570f6d41bef767aa28537e270a094f54727efacb9b3e83e915f69048d15.png" />
@@ -763,7 +833,12 @@ ideal gas.</p>
   </div>
   <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#distribution-function">Distribution function</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-equation-of-state">The Equation of State</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fermi-dirac-statistics">Fermi-Dirac statistics</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#thermodynamic-quantities">Thermodynamic quantities</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fermi-energy">Fermi energy</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#degeneracy">Degeneracy</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#transition-to-degeneracy">Transition to degeneracy</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#computing-eta">Computing <span class="math notranslate nohighlight">\(\eta\)</span></a></li>
