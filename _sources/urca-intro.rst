@@ -30,6 +30,17 @@ and robbing the star of energy.
 The high densities inside a white dwarf can inhibit these processes, so we need to understand
 how electrons behave at white dwarf densities.
 
+.. tip::
+
+   Why is it called Urca?
+
+   Gamow and Schenberg named it after the `Cassino da Urca <https://en.wikipedia.org/wiki/Urca_Casino>`_ in Urca, Rio
+   de Janeiro.
+
+      the Urca Process results in a rapid disappearance of thermal
+      energy from the interior of a star, similar to the rapid
+      disappearance of money from the pockets of the gamblers on the
+      Casino de Urca.
 
 
 Environments where Urca is at play
