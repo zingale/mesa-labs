@@ -36,3 +36,13 @@ MESA Summer School Urca Notebooks
    mesa-net-vis.ipynb
    mesa-missing-rates.ipynb
    urca-shells.ipynb
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Integrating Reaction Networks
+   :hidden:
+
+   reactions-overview/ODEs-implicit.ipynb
+   reactions-overview/ODEs-implicit-systems.ipynb
+   reactions-overview/ODEs-implicit-nonlinear-systems.ipynb
+   reactions-overview/application-CNO-network.ipynb
