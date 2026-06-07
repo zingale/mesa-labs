@@ -23,6 +23,8 @@ MESA Summer School Urca Notebooks
    :hidden:
 
    reactions.ipynb
+   reactions-oburning.ipynb
+   reactions-ecap-beta.ipynb
 
 .. toctree::
    :maxdepth: 1

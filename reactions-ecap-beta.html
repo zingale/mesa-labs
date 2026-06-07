@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Reaction networks &#8212; mesa-labs  documentation</title>
+    <title>Electron-capture / \(\beta\)-decay &#8212; mesa-labs  documentation</title>
   
   
   
@@ -53,11 +53,11 @@
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'reactions';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'reactions-ecap-beta';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="O-burning" href="reactions-oburning.html" />
-    <link rel="prev" title="White dwarf star structure" href="wd_structure.html" />
+    <link rel="next" title="Initial model" href="initial_model.html" />
+    <link rel="prev" title="O-burning" href="reactions-oburning.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="1.0" />
@@ -159,9 +159,9 @@
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Reactions</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Reaction networks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reactions.html">Reaction networks</a></li>
 <li class="toctree-l1"><a class="reference internal" href="reactions-oburning.html">O-burning</a></li>
-<li class="toctree-l1"><a class="reference internal" href="reactions-ecap-beta.html">Electron-capture / <span class="math notranslate nohighlight">\(\beta\)</span>-decay</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Electron-capture / <span class="math notranslate nohighlight">\(\beta\)</span>-decay</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Urca Lab</span></p>
 <ul class="nav bd-sidenav">
@@ -237,7 +237,7 @@
       
       
       
-      <li><a href="https://colab.research.google.com/github/zingale/mesa-labs/blob/main/docs/source/reactions.ipynb" target="_blank"
+      <li><a href="https://colab.research.google.com/github/zingale/mesa-labs/blob/main/docs/source/reactions-ecap-beta.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch on Colab"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -285,7 +285,7 @@
       
       
       
-      <li><a href="https://github.com/zingale/mesa-labs/blob/main/docs/source/reactions.ipynb?plain=1" target="_blank"
+      <li><a href="https://github.com/zingale/mesa-labs/blob/main/docs/source/reactions-ecap-beta.ipynb?plain=1" target="_blank"
    class="btn btn-sm btn-source-file-button dropdown-item"
    title="Show source"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -302,7 +302,7 @@
       
       
       
-      <li><a href="https://github.com/zingale/mesa-labs/edit/main/docs/source/reactions.ipynb" target="_blank"
+      <li><a href="https://github.com/zingale/mesa-labs/edit/main/docs/source/reactions-ecap-beta.ipynb" target="_blank"
    class="btn btn-sm btn-source-edit-button dropdown-item"
    title="Suggest edit"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -319,7 +319,7 @@
       
       
       
-      <li><a href="https://github.com/zingale/mesa-labs/issues/new?title=Issue%20on%20page%20%2Freactions.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/zingale/mesa-labs/issues/new?title=Issue%20on%20page%20%2Freactions-ecap-beta.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -349,7 +349,7 @@
       
       
       
-      <li><a href="_sources/reactions.ipynb" target="_blank"
+      <li><a href="_sources/reactions-ecap-beta.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -425,7 +425,7 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Reaction networks</h1>
+    <h1>Electron-capture / \beta-decay</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -435,13 +435,7 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#general-reactions">General reactions</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nuclear-properties">Nuclear properties</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#energy-release">Energy release</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reaction-rate">Reaction rate</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mass-and-molar-fractions">Mass and molar fractions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sources-for-rates">Sources for rates</a></li>
 </ul>
             </nav>
         </div>
@@ -453,100 +447,10 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="reaction-networks">
-<h1>Reaction networks<a class="headerlink" href="#reaction-networks" title="Link to this heading">#</a></h1>
-<section id="general-reactions">
-<h2>General reactions<a class="headerlink" href="#general-reactions" title="Link to this heading">#</a></h2>
-<p>Consider the general reaction,</p>
-<div class="math notranslate nohighlight">
-\[X + a \rightarrow Y + b\]</div>
-<p>where <span class="math notranslate nohighlight">\(X\)</span> and <span class="math notranslate nohighlight">\(Y\)</span> are typically nuclei and <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(b\)</span> are light particles (like <span class="math notranslate nohighlight">\(p\)</span>, <span class="math notranslate nohighlight">\(\alpha\)</span>, <span class="math notranslate nohighlight">\(n\)</span>)</p>
-<p>We normally write this in a compact form as <span class="math notranslate nohighlight">\(X(a, b)Y\)</span>.</p>
-<section id="nuclear-properties">
-<h3>Nuclear properties<a class="headerlink" href="#nuclear-properties" title="Link to this heading">#</a></h3>
-<p>We characterize a nucleus with a mass number, <span class="math notranslate nohighlight">\(A\)</span> (the number of protons and neutrons) and a proton number, <span class="math notranslate nohighlight">\(Z\)</span>.</p>
-<p>In nuclear
-physics, masses are measured as the atomic mass excess:</p>
-<div class="math notranslate nohighlight">
-\[\Delta M_{AZ} = (m_{AZ} - A m_u) c^2\]</div>
-<p>where <span class="math notranslate nohighlight">\(m_{AZ}\)</span> is the actual mass and <span class="math notranslate nohighlight">\(m_u\)</span> is the atomic mass unit.</p>
-</section>
-<section id="energy-release">
-<h3>Energy release<a class="headerlink" href="#energy-release" title="Link to this heading">#</a></h3>
-<p>The energy release (or <span class="math notranslate nohighlight">\(Q\)</span>) value is just the difference in masses.</p>
-<p>In any reaction, the number of baryons is conserved, so the <span class="math notranslate nohighlight">\(Q\)</span> value is the difference in mass excesses.  For our reaction, it is:</p>
-<div class="math notranslate nohighlight">
-\[Q = (\Delta M_a + \Delta M_X) - (\Delta M_b - \Delta M_Y)\]</div>
-</section>
-<section id="reaction-rate">
-<h3>Reaction rate<a class="headerlink" href="#reaction-rate" title="Link to this heading">#</a></h3>
-<p>Imagine an experiment:</p>
-<ul class="simple">
-<li><p>A beam of partial <span class="math notranslate nohighlight">\(a\)</span> is shot at a fixed target of <span class="math notranslate nohighlight">\(X\)</span></p></li>
-<li><p>Each <span class="math notranslate nohighlight">\(X\)</span> nuclei presents a cross-section for reactions <span class="math notranslate nohighlight">\(\sigma\)</span></p></li>
-<li><p>The number of reactions will depend on the amount of <span class="math notranslate nohighlight">\(X\)</span> in the target</p></li>
-<li><p>The number of reactions / second will also depend on the flux of <span class="math notranslate nohighlight">\(a\)</span></p></li>
-</ul>
-<p>General form of a rate:</p>
-<div class="math notranslate nohighlight">
-\[r = (n_a v) (n_X \sigma)\]</div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p><span class="math notranslate nohighlight">\(r\)</span> has units of # of reactions / volume / time</p>
-</div>
-<p>Notice:</p>
-<ul class="simple">
-<li><p>v is the relative velocity between <span class="math notranslate nohighlight">\(X\)</span> and <span class="math notranslate nohighlight">\(a\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(\sigma\)</span> will be energy dependent, <span class="math notranslate nohighlight">\(\sigma(v)\)</span></p></li>
-<li><p>If <span class="math notranslate nohighlight">\(X\)</span> and <span class="math notranslate nohighlight">\(a\)</span> are the same particle, we divide by two (only care about pairs, not ordering)</p></li>
-</ul>
-<div class="math notranslate nohighlight">
-\[r = \frac{n_a n_X \sigma(v) v}{1 + \delta_{Xa}}\]</div>
-<p>There’s a range of velocities</p>
-<ul>
-<li><p>If both <span class="math notranslate nohighlight">\(X\)</span> and <span class="math notranslate nohighlight">\(a\)</span> velocities follow the Maxwell-Boltzmann distribution,
-then the relative   velocity does too.</p></li>
-<li><p>Define <span class="math notranslate nohighlight">\(\phi(v)\)</span> as M-B distribution (normalized to integrate to 1)</p></li>
-<li><p>Velocity averaged reaction rate is:</p>
-<div class="math notranslate nohighlight">
-\[r = \frac{n_a n_X}{1 + \delta_{aX}} \int_0^\infty v \sigma(v) \phi(v) dv \equiv \frac{n_a n_X}{1+ \delta_{aX}} \langle \sigma v \rangle\]</div>
-</li>
-</ul>
-<p>Note, all of the nuclear physics is contained in <span class="math notranslate nohighlight">\(\sigma\)</span>.</p>
-<p>The quantity <span class="math notranslate nohighlight">\(\sigma v\)</span> depends only on temperature.</p>
-<p>The evolution of nucleus <span class="math notranslate nohighlight">\(X\)</span> is given as:</p>
-<div class="math notranslate nohighlight">
-\[\frac{dn_X}{dt} = -r = -n_a n_X \langle \sigma v \rangle\]</div>
-<p>where the <span class="math notranslate nohighlight">\(-\)</span>  indicates that <span class="math notranslate nohighlight">\(X\)</span> is being destroyed.</p>
-</section>
-</section>
-<section id="mass-and-molar-fractions">
-<h2>Mass and molar fractions<a class="headerlink" href="#mass-and-molar-fractions" title="Link to this heading">#</a></h2>
-<p>We define the mass fraction of species <span class="math notranslate nohighlight">\(k\)</span> as:</p>
-<div class="math notranslate nohighlight">
-\[X_k = \frac{\rho_k}{\rho}\]</div>
-<p>where <span class="math notranslate nohighlight">\(\rho_k\)</span> is the mass density of species <span class="math notranslate nohighlight">\(k\)</span>.  Note that by conservation of mass,</p>
-<div class="math notranslate nohighlight">
-\[\sum_k X_k = 1\]</div>
-<p>We can express the mass density of species <span class="math notranslate nohighlight">\(k\)</span> as:</p>
-<div class="math notranslate nohighlight">
-\[\rho_k = A_k m_u n_k\]</div>
-<p>where <span class="math notranslate nohighlight">\(A_k m_u\)</span> represents the mass of a single nucleus.  This then shows that</p>
-<div class="math notranslate nohighlight">
-\[n_k = \frac{\rho_k}{A_k m_u} = \frac{\rho X_k}{A_k m_u}\]</div>
-<p>We define the molar fraction of species <span class="math notranslate nohighlight">\(k\)</span> as:</p>
-<div class="math notranslate nohighlight">
-\[Y_k = \frac{X_k}{A_k}\]</div>
-<p>then we have:</p>
-<div class="math notranslate nohighlight">
-\[n_k = \frac{\rho Y_k}{m_u}\]</div>
-<p>it is common to take <span class="math notranslate nohighlight">\(N_A = 1/m_u\)</span> (in CGS), and write this as:</p>
-<div class="math notranslate nohighlight">
-\[n_k = \rho N_A Y_k\]</div>
-<p>With this definition, our evolution equation becomes:</p>
-<div class="math notranslate nohighlight">
-\[\frac{dY(X)}{dt} = -\rho Y(a) Y(X) N_A \langle \sigma v \rangle\]</div>
-<p>Reaction rate libraries typically provide <span class="math notranslate nohighlight">\(N_A \langle \sigma v \rangle\)</span>.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="electron-capture-beta-decay">
+<h1>Electron-capture / <span class="math notranslate nohighlight">\(\beta\)</span>-decay<a class="headerlink" href="#electron-capture-beta-decay" title="Link to this heading">#</a></h1>
+<section id="sources-for-rates">
+<h2>Sources for rates<a class="headerlink" href="#sources-for-rates" title="Link to this heading">#</a></h2>
 </section>
 </section>
 
@@ -562,20 +466,20 @@ then the relative   velocity does too.</p></li>
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="wd_structure.html"
+       href="reactions-oburning.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">White dwarf star structure</p>
+        <p class="prev-next-title">O-burning</p>
       </div>
     </a>
     <a class="right-next"
-       href="reactions-oburning.html"
+       href="initial_model.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">O-burning</p>
+        <p class="prev-next-title">Initial model</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -597,13 +501,7 @@ then the relative   velocity does too.</p></li>
   </div>
   <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#general-reactions">General reactions</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nuclear-properties">Nuclear properties</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#energy-release">Energy release</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reaction-rate">Reaction rate</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mass-and-molar-fractions">Mass and molar fractions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sources-for-rates">Sources for rates</a></li>
 </ul>
   </nav></div>
 
