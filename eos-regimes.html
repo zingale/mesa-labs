@@ -437,6 +437,7 @@
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ideal-gas-vs-radiation">Ideal gas vs. radiation</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#crystallization">Crystallization</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#plotting-the-boundaries">Plotting the boundaries</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#our-eos">Our EOS</a></li>
 </ul>
             </nav>
         </div>
@@ -450,6 +451,12 @@
                   
   <section class="tex2jax_ignore mathjax_ignore" id="eos-regimes">
 <h1>EOS regimes<a class="headerlink" href="#eos-regimes" title="Link to this heading">#</a></h1>
+<p>Recall, we’ll consider:</p>
+<ul class="simple">
+<li><p>ions (assume full ionization)</p></li>
+<li><p>electrons</p></li>
+<li><p>radiation</p></li>
+</ul>
 <p>We can look at the <span class="math notranslate nohighlight">\(\rho\)</span>-<span class="math notranslate nohighlight">\(T\)</span> plane to understand where each of the components of the EOS
 dominate.</p>
 <div class="cell docutils container">
@@ -470,29 +477,35 @@ dominate.</p>
 <span class="n">h</span> <span class="o">=</span> <span class="mf">6.63e-27</span>
 <span class="n">a</span> <span class="o">=</span> <span class="mf">5.67e-15</span>
 <span class="n">e</span> <span class="o">=</span> <span class="mf">4.8e-10</span> <span class="c1"># esu</span>
-
-<span class="c1"># crystallization</span>
-<span class="n">Gamma_C</span> <span class="o">=</span> <span class="mi">170</span>
 </pre></div>
 </div>
 </div>
 </div>
 <p>Some composition info.  We’ll specify</p>
+<ul>
+<li><p>mean molecular weight per electron:</p>
 <div class="math notranslate nohighlight">
 \[\mu_e = \left [ \sum_k \frac{Z_k X_k}{A_k} \right ]^{-1}\]</div>
+<p>we often work with electron fraction, <span class="math notranslate nohighlight">\(Y_e = 1/\mu_e\)</span></p>
+</li>
+<li><p>mean molecular weight of the ions:</p>
 <div class="math notranslate nohighlight">
 \[\mu_I = \left [ \sum_k \frac{X_k}{A_k} \right ]^{-1}\]</div>
-<p>and <span class="math notranslate nohighlight">\(\mu\)</span> such that</p>
+</li>
+<li><p>total mean molecular weight:</p>
 <div class="math notranslate nohighlight">
 \[\frac{1}{\mu} = \frac{1}{\mu_e} + \frac{1}{\mu_I}\]</div>
+</li>
+</ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mu_e</span> <span class="o">=</span> <span class="mi">2</span>
-<span class="n">mu_I</span> <span class="o">=</span> <span class="mf">1.0</span>
+<span class="n">mu_I</span> <span class="o">=</span> <span class="mf">12.0</span>
 
 <span class="n">mu</span> <span class="o">=</span> <span class="mf">1.0</span> <span class="o">/</span> <span class="p">(</span><span class="mf">1.0</span><span class="o">/</span><span class="n">mu_e</span> <span class="o">+</span> <span class="mf">1.0</span><span class="o">/</span><span class="n">mu_I</span><span class="p">)</span>
 
-<span class="n">Z</span> <span class="o">=</span> <span class="mf">1.0</span>
+<span class="c1"># for crystallization, we need the charge of the ions</span>
+<span class="n">Z</span> <span class="o">=</span> <span class="mf">6.0</span>
 </pre></div>
 </div>
 </div>
@@ -560,7 +573,7 @@ so we will use the full <span class="math notranslate nohighlight">\(\mu\)</span
 <p>Finally, at low temperatures and high densities, the ions can crystallize.  The comparison where is the thermal energy to the Coulomb energy:</p>
 <div class="math notranslate nohighlight">
 \[\Gamma = \frac{kT}{Z^2 e^2 / a}\]</div>
-<p>where we take <span class="math notranslate nohighlight">\(\Gamma = 170\)</span> as the point where crystallization sets in.</p>
+<p>where we take <span class="math notranslate nohighlight">\(\Gamma = 175\)</span> as the point where crystallization sets in (see <a class="reference external" href="https://arxiv.org/abs/astro-ph/0009261">Equation of state of fully ionized electron-ion plasmas. II. Extension to relativistic densities and to the solid phase</a> by Potekhin &amp; Chabrier 2002).</p>
 <p>The separation between ions, <span class="math notranslate nohighlight">\(a\)</span> is found via:</p>
 <div class="math notranslate nohighlight">
 \[V = n_I^{-1} = \frac{\mu_I m_u}{\rho} = \frac{4\pi}{3} a^3\]</div>
@@ -569,7 +582,8 @@ so we will use the full <span class="math notranslate nohighlight">\(\mu\)</span
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">crystallization</span><span class="p">(</span><span class="n">rho</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;temperature where crystallization of ions sets in&quot;&quot;&quot;</span>
-
+    <span class="n">Gamma_C</span> <span class="o">=</span> <span class="mi">175</span>
+    
     <span class="n">T</span> <span class="o">=</span> <span class="p">((</span><span class="n">rho</span> <span class="o">/</span> <span class="n">mu_I</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">Z</span><span class="o">**</span><span class="mi">2</span> <span class="o">*</span> <span class="n">e</span><span class="o">**</span><span class="mi">2</span> <span class="o">/</span> <span class="p">(</span><span class="n">Gamma_C</span> <span class="o">*</span> <span class="n">k</span><span class="p">))</span><span class="o">**</span><span class="mi">3</span> <span class="o">*</span> <span class="p">(</span><span class="mf">4.0</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">/</span> <span class="mf">3.0</span> <span class="o">/</span> 
 <span class="n">m_u</span><span class="p">))</span><span class="o">**</span><span class="p">(</span><span class="mf">1.</span><span class="o">/</span><span class="mf">3.</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">T</span>
@@ -615,9 +629,17 @@ so we will use the full <span class="math notranslate nohighlight">\(\mu\)</span
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/19dabb141f0ef7f9d37f272cde05aa016a34eea95eeb34ef811066b1a0a11154.png" src="_images/19dabb141f0ef7f9d37f272cde05aa016a34eea95eeb34ef811066b1a0a11154.png" />
+<img alt="_images/8ffdf6a9dad690f47fd7c60cc5abeeefb586459ba4007f93a85e3cf0367e4ea3.png" src="_images/8ffdf6a9dad690f47fd7c60cc5abeeefb586459ba4007f93a85e3cf0367e4ea3.png" />
 </div>
 </div>
+<p>Some representative WD positions are marked here—those are the conditions we might expect to encounter in the core of our WD in these labs.</p>
+</section>
+<section id="our-eos">
+<h2>Our EOS<a class="headerlink" href="#our-eos" title="Link to this heading">#</a></h2>
+<p>We’ll use the <code class="docutils literal notranslate"><span class="pre">helmeos</span></code> for these labs (see <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/2000ApJS..126..501T/abstract"> The Accuracy, Consistency, and Speed of an Electron-Positron Equation of State Based on Table Interpolation of the Helmholtz Free Energy </a> by Timmes &amp; Swesty 2000).  This tabulates the electron thermodynamics in terms of <span class="math notranslate nohighlight">\(\rho Y_e, T\)</span>,
+and then adds the ion, radiation, and a simple expression for the Coulomb interactions.</p>
+<p>If crystallization becomes important, we would be better served with using the <code class="docutils literal notranslate"><span class="pre">skye</span></code> EOS.  However that
+will run the labs a lot slower.</p>
 </section>
 </section>
 
@@ -672,6 +694,7 @@ so we will use the full <span class="math notranslate nohighlight">\(\mu\)</span
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ideal-gas-vs-radiation">Ideal gas vs. radiation</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#crystallization">Crystallization</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#plotting-the-boundaries">Plotting the boundaries</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#our-eos">Our EOS</a></li>
 </ul>
   </nav></div>
 
