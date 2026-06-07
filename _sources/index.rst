@@ -16,7 +16,6 @@ MESA Summer School Urca Notebooks
    degeneracy.ipynb
    eos-regimes.ipynb
    wd_structure.ipynb
-   wd-composition
 
 .. toctree::
    :maxdepth: 1
