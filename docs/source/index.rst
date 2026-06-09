@@ -16,6 +16,7 @@ MESA Summer School Urca Notebooks
    degeneracy.ipynb
    eos-regimes.ipynb
    wd_structure.ipynb
+   c-burning-products.ipynb
 
 .. toctree::
    :maxdepth: 1
