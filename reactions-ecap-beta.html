@@ -169,9 +169,9 @@
 <li class="toctree-l1"><a class="reference internal" href="initial_model.html">Initial model</a></li>
 <li class="toctree-l1"><a class="reference internal" href="A24.html">A = 23 vs. A = 24</a></li>
 <li class="toctree-l1"><a class="reference internal" href="nets.html">Networks used in labs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="urca-shells.html">Visualizing Urca shell</a></li>
 <li class="toctree-l1"><a class="reference internal" href="mesa-net-vis.html">Visualizing MESA reactions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="mesa-missing-rates.html">Finding other important rates</a></li>
-<li class="toctree-l1"><a class="reference internal" href="urca-shells.html">Visualizing Urca shell</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Integrating Reaction Networks</span></p>
 <ul class="nav bd-sidenav">
@@ -451,11 +451,17 @@
                   
   <section class="tex2jax_ignore mathjax_ignore" id="electron-capture-decay">
 <h1>Electron-capture / β-decay<a class="headerlink" href="#electron-capture-decay" title="Link to this heading">#</a></h1>
-<p>Consider a pair of nuclei, <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> linked together by electon-capture and <span class="math notranslate nohighlight">\(\beta\)</span>-decay:</p>
+<p>Consider a pair of nuclei, <span class="math notranslate nohighlight">\(X\)</span> and <span class="math notranslate nohighlight">\(Y\)</span> linked together by electon-capture and <span class="math notranslate nohighlight">\(\beta\)</span>-decay:</p>
 <div class="math notranslate nohighlight">
-\[A + e^- \rightarrow B + \nu_e\]</div>
+\[X + e^- \rightarrow Y + \nu_e\]</div>
 <div class="math notranslate nohighlight">
-\[B \rightarrow A + e^- + \bar{\nu}_e\]</div>
+\[Y \rightarrow X + e^- + \bar{\nu}_e\]</div>
+<p>These nuclei have the same mass number, <span class="math notranslate nohighlight">\(A\)</span>, but different proton numbers, <span class="math notranslate nohighlight">\(Z\)</span>:</p>
+<ul class="simple">
+<li><p>X: (Z, A)</p></li>
+<li><p>Y: (Z-1, A)</p></li>
+</ul>
+<p>For example, <span class="math notranslate nohighlight">\({}^{23}\mathrm{Na}\)</span> (Z = 11, A = 23) and <span class="math notranslate nohighlight">\({}^{23}\mathrm{Ne}\)</span> (Z = 10, A = 23)</p>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p>Any nuclear reaction needs to conserve baryon number, lepton number, and charge.  The neutrino / anti-neutrinos here

@@ -35,9 +35,9 @@ MESA Summer School Urca Notebooks
    initial_model.ipynb
    A24.ipynb
    nets.ipynb
+   urca-shells.ipynb
    mesa-net-vis.ipynb
    mesa-missing-rates.ipynb
-   urca-shells.ipynb
 
 .. toctree::
    :maxdepth: 1
