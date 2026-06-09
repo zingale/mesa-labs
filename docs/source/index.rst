@@ -16,7 +16,6 @@ MESA Summer School Urca Notebooks
    degeneracy.ipynb
    eos-regimes.ipynb
    wd_structure.ipynb
-   c-burning-products.ipynb
 
 .. toctree::
    :maxdepth: 1
@@ -24,6 +23,7 @@ MESA Summer School Urca Notebooks
    :hidden:
 
    reactions.ipynb
+   c-burning-products.ipynb
    reactions-oburning.ipynb
    reactions-ecap-beta.ipynb
 
