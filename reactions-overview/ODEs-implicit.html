@@ -597,10 +597,11 @@
 <section id="implicit-discretization">
 <h2>Implicit discretization<a class="headerlink" href="#implicit-discretization" title="Link to this heading">#</a></h2>
 <p>Now let’s try a simple first-order accurate implicit method</p>
-<p>\begin{align*}
-y^{n+1} &amp;= y^n + \tau \dot{y}^{n+1} \
-&amp;= y^n + \tau \left [-10^3 (y^{n+1} - e^{-t^{n+1}} ) - e^{-t^{n+1}}\right ]
-\end{align*}</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+y^{n+1} &amp;= y^n + \tau \dot{y}^{n+1} \\
+        &amp;= y^n + \tau \left [-10^3 (y^{n+1} - e^{-t^{n+1}} ) - e^{-t^{n+1}}\right ]
+\end{split}\]</div>
 <p>This is called <em>backward-Euler</em>.
 For our model problem, we can solve for the new state algebraically:</p>
 <div class="math notranslate nohighlight">
