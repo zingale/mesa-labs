@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>CNO Burning Example &#8212; mesa-labs  documentation</title>
+    <title>Reaction Networks 101 &#8212; mesa-labs  documentation</title>
   
   
   
@@ -51,11 +51,13 @@
     <script src="../_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
     <script src="../_static/design-tabs.js?v=f930bc37"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'reactions-overview/CNO-pynucastro';</script>
+    <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'reactions-overview/reactions-101';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Rate Approximations" href="aprox13.html" />
-    <link rel="prev" title="CNO Burning Example" href="CNO-example.html" />
+    <link rel="next" title="Stiff ODEs / Implicit Methods" href="ODEs-implicit.html" />
+    <link rel="prev" title="Finding other important rates" href="../mesa-missing-rates.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="1.0" />
@@ -173,12 +175,12 @@
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Integrating Reaction Networks</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="reactions-101.html">Reaction Networks 101</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Reaction Networks 101</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ODEs-implicit.html">Stiff ODEs / Implicit Methods</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ODEs-implicit-systems.html">Implicit Methods for Systems of ODEs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ODEs-implicit-nonlinear-systems.html">Implicit Methods and Nonlinear Systems</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CNO-example.html">CNO Burning Example</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">CNO Burning Example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CNO-pynucastro.html">CNO Burning Example</a></li>
 <li class="toctree-l1"><a class="reference internal" href="aprox13.html">Rate Approximations</a></li>
 </ul>
 
@@ -239,7 +241,7 @@
       
       
       
-      <li><a href="https://colab.research.google.com/github/zingale/mesa-labs/blob/main/docs/source/reactions-overview/CNO-pynucastro.ipynb" target="_blank"
+      <li><a href="https://colab.research.google.com/github/zingale/mesa-labs/blob/main/docs/source/reactions-overview/reactions-101.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch on Colab"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -287,7 +289,7 @@
       
       
       
-      <li><a href="https://github.com/zingale/mesa-labs/blob/main/docs/source/reactions-overview/CNO-pynucastro.ipynb?plain=1" target="_blank"
+      <li><a href="https://github.com/zingale/mesa-labs/blob/main/docs/source/reactions-overview/reactions-101.ipynb?plain=1" target="_blank"
    class="btn btn-sm btn-source-file-button dropdown-item"
    title="Show source"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -304,7 +306,7 @@
       
       
       
-      <li><a href="https://github.com/zingale/mesa-labs/edit/main/docs/source/reactions-overview/CNO-pynucastro.ipynb" target="_blank"
+      <li><a href="https://github.com/zingale/mesa-labs/edit/main/docs/source/reactions-overview/reactions-101.ipynb" target="_blank"
    class="btn btn-sm btn-source-edit-button dropdown-item"
    title="Suggest edit"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -321,7 +323,7 @@
       
       
       
-      <li><a href="https://github.com/zingale/mesa-labs/issues/new?title=Issue%20on%20page%20%2Freactions-overview/CNO-pynucastro.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/zingale/mesa-labs/issues/new?title=Issue%20on%20page%20%2Freactions-overview/reactions-101.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -351,7 +353,7 @@
       
       
       
-      <li><a href="../_sources/reactions-overview/CNO-pynucastro.ipynb" target="_blank"
+      <li><a href="../_sources/reactions-overview/reactions-101.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -414,7 +416,9 @@
 <button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
 </button>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -425,11 +429,21 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>CNO Burning Example</h1>
+    <h1>Reaction Networks 101</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reaction-rates">Reaction Rates</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#structure-of-a-network">Structure of a Network</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#integrating-the-network">Integrating the Network</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -439,141 +453,84 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="cno-burning-example">
-<h1>CNO Burning Example<a class="headerlink" href="#cno-burning-example" title="Link to this heading">#</a></h1>
-<p>We can redo the same integration but using pynucastro to manage the integration.  This will allow us to make pretty pictures.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">pynucastro</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pyna</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">net</span> <span class="o">=</span> <span class="n">pyna</span><span class="o">.</span><span class="n">network_helper</span><span class="p">([</span><span class="s2">&quot;p&quot;</span><span class="p">,</span> <span class="s2">&quot;he4&quot;</span><span class="p">,</span>
-                           <span class="s2">&quot;c12&quot;</span><span class="p">,</span> <span class="s2">&quot;c13&quot;</span><span class="p">,</span>
-                           <span class="s2">&quot;n13&quot;</span><span class="p">,</span> <span class="s2">&quot;n14&quot;</span><span class="p">,</span> <span class="s2">&quot;n15&quot;</span><span class="p">,</span>
-                           <span class="s2">&quot;o14&quot;</span><span class="p">,</span> <span class="s2">&quot;o15&quot;</span><span class="p">,</span> <span class="s2">&quot;o16&quot;</span><span class="p">,</span> <span class="s2">&quot;o17&quot;</span><span class="p">,</span> <span class="s2">&quot;o18&quot;</span><span class="p">,</span>
-                           <span class="s2">&quot;f17&quot;</span><span class="p">,</span> <span class="s2">&quot;f18&quot;</span><span class="p">,</span> <span class="s2">&quot;f19&quot;</span><span class="p">,</span>
-                           <span class="s2">&quot;ne18&quot;</span><span class="p">,</span> <span class="s2">&quot;ne19&quot;</span><span class="p">,</span> <span class="s2">&quot;ne20&quot;</span><span class="p">],</span> <span class="n">tabular_ordering</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;ffn&quot;</span><span class="p">,</span> <span class="s2">&quot;oda&quot;</span><span class="p">])</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>We’ll setup the same initial conditions</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rho</span> <span class="o">=</span> <span class="mi">150</span>
-<span class="n">T</span> <span class="o">=</span> <span class="mf">1.5e7</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">comp</span> <span class="o">=</span> <span class="n">pyna</span><span class="o">.</span><span class="n">Composition</span><span class="p">(</span><span class="n">net</span><span class="o">.</span><span class="n">unique_nuclei</span><span class="p">)</span>
-<span class="n">comp</span><span class="o">.</span><span class="n">X</span><span class="p">[</span><span class="n">pyna</span><span class="o">.</span><span class="n">Nucleus</span><span class="p">(</span><span class="s2">&quot;p&quot;</span><span class="p">)]</span> <span class="o">=</span> <span class="mf">0.7</span>
-<span class="n">comp</span><span class="o">.</span><span class="n">X</span><span class="p">[</span><span class="n">pyna</span><span class="o">.</span><span class="n">Nucleus</span><span class="p">(</span><span class="s2">&quot;he4&quot;</span><span class="p">)]</span> <span class="o">=</span> <span class="mf">0.28</span>
-<span class="n">comp</span><span class="o">.</span><span class="n">X</span><span class="p">[</span><span class="n">pyna</span><span class="o">.</span><span class="n">Nucleus</span><span class="p">(</span><span class="s2">&quot;c12&quot;</span><span class="p">)]</span> <span class="o">=</span> <span class="mf">0.02</span>
-
-<span class="n">Y0</span> <span class="o">=</span> <span class="n">comp</span><span class="o">.</span><span class="n">get_molar_array</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>Now we can integrate</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tmax</span> <span class="o">=</span> <span class="mf">1.e20</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sol</span> <span class="o">=</span> <span class="n">net</span><span class="o">.</span><span class="n">integrate_network</span><span class="p">(</span><span class="n">tmax</span><span class="p">,</span> <span class="n">rho</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="n">Y0</span><span class="p">,</span> <span class="n">atol</span><span class="o">=</span><span class="mf">1.e-8</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/hostedtoolcache/Python/3.14.5/x64/lib/python3.14/site-packages/pynucastro/rates/derived_rate.py:125: UserWarning: C12 partition function is not supported by tables: set log_pf = 0.0 by default
-  warnings.warn(UserWarning(f&#39;{nuc} partition function is not supported by tables: set log_pf = 0.0 by default&#39;))
-/opt/hostedtoolcache/Python/3.14.5/x64/lib/python3.14/site-packages/pynucastro/rates/derived_rate.py:125: UserWarning: N13 partition function is not supported by tables: set log_pf = 0.0 by default
-  warnings.warn(UserWarning(f&#39;{nuc} partition function is not supported by tables: set log_pf = 0.0 by default&#39;))
-/opt/hostedtoolcache/Python/3.14.5/x64/lib/python3.14/site-packages/pynucastro/rates/derived_rate.py:125: UserWarning: C13 partition function is not supported by tables: set log_pf = 0.0 by default
-  warnings.warn(UserWarning(f&#39;{nuc} partition function is not supported by tables: set log_pf = 0.0 by default&#39;))
-/opt/hostedtoolcache/Python/3.14.5/x64/lib/python3.14/site-packages/pynucastro/rates/derived_rate.py:125: UserWarning: N14 partition function is not supported by tables: set log_pf = 0.0 by default
-  warnings.warn(UserWarning(f&#39;{nuc} partition function is not supported by tables: set log_pf = 0.0 by default&#39;))
-/opt/hostedtoolcache/Python/3.14.5/x64/lib/python3.14/site-packages/pynucastro/rates/derived_rate.py:125: UserWarning: N15 partition function is not supported by tables: set log_pf = 0.0 by default
-  warnings.warn(UserWarning(f&#39;{nuc} partition function is not supported by tables: set log_pf = 0.0 by default&#39;))
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sol</span><span class="o">.</span><span class="n">success</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
-</pre></div>
-</div>
-</div>
-</div>
-<p>Now we can plot the mass fractions.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span> <span class="o">=</span> <span class="n">sol</span><span class="o">.</span><span class="n">plot_evolution</span><span class="p">(</span><span class="n">ymin</span><span class="o">=</span><span class="mf">1.e-8</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/hostedtoolcache/Python/3.14.5/x64/lib/python3.14/site-packages/pynucastro/networks/python_network.py:412: UserWarning: Attempt to set non-positive xlim on a log-scaled axis will be ignored.
-  ax.set_xlim(tmin, tmax)
-</pre></div>
-</div>
-<img alt="../_images/56a7ec0da62214edaef384a1136759ea18146240a0b89dc3ec94d189d427c9f6.png" src="../_images/56a7ec0da62214edaef384a1136759ea18146240a0b89dc3ec94d189d427c9f6.png" />
-</div>
-</div>
-<p>We can also look at the flow through the network</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X_final</span> <span class="o">=</span> <span class="n">sol</span><span class="o">.</span><span class="n">X</span><span class="p">[:,</span> <span class="o">-</span><span class="mi">1</span><span class="p">]</span>
-<span class="n">comp_final</span> <span class="o">=</span> <span class="n">pyna</span><span class="o">.</span><span class="n">Composition</span><span class="p">(</span><span class="n">net</span><span class="o">.</span><span class="n">unique_nuclei</span><span class="p">)</span>
-<span class="n">comp_final</span><span class="o">.</span><span class="n">set_array</span><span class="p">(</span><span class="n">X_final</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span> <span class="o">=</span> <span class="n">net</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">rho</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="n">comp_final</span><span class="p">,</span>
-               <span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">800</span><span class="p">,</span> <span class="mi">800</span><span class="p">),</span>
-               <span class="n">use_net_rate</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">color_nodes_by_abundance</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/hostedtoolcache/Python/3.14.5/x64/lib/python3.14/site-packages/pynucastro/rates/derived_rate.py:125: UserWarning: C12 partition function is not supported by tables: set log_pf = 0.0 by default
-  warnings.warn(UserWarning(f&#39;{nuc} partition function is not supported by tables: set log_pf = 0.0 by default&#39;))
-/opt/hostedtoolcache/Python/3.14.5/x64/lib/python3.14/site-packages/pynucastro/rates/derived_rate.py:125: UserWarning: N13 partition function is not supported by tables: set log_pf = 0.0 by default
-  warnings.warn(UserWarning(f&#39;{nuc} partition function is not supported by tables: set log_pf = 0.0 by default&#39;))
-/opt/hostedtoolcache/Python/3.14.5/x64/lib/python3.14/site-packages/pynucastro/rates/derived_rate.py:125: UserWarning: C13 partition function is not supported by tables: set log_pf = 0.0 by default
-  warnings.warn(UserWarning(f&#39;{nuc} partition function is not supported by tables: set log_pf = 0.0 by default&#39;))
-/opt/hostedtoolcache/Python/3.14.5/x64/lib/python3.14/site-packages/pynucastro/rates/derived_rate.py:125: UserWarning: N14 partition function is not supported by tables: set log_pf = 0.0 by default
-  warnings.warn(UserWarning(f&#39;{nuc} partition function is not supported by tables: set log_pf = 0.0 by default&#39;))
-/opt/hostedtoolcache/Python/3.14.5/x64/lib/python3.14/site-packages/pynucastro/rates/derived_rate.py:125: UserWarning: N15 partition function is not supported by tables: set log_pf = 0.0 by default
-  warnings.warn(UserWarning(f&#39;{nuc} partition function is not supported by tables: set log_pf = 0.0 by default&#39;))
-</pre></div>
-</div>
-<img alt="../_images/81683c3ec2f508c6ae6178ab8c0a8aae5ac7b09530d4800334a61b67fc9f5a46.png" src="../_images/81683c3ec2f508c6ae6178ab8c0a8aae5ac7b09530d4800334a61b67fc9f5a46.png" />
-</div>
-</div>
+  <section class="tex2jax_ignore mathjax_ignore" id="reaction-networks-101">
+<h1>Reaction Networks 101<a class="headerlink" href="#reaction-networks-101" title="Link to this heading">#</a></h1>
+<section id="reaction-rates">
+<h2>Reaction Rates<a class="headerlink" href="#reaction-rates" title="Link to this heading">#</a></h2>
+<p>Nuclear experiments provide us with reaction rates of the form (for a 2-body reaction):</p>
+<div class="math notranslate nohighlight">
+\[r = \frac{n_A n_B}{1 + \delta_{AB}} \langle \sigma v \rangle\]</div>
+<p>where <span class="math notranslate nohighlight">\(n_A\)</span> is the number density of species A and <span class="math notranslate nohighlight">\(n_B\)</span> is the number
+density of species B.  The denominator ensures that we don’t double
+count for a species reacting with itself.  The term <span class="math notranslate nohighlight">\(\langle \sigma v
+\rangle\)</span> is the average of the cross section and velocity over the
+distribution of velocities in the frame of the reaction.  This is what is
+measured by experiments.</p>
+<p>Here the rate, <span class="math notranslate nohighlight">\(r\)</span>, has units of reactions / time / volume.</p>
+<p>Reaction databases (like ReacLib) often provide fits to <span class="math notranslate nohighlight">\(N_A \langle \sigma v
+\rangle\)</span>, where <span class="math notranslate nohighlight">\(N_A\)</span> is Avogadro’s number.</p>
+</section>
+<section id="structure-of-a-network">
+<h2>Structure of a Network<a class="headerlink" href="#structure-of-a-network" title="Link to this heading">#</a></h2>
+<p>A reaction network is a set of nuclei and the rates that link them together.  Consider
+4 nuclei, <span class="math notranslate nohighlight">\(A\)</span>, <span class="math notranslate nohighlight">\(B\)</span>, <span class="math notranslate nohighlight">\(C\)</span>, and <span class="math notranslate nohighlight">\(D\)</span>, linked by 2 rates:</p>
+<div class="math notranslate nohighlight">
+\[A + A \rightarrow B + \gamma\]</div>
+<div class="math notranslate nohighlight">
+\[B + C \rightarrow A + D\]</div>
+<p>we would describe these as a set of ODEs for each species.  In terms
+of number density, it is straightforward to write down:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\frac{dn_A}{dt} &amp;= - 2 \frac{1}{2} n_A^2 \langle \sigma v \rangle_{AA}
+                     + n_B n_C \langle \sigma v \rangle_{BC} \\
+\frac{dn_B}{dt} &amp;= \frac{1}{2} n_A^2 \langle \sigma v \rangle_{AA} 
+                     - n_B n_C \langle \sigma v \rangle_{BC} \\
+\frac{dn_C}{dt} &amp;= - n_B n_C \langle \sigma v \rangle_{BC} \\
+\frac{dn_D}{dt} &amp;=  n_B n_C \langle \sigma v \rangle_{BC} \\
+\end{split}\]</div>
+<p>Here the first equation says that we lose 2 nuclei <span class="math notranslate nohighlight">\(A\)</span> for each <span class="math notranslate nohighlight">\(A + A\)</span> reaction
+and we gain 1 nuclei <span class="math notranslate nohighlight">\(A\)</span> for each <span class="math notranslate nohighlight">\(B + C\)</span> reaction.  The factor of 1/2 in the first
+term is because when <span class="math notranslate nohighlight">\(A\)</span> reacts with itself, we don’t want to double count the number
+of pairs.</p>
+<p>We can instead write this in terms of molar or mass fractions.  Mass fractions are defined
+as the mass of the species relative to the total mass of all species in a volume, or</p>
+<div class="math notranslate nohighlight">
+\[X_k = \frac{\rho_k}{\rho}\]</div>
+<p>These have the property</p>
+<div class="math notranslate nohighlight">
+\[\sum_k X_k = 1\]</div>
+<p>Molar fractions are scaled by the atomic weight:</p>
+<div class="math notranslate nohighlight">
+\[Y_k = \frac{X_k}{A_k}\]</div>
+<p>where <span class="math notranslate nohighlight">\(Y_k\)</span> is the molar fraction of species <span class="math notranslate nohighlight">\(k\)</span>, <span class="math notranslate nohighlight">\(X_k\)</span> is the mass fraction, and <span class="math notranslate nohighlight">\(A_k\)</span>
+is the atomic weight.  Number density is related to mass fraction as:</p>
+<div class="math notranslate nohighlight">
+\[n_k = \frac{\rho X_k}{m_u A_k}\]</div>
+<p>where <span class="math notranslate nohighlight">\(m_u\)</span> is the atomic mass unit (<span class="math notranslate nohighlight">\(1/N_A\)</span>).</p>
+<p>Substituting these into the above expression we get</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\frac{dY_A}{dt} &amp;= - 2 \frac{1}{2} \rho Y_A^2 N_A \langle \sigma v \rangle_{AA}
+                     + \rho Y_B Y_C N_A \langle \sigma v \rangle_{BC} \\
+\frac{dY_B}{dt} &amp;= \frac{1}{2} \rho Y_A^2 N_A \langle \sigma v \rangle_{AA} 
+                     - \rho Y_B Y_C N_A \langle \sigma v \rangle_{BC} \\
+\frac{dY_C}{dt} &amp;= - \rho Y_B Y_C N_A \langle \sigma v \rangle_{BC} \\
+\frac{dY_D}{dt} &amp;=  \rho Y_B Y_C N_A \langle \sigma v \rangle_{BC} \\
+\end{split}\]</div>
+<p>This is often the form we write the system of ODEs in when we write a network.</p>
+</section>
+<section id="integrating-the-network">
+<h2>Integrating the Network<a class="headerlink" href="#integrating-the-network" title="Link to this heading">#</a></h2>
+<p>We often need to integrate this system together with an energy
+equation to capture the evolution of the temperature as reactions
+progress, since the reaction rates are highly-temperature sensitive.</p>
+<p>But even without an energy equation, this system is difficult to
+integrate because there can be a wide range of timescales involved in
+the reaction rates, which makes the system a <em>stiff</em> system of ODEs.</p>
+<p>We need to use different methods from the explicit Runge-Kutta methods
+we often use.</p>
+</section>
 </section>
 
 
@@ -588,20 +545,20 @@
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="CNO-example.html"
+       href="../mesa-missing-rates.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">CNO Burning Example</p>
+        <p class="prev-next-title">Finding other important rates</p>
       </div>
     </a>
     <a class="right-next"
-       href="aprox13.html"
+       href="ODEs-implicit.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Rate Approximations</p>
+        <p class="prev-next-title">Stiff ODEs / Implicit Methods</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -611,6 +568,25 @@
             </div>
             
             
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reaction-rates">Reaction Rates</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#structure-of-a-network">Structure of a Network</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#integrating-the-network">Integrating the Network</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
