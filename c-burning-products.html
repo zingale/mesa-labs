@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Reaction networks &#8212; mesa-labs  documentation</title>
+    <title>Carbon burning products &#8212; mesa-labs  documentation</title>
   
   
   
@@ -53,11 +53,11 @@
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'reactions';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'c-burning-products';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="O-burning" href="reactions-oburning.html" />
-    <link rel="prev" title="Carbon burning products" href="c-burning-products.html" />
+    <link rel="next" title="Reaction networks" href="reactions.html" />
+    <link rel="prev" title="White dwarf star structure" href="wd_structure.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="1.0" />
@@ -152,15 +152,15 @@
 <li class="toctree-l1"><a class="reference internal" href="urca-intro.html">Lab Goals</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">White Dwarfs</span></p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="degeneracy.html">Degeneracy and White Dwarfs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="eos-regimes.html">EOS regimes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="wd_structure.html">White dwarf star structure</a></li>
-<li class="toctree-l1"><a class="reference internal" href="c-burning-products.html">Carbon burning products</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Carbon burning products</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Reactions</span></p>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Reaction networks</a></li>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="reactions.html">Reaction networks</a></li>
 <li class="toctree-l1"><a class="reference internal" href="reactions-oburning.html">O-burning</a></li>
 <li class="toctree-l1"><a class="reference internal" href="reactions-ecap-beta.html">Electron-capture / β-decay</a></li>
 </ul>
@@ -238,7 +238,7 @@
       
       
       
-      <li><a href="https://colab.research.google.com/github/zingale/mesa-labs/blob/main/docs/source/reactions.ipynb" target="_blank"
+      <li><a href="https://colab.research.google.com/github/zingale/mesa-labs/blob/main/docs/source/c-burning-products.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch on Colab"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -286,7 +286,7 @@
       
       
       
-      <li><a href="https://github.com/zingale/mesa-labs/blob/main/docs/source/reactions.ipynb?plain=1" target="_blank"
+      <li><a href="https://github.com/zingale/mesa-labs/blob/main/docs/source/c-burning-products.ipynb?plain=1" target="_blank"
    class="btn btn-sm btn-source-file-button dropdown-item"
    title="Show source"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -303,7 +303,7 @@
       
       
       
-      <li><a href="https://github.com/zingale/mesa-labs/edit/main/docs/source/reactions.ipynb" target="_blank"
+      <li><a href="https://github.com/zingale/mesa-labs/edit/main/docs/source/c-burning-products.ipynb" target="_blank"
    class="btn btn-sm btn-source-edit-button dropdown-item"
    title="Suggest edit"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -320,7 +320,7 @@
       
       
       
-      <li><a href="https://github.com/zingale/mesa-labs/issues/new?title=Issue%20on%20page%20%2Freactions.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/zingale/mesa-labs/issues/new?title=Issue%20on%20page%20%2Fc-burning-products.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -350,7 +350,7 @@
       
       
       
-      <li><a href="_sources/reactions.ipynb" target="_blank"
+      <li><a href="_sources/c-burning-products.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -413,9 +413,7 @@
 <button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
 </button>
-<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="fa-solid fa-list"></span>
-</button>
+
 </div></div>
       
     </div>
@@ -426,25 +424,11 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Reaction networks</h1>
+    <h1>Carbon burning products</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
-            <div>
-                <h2> Contents </h2>
-            </div>
-            <nav aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#general-reactions">General reactions</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nuclear-properties">Nuclear properties</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#energy-release">Energy release</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reaction-rate">Reaction rate</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mass-and-molar-fractions">Mass and molar fractions</a></li>
-</ul>
-            </nav>
         </div>
     </div>
 </div>
@@ -454,101 +438,126 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="reaction-networks">
-<h1>Reaction networks<a class="headerlink" href="#reaction-networks" title="Link to this heading">#</a></h1>
-<section id="general-reactions">
-<h2>General reactions<a class="headerlink" href="#general-reactions" title="Link to this heading">#</a></h2>
-<p>Consider the general reaction,</p>
-<div class="math notranslate nohighlight">
-\[X + a \rightarrow Y + b\]</div>
-<p>where <span class="math notranslate nohighlight">\(X\)</span> and <span class="math notranslate nohighlight">\(Y\)</span> are typically nuclei and <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(b\)</span> are light particles (like <span class="math notranslate nohighlight">\(p\)</span>, <span class="math notranslate nohighlight">\(\alpha\)</span>, <span class="math notranslate nohighlight">\(n\)</span>)</p>
-<p>We normally write this in a compact form as <span class="math notranslate nohighlight">\(X(a, b)Y\)</span>.</p>
-<section id="nuclear-properties">
-<h3>Nuclear properties<a class="headerlink" href="#nuclear-properties" title="Link to this heading">#</a></h3>
-<p>We characterize a nucleus with a mass number, <span class="math notranslate nohighlight">\(A\)</span> (the number of protons and neutrons) and a proton number, <span class="math notranslate nohighlight">\(Z\)</span>.</p>
-<p>In nuclear
-physics, masses are measured as the atomic mass excess:</p>
-<div class="math notranslate nohighlight">
-\[\Delta M_{AZ} = (m_{AZ} - A m_u) c^2\]</div>
-<p>where <span class="math notranslate nohighlight">\(m_{AZ}\)</span> is the actual mass and <span class="math notranslate nohighlight">\(m_u\)</span> is the atomic mass unit.</p>
-</section>
-<section id="energy-release">
-<h3>Energy release<a class="headerlink" href="#energy-release" title="Link to this heading">#</a></h3>
-<p>The energy release (or <span class="math notranslate nohighlight">\(Q\)</span>) value is just the difference in masses.</p>
-<p>In any reaction, the number of baryons is conserved, so the <span class="math notranslate nohighlight">\(Q\)</span> value is the difference in mass excesses.  For our reaction, it is:</p>
-<div class="math notranslate nohighlight">
-\[Q = (\Delta M_a + \Delta M_X) - (\Delta M_b - \Delta M_Y)\]</div>
-</section>
-<section id="reaction-rate">
-<h3>Reaction rate<a class="headerlink" href="#reaction-rate" title="Link to this heading">#</a></h3>
-<p>Imagine an experiment:</p>
-<ul class="simple">
-<li><p>A beam of partial <span class="math notranslate nohighlight">\(a\)</span> is shot at a fixed target of <span class="math notranslate nohighlight">\(X\)</span></p></li>
-<li><p>Each <span class="math notranslate nohighlight">\(X\)</span> nuclei presents a cross-section for reactions <span class="math notranslate nohighlight">\(\sigma\)</span></p></li>
-<li><p>The number of reactions will depend on the amount of <span class="math notranslate nohighlight">\(X\)</span> in the target</p></li>
-<li><p>The number of reactions / second will also depend on the flux of <span class="math notranslate nohighlight">\(a\)</span></p></li>
-</ul>
-<p>General form of a rate:</p>
-<div class="math notranslate nohighlight">
-\[r = (n_a v) (n_X \sigma)\]</div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p><span class="math notranslate nohighlight">\(r\)</span> has units of # of reactions / volume / time</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="carbon-burning-products">
+<h1>Carbon burning products<a class="headerlink" href="#carbon-burning-products" title="Link to this heading">#</a></h1>
+<p>O/Ne white dwarfs have small amounts of Na, Mg, and other nuclei which are the products of carbon burning.</p>
+<p>These will be the seed nuclei for the Urca process in our O/Ne white dwarfs.</p>
+<p>Let’s do a one-zone C/O burn to see what these end products are.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pynucastro</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pyna</span>
+</pre></div>
 </div>
-<p>Notice:</p>
-<ul class="simple">
-<li><p>v is the relative velocity between <span class="math notranslate nohighlight">\(X\)</span> and <span class="math notranslate nohighlight">\(a\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(\sigma\)</span> will be energy dependent, <span class="math notranslate nohighlight">\(\sigma(v)\)</span></p></li>
-<li><p>If <span class="math notranslate nohighlight">\(X\)</span> and <span class="math notranslate nohighlight">\(a\)</span> are the same particle, we divide by two (only care about pairs, not ordering)</p></li>
-</ul>
+</div>
+</div>
+<p>The major C burning processes are:</p>
 <div class="math notranslate nohighlight">
-\[r = \frac{n_a n_X \sigma(v) v}{1 + \delta_{Xa}}\]</div>
-<p>There’s a range of velocities</p>
-<ul>
-<li><p>If both <span class="math notranslate nohighlight">\(X\)</span> and <span class="math notranslate nohighlight">\(a\)</span> velocities follow the Maxwell-Boltzmann distribution,
-then the relative   velocity does too.</p></li>
-<li><p>Define <span class="math notranslate nohighlight">\(\phi(v)\)</span> as M-B distribution (normalized to integrate to 1)</p></li>
-<li><p>Velocity averaged reaction rate is:</p>
-<div class="math notranslate nohighlight">
-\[r = \frac{n_a n_X}{1 + \delta_{aX}} \int_0^\infty v \sigma(v) \phi(v) dv \equiv \frac{n_a n_X}{1+ \delta_{aX}} \langle \sigma v \rangle\]</div>
-</li>
-</ul>
-<p>Note, all of the nuclear physics is contained in <span class="math notranslate nohighlight">\(\sigma\)</span>.</p>
-<p>The quantity <span class="math notranslate nohighlight">\(\sigma v\)</span> depends only on temperature.</p>
-<p>The evolution of nucleus <span class="math notranslate nohighlight">\(X\)</span> is given as:</p>
-<div class="math notranslate nohighlight">
-\[\frac{dn_X}{dt} = -r = -n_a n_X \langle \sigma v \rangle\]</div>
-<p>where the <span class="math notranslate nohighlight">\(-\)</span>  indicates that <span class="math notranslate nohighlight">\(X\)</span> is being destroyed.</p>
-</section>
-</section>
-<section id="mass-and-molar-fractions">
-<h2>Mass and molar fractions<a class="headerlink" href="#mass-and-molar-fractions" title="Link to this heading">#</a></h2>
-<p>We define the mass fraction of species <span class="math notranslate nohighlight">\(k\)</span> as:</p>
-<div class="math notranslate nohighlight">
-\[X_k = \frac{\rho_k}{\rho}\]</div>
-<p>where <span class="math notranslate nohighlight">\(\rho_k\)</span> is the mass density of species <span class="math notranslate nohighlight">\(k\)</span>.  Note that by conservation of mass,</p>
-<div class="math notranslate nohighlight">
-\[\sum_k X_k = 1\]</div>
-<p>We can express the mass density of species <span class="math notranslate nohighlight">\(k\)</span> as:</p>
-<div class="math notranslate nohighlight">
-\[\rho_k = A_k m_u n_k\]</div>
-<p>where <span class="math notranslate nohighlight">\(A_k m_u\)</span> represents the mass of a single nucleus.  This then shows that</p>
-<div class="math notranslate nohighlight">
-\[n_k = \frac{\rho_k}{A_k m_u} = \frac{\rho X_k}{A_k m_u}\]</div>
-<p>We define the molar fraction of species <span class="math notranslate nohighlight">\(k\)</span> as:</p>
-<div class="math notranslate nohighlight">
-\[Y_k = \frac{X_k}{A_k}\]</div>
-<p>then we have:</p>
-<div class="math notranslate nohighlight">
-\[n_k = \frac{\rho Y_k}{m_u}\]</div>
-<p>it is common to take <span class="math notranslate nohighlight">\(N_A = 1/m_u\)</span> (in CGS), and write this as:</p>
-<div class="math notranslate nohighlight">
-\[n_k = \rho N_A Y_k\]</div>
-<p>With this definition, our evolution equation becomes:</p>
-<div class="math notranslate nohighlight">
-\[\frac{dY(X)}{dt} = -\rho Y(a) Y(X) N_A \langle \sigma v \rangle\]</div>
-<p>Reaction rate libraries typically provide <span class="math notranslate nohighlight">\(N_A \langle \sigma v \rangle\)</span>.</p>
-</section>
+\[\begin{split}\begin{split}{}^{12}\mathrm{C} + {}^{12}\mathrm{C} \rightarrow \begin{cases}
+       {}^{20}\mathrm{Ne} + \alpha \\
+       {}^{23}\mathrm{Na} + p \\
+       {}^{23}\mathrm{Mg} + n \end{cases}
+\end{split}\end{split}\]</div>
+<p>We’ll include some other Ne, Na, and Mg isotopes as well.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">net</span> <span class="o">=</span> <span class="n">pyna</span><span class="o">.</span><span class="n">network_helper</span><span class="p">([</span><span class="s2">&quot;p&quot;</span><span class="p">,</span> <span class="s2">&quot;he4&quot;</span><span class="p">,</span> <span class="s2">&quot;n&quot;</span><span class="p">,</span>
+                           <span class="s2">&quot;c12&quot;</span><span class="p">,</span> <span class="s2">&quot;o16&quot;</span><span class="p">,</span>
+                           <span class="s2">&quot;ne20&quot;</span><span class="p">,</span> <span class="s2">&quot;ne21&quot;</span><span class="p">,</span> <span class="s2">&quot;ne22&quot;</span><span class="p">,</span>
+                           <span class="s2">&quot;na21&quot;</span><span class="p">,</span> <span class="s2">&quot;na22&quot;</span><span class="p">,</span> <span class="s2">&quot;na23&quot;</span><span class="p">,</span>
+                           <span class="s2">&quot;mg23&quot;</span><span class="p">,</span> <span class="s2">&quot;mg24&quot;</span><span class="p">,</span> <span class="s2">&quot;mg25&quot;</span><span class="p">,</span>
+                           <span class="s2">&quot;al27&quot;</span><span class="p">,</span> <span class="s2">&quot;si28&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span> <span class="o">=</span> <span class="n">net</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">rotated</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/80fee497d1d725f343ed7f1573ba5ae58ce3b3e7675caa1deef1c757a692fe00.png" src="_images/80fee497d1d725f343ed7f1573ba5ae58ce3b3e7675caa1deef1c757a692fe00.png" />
+</div>
+</div>
+<p>We’ll assume conditions where we expect C buring to occur.  Our results will be very sensitive to temperature.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">comp</span> <span class="o">=</span> <span class="n">pyna</span><span class="o">.</span><span class="n">Composition</span><span class="p">(</span><span class="n">net</span><span class="o">.</span><span class="n">unique_nuclei</span><span class="p">)</span>
+<span class="n">comp</span><span class="o">.</span><span class="n">X</span><span class="p">[</span><span class="n">pyna</span><span class="o">.</span><span class="n">Nucleus</span><span class="p">(</span><span class="s2">&quot;c12&quot;</span><span class="p">)]</span> <span class="o">=</span> <span class="mf">0.5</span>
+<span class="n">comp</span><span class="o">.</span><span class="n">X</span><span class="p">[</span><span class="n">pyna</span><span class="o">.</span><span class="n">Nucleus</span><span class="p">(</span><span class="s2">&quot;o16&quot;</span><span class="p">)]</span> <span class="o">=</span> <span class="mf">0.5</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rho</span> <span class="o">=</span> <span class="mf">1.e8</span>
+<span class="n">T</span> <span class="o">=</span> <span class="mf">1.e9</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now we can burn, assuming that the thermodynamic conditions are fixed.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tmax</span> <span class="o">=</span> <span class="mf">1.e5</span>
+<span class="n">sol</span> <span class="o">=</span> <span class="n">net</span><span class="o">.</span><span class="n">integrate_network</span><span class="p">(</span><span class="n">tmax</span><span class="p">,</span> <span class="n">rho</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="n">comp</span><span class="o">.</span><span class="n">get_molar_array</span><span class="p">(),</span> <span class="n">atol</span><span class="o">=</span><span class="mf">1.e-10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/hostedtoolcache/Python/3.14.5/x64/lib/python3.14/site-packages/pynucastro/rates/derived_rate.py:125: UserWarning: C12 partition function is not supported by tables: set log_pf = 0.0 by default
+  warnings.warn(UserWarning(f&#39;{nuc} partition function is not supported by tables: set log_pf = 0.0 by default&#39;))
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span> <span class="o">=</span> <span class="n">sol</span><span class="o">.</span><span class="n">plot_evolution</span><span class="p">(</span><span class="n">three_level_style</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">ymin</span><span class="o">=</span><span class="mf">1.e-6</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/hostedtoolcache/Python/3.14.5/x64/lib/python3.14/site-packages/pynucastro/networks/python_network.py:412: UserWarning: Attempt to set non-positive xlim on a log-scaled axis will be ignored.
+  ax.set_xlim(tmin, tmax)
+</pre></div>
+</div>
+<img alt="_images/7ce9abb88fc70286e1aa3e5b23c3346402ab33201a587317d1a75de91a2456d0.png" src="_images/7ce9abb88fc70286e1aa3e5b23c3346402ab33201a587317d1a75de91a2456d0.png" />
+</div>
+</div>
+<p>We can access the mass fractions at the final time (the <code class="docutils literal notranslate"><span class="pre">-1</span></code> in the temporal index)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X</span> <span class="o">=</span> <span class="n">sol</span><span class="o">.</span><span class="n">X</span><span class="p">[:,</span> <span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">X</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([3.38751224e-22, 1.65082670e-17, 3.96382795e-12, 2.97792196e-02,
+       2.74934547e-01, 5.67725355e-01, 3.32497954e-04, 1.19597671e-04,
+       4.82001646e-09, 9.41848870e-06, 6.51458531e-03, 1.63783991e-09,
+       1.11145073e-01, 2.66979319e-03, 1.14896355e-04, 6.65500990e-03])
+</pre></div>
+</div>
+</div>
+</div>
+<p>We can visualize the fractions of the final composition:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">comp</span> <span class="o">=</span> <span class="n">pyna</span><span class="o">.</span><span class="n">Composition</span><span class="p">(</span><span class="n">net</span><span class="o">.</span><span class="n">unique_nuclei</span><span class="p">)</span>
+<span class="n">comp</span><span class="o">.</span><span class="n">set_array</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">comp</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">trace_threshold</span><span class="o">=</span><span class="mf">5.e-3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/5bc0f4c4aa776f5d35059ad05fb7a789a86cb2db9f444b8956958cde50b30237.png" src="_images/5bc0f4c4aa776f5d35059ad05fb7a789a86cb2db9f444b8956958cde50b30237.png" />
+</div>
+</div>
+<p>Now we see that the major products after <span class="math notranslate nohighlight">\({}^{20}\mathrm{Ne}\)</span> are <span class="math notranslate nohighlight">\({}^{24}\mathrm{Mg}\)</span> and then the two Urca nuclei we will focus on: <span class="math notranslate nohighlight">\({}^{23}\mathrm{Na}\)</span> and <span class="math notranslate nohighlight">\({}^{25}\mathrm{Mg}\)</span>.</p>
 </section>
 
 
@@ -563,20 +572,20 @@ then the relative   velocity does too.</p></li>
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="c-burning-products.html"
+       href="wd_structure.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Carbon burning products</p>
+        <p class="prev-next-title">White dwarf star structure</p>
       </div>
     </a>
     <a class="right-next"
-       href="reactions-oburning.html"
+       href="reactions.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">O-burning</p>
+        <p class="prev-next-title">Reaction networks</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -586,29 +595,6 @@ then the relative   velocity does too.</p></li>
             </div>
             
             
-              
-                <dialog id="pst-secondary-sidebar-modal"></dialog>
-                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-
-  <div class="sidebar-secondary-item"><div
-    id="pst-page-navigation-heading-2"
-    class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> Contents
-  </div>
-  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#general-reactions">General reactions</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nuclear-properties">Nuclear properties</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#energy-release">Energy release</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reaction-rate">Reaction rate</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mass-and-molar-fractions">Mass and molar fractions</a></li>
-</ul>
-  </nav></div>
-
-</div></div>
               
             
           </div>
