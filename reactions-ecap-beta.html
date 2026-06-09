@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Electron-capture / \(\beta\)-decay &#8212; mesa-labs  documentation</title>
+    <title>Electron-capture / β-decay &#8212; mesa-labs  documentation</title>
   
   
   
@@ -161,7 +161,7 @@
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="reactions.html">Reaction networks</a></li>
 <li class="toctree-l1"><a class="reference internal" href="reactions-oburning.html">O-burning</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Electron-capture / <span class="math notranslate nohighlight">\(\beta\)</span>-decay</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Electron-capture / β-decay</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Urca Lab</span></p>
 <ul class="nav bd-sidenav">
@@ -425,7 +425,7 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Electron-capture / \beta-decay</h1>
+    <h1>Electron-capture / β-decay</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -435,6 +435,7 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#threshold">Threshold</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sources-for-rates">Sources for rates</a></li>
 </ul>
             </nav>
@@ -447,8 +448,40 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="electron-capture-beta-decay">
-<h1>Electron-capture / <span class="math notranslate nohighlight">\(\beta\)</span>-decay<a class="headerlink" href="#electron-capture-beta-decay" title="Link to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="electron-capture-decay">
+<h1>Electron-capture / β-decay<a class="headerlink" href="#electron-capture-decay" title="Link to this heading">#</a></h1>
+<p>Consider a pair of nuclei, <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> linked together by electon-capture and <span class="math notranslate nohighlight">\(\beta\)</span>-decay:</p>
+<div class="math notranslate nohighlight">
+\[A + e^- \rightarrow B + \nu_e\]</div>
+<div class="math notranslate nohighlight">
+\[B \rightarrow A + e^- + \bar{\nu}_e\]</div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Any nuclear reaction needs to conserve baryon number, lepton number, and charge.  The neutrino / anti-neutrinos here
+ensure that lepton-number is conserved.</p>
+</div>
+<p>The evolution equations for these are:</p>
+<div class="math notranslate nohighlight">
+\[\frac{dY(A)}{dt} = - Y(A) \lambda_\mathrm{ec} + Y(B) \lambda_{\beta}\]</div>
+<div class="math notranslate nohighlight">
+\[\frac{dY{B}}{dt} = + Y(A) \lambda_\mathrm{ec} - Y(B) \lambda_{\beta}\]</div>
+<p>where we note that the electron capture rate will have an implicit dependence on <span class="math notranslate nohighlight">\(\rho Y_e\)</span>—the density of electrons.</p>
+<section id="threshold">
+<h2>Threshold<a class="headerlink" href="#threshold" title="Link to this heading">#</a></h2>
+<p>When an electron is captured by <span class="math notranslate nohighlight">\(A\)</span>, it usually results in an excited state of nucleus <span class="math notranslate nohighlight">\(B\)</span>.  This means that
+the electron must have an energy of</p>
+<div class="math notranslate nohighlight">
+\[\mathcal{E} = Q_0 + \delta Q\]</div>
+<p>where <span class="math notranslate nohighlight">\(Q_0 = \mbox{mass}(A) - \mbox{mass}(B)\)</span> is the mass difference between the nuclei, and <span class="math notranslate nohighlight">\(\delta Q\)</span> depends on the energy level structure of the nucleus.</p>
+<p>In an degenerate gas, the most energetic electrons will have <span class="math notranslate nohighlight">\(\mathcal{E} \sim \mathcal{E}_F\)</span> (the Fermi energy).</p>
+<p>We can estimate a typical value for this energy and the density</p>
+<p>For a <span class="math notranslate nohighlight">\(\beta\)</span>-decay, it is the same idea.  The electron that is emitted needs to have a place to go.  For a degenerate gas, all of the states up to <span class="math notranslate nohighlight">\(\mathrm{E}_F\)</span> will be filled, so the electron can only decay when <span class="math notranslate nohighlight">\(Q_0 &gt; \mathcal{E}_F\)</span>.</p>
+<p>So approximately, we can imagine:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\mathcal{E}_F &gt; Q_0\)</span> : electron-capture possible</p></li>
+<li><p><span class="math notranslate nohighlight">\(\mathcal{E}_F &lt; Q_0\)</span> : beta-decay possible</p></li>
+</ul>
+</section>
 <section id="sources-for-rates">
 <h2>Sources for rates<a class="headerlink" href="#sources-for-rates" title="Link to this heading">#</a></h2>
 </section>
@@ -501,6 +534,7 @@
   </div>
   <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#threshold">Threshold</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sources-for-rates">Sources for rates</a></li>
 </ul>
   </nav></div>
