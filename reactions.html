@@ -56,8 +56,8 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'reactions';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="O-burning" href="reactions-oburning.html" />
-    <link rel="prev" title="Carbon burning products" href="c-burning-products.html" />
+    <link rel="next" title="Carbon burning products" href="c-burning-products.html" />
+    <link rel="prev" title="White dwarf star structure" href="wd_structure.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="1.0" />
@@ -156,11 +156,11 @@
 <li class="toctree-l1"><a class="reference internal" href="degeneracy.html">Degeneracy and White Dwarfs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="eos-regimes.html">EOS regimes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="wd_structure.html">White dwarf star structure</a></li>
-<li class="toctree-l1"><a class="reference internal" href="c-burning-products.html">Carbon burning products</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Reactions</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Reaction networks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="c-burning-products.html">Carbon burning products</a></li>
 <li class="toctree-l1"><a class="reference internal" href="reactions-oburning.html">O-burning</a></li>
 <li class="toctree-l1"><a class="reference internal" href="reactions-ecap-beta.html">Electron-capture / β-decay</a></li>
 </ul>
@@ -437,6 +437,7 @@
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#general-reactions">General reactions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#expectations">Expectations</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nuclear-properties">Nuclear properties</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#energy-release">Energy release</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reaction-rate">Reaction rate</a></li>
@@ -463,6 +464,31 @@
 \[X + a \rightarrow Y + b\]</div>
 <p>where <span class="math notranslate nohighlight">\(X\)</span> and <span class="math notranslate nohighlight">\(Y\)</span> are typically nuclei and <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(b\)</span> are light particles (like <span class="math notranslate nohighlight">\(p\)</span>, <span class="math notranslate nohighlight">\(\alpha\)</span>, <span class="math notranslate nohighlight">\(n\)</span>)</p>
 <p>We normally write this in a compact form as <span class="math notranslate nohighlight">\(X(a, b)Y\)</span>.</p>
+<section id="expectations">
+<h3>Expectations<a class="headerlink" href="#expectations" title="Link to this heading">#</a></h3>
+<p>For nuclei to fuse, they need to overcome the Coulomb repulsion and get close enough to fall into the attractive potential
+well of the strong force, ~ 1 fm.</p>
+<p>For example, consider proton fusion.  The incoming proton will see a potential of the form:</p>
+<p><img alt="coulomb" src="_images/coulomb_barrier.png" /></p>
+<p>The kinetic / thermal energy of the nucleus is</p>
+<div class="math notranslate nohighlight">
+\[E = \frac{3}{2}k T\]</div>
+<p>and the Coulomb energy is:</p>
+<div class="math notranslate nohighlight">
+\[U = \frac{Z_1 Z_2 e^2}{r}\]</div>
+<p>where <span class="math notranslate nohighlight">\(Z_1\)</span> and <span class="math notranslate nohighlight">\(Z_2\)</span> are the charges of the nuclei.  Equating these gives the classical turning radius, <span class="math notranslate nohighlight">\(r_0\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\frac{3}{2}k T = \frac{Z_1 Z_2 e^2}{r_0}\]</div>
+<p>This is the classical result.  And it would require really high temperatures (like <span class="math notranslate nohighlight">\(\sim 10^{10}~\mathrm{K}\)</span> for p + p).</p>
+<p>Quantum mechanics says that there is a probability for the nucleus to tunnel through the barrier,</p>
+<div class="math notranslate nohighlight">
+\[P \sim e^{-r_0 / \lambda} ~ \sim e^{-\mbox{constant} Z_1 Z_2 / E^{1/2}}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\lambda\)</span> is the de Broglie wavelength.  This lowers the required temperature significantly.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Immediately we see from this that heavier nuclei need higher temperatures to fuse.</p>
+</div>
+</section>
 <section id="nuclear-properties">
 <h3>Nuclear properties<a class="headerlink" href="#nuclear-properties" title="Link to this heading">#</a></h3>
 <p>We characterize a nucleus with a mass number, <span class="math notranslate nohighlight">\(A\)</span> (the number of protons and neutrons) and a proton number, <span class="math notranslate nohighlight">\(Z\)</span>.</p>
@@ -471,6 +497,10 @@ physics, masses are measured as the atomic mass excess:</p>
 <div class="math notranslate nohighlight">
 \[\Delta M_{AZ} = (m_{AZ} - A m_u) c^2\]</div>
 <p>where <span class="math notranslate nohighlight">\(m_{AZ}\)</span> is the actual mass and <span class="math notranslate nohighlight">\(m_u\)</span> is the atomic mass unit.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>The standard source for mass excesses is the <a class="reference external" href="https://www-nds.iaea.org/amdc/">atomic mass evaluations</a> which are updated every ~ 4 years.</p>
+</div>
 </section>
 <section id="energy-release">
 <h3>Energy release<a class="headerlink" href="#energy-release" title="Link to this heading">#</a></h3>
@@ -563,20 +593,20 @@ then the relative   velocity does too.</p></li>
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="c-burning-products.html"
+       href="wd_structure.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Carbon burning products</p>
+        <p class="prev-next-title">White dwarf star structure</p>
       </div>
     </a>
     <a class="right-next"
-       href="reactions-oburning.html"
+       href="c-burning-products.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">O-burning</p>
+        <p class="prev-next-title">Carbon burning products</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -599,6 +629,7 @@ then the relative   velocity does too.</p></li>
   <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#general-reactions">General reactions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#expectations">Expectations</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nuclear-properties">Nuclear properties</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#energy-release">Energy release</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reaction-rate">Reaction rate</a></li>
