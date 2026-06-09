@@ -33,8 +33,8 @@ MESA Summer School Urca Notebooks
    :hidden:
 
    initial_model.ipynb
-   A24.ipynb
    nets.ipynb
+   A24.ipynb
    urca-shells.ipynb
    mesa-net-vis.ipynb
    mesa-missing-rates.ipynb
@@ -44,7 +44,11 @@ MESA Summer School Urca Notebooks
    :caption: Integrating Reaction Networks
    :hidden:
 
+   reactions-overview/reactions-101.ipynb
    reactions-overview/ODEs-implicit.ipynb
    reactions-overview/ODEs-implicit-systems.ipynb
    reactions-overview/ODEs-implicit-nonlinear-systems.ipynb
-   reactions-overview/application-CNO-network.ipynb
+   reactions-overview/CNO-example.ipynb
+   reactions-overview/CNO-pynucastro.ipynb
+   reactions-overview/aprox13.ipynb
+
