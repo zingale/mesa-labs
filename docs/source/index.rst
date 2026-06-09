@@ -10,16 +10,17 @@ MESA Summer School Urca Notebooks
 
 .. toctree::
    :maxdepth: 1
-   :caption: White Dwarfs
+   :caption: Initial Concepts: WDs and degeneray (pre-lab 1)
    :hidden:
 
    degeneracy.ipynb
    eos-regimes.ipynb
    wd_structure.ipynb
+   initial_model_structure
 
 .. toctree::
    :maxdepth: 1
-   :caption: Reactions
+   :caption: More Concepts: Reactions (pre-lab 2)
    :hidden:
 
    reactions.ipynb
@@ -29,10 +30,10 @@ MESA Summer School Urca Notebooks
 
 .. toctree::
    :maxdepth: 1
-   :caption: Urca Lab
+   :caption: Putting It Together (pre-lab 3)
    :hidden:
 
-   initial_model.ipynb
+   initial_model_fermi.ipynb
    nets.ipynb
    A24.ipynb
    urca-shells.ipynb
