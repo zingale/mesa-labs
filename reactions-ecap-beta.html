@@ -492,9 +492,70 @@ the electron must have an energy of</p>
 </section>
 <section id="estimating-the-crticial-density">
 <h2>Estimating the crticial density<a class="headerlink" href="#estimating-the-crticial-density" title="Link to this heading">#</a></h2>
+<p>We expect the density where <span class="math notranslate nohighlight">\(\mathcal{E}_F \sim Q\)</span> to be high, so we will assume we are relatvistic.  Then</p>
+<div class="math notranslate nohighlight">
+\[\mathcal{E}_F = p_F c = \left ( \frac{3}{8\pi} \right )^{1/3} h c n_e^{1/3} \sim Q\]</div>
+<p>and taking:</p>
+<div class="math notranslate nohighlight">
+\[n_e = \frac{\rho Y_e}{m_u}\]</div>
+<p>we have</p>
+<div class="math notranslate nohighlight">
+\[\rho \sim \frac{8\pi}{3} \frac{m_u}{(hc)^3} \frac{Q}{Y_e}\]</div>
+<p>Now we can put in numbers.  We’ll take:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(Q \sim 4~\mathrm{MeV}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(Y_e \sim 1/2\)</span></p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">h</span> <span class="o">=</span> <span class="mf">6.63e-27</span>
+<span class="n">c</span> <span class="o">=</span> <span class="mf">3.e10</span>
+<span class="n">m_u</span> <span class="o">=</span> <span class="mf">1.66e-24</span>
+<span class="n">Y_e</span> <span class="o">=</span> <span class="mf">0.5</span>
+<span class="n">Q</span> <span class="o">=</span> <span class="mi">4</span> <span class="o">*</span> <span class="mf">1.6e-6</span>  <span class="c1"># convert to erg</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rho</span> <span class="o">=</span> <span class="mi">8</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span> <span class="o">/</span> <span class="mi">3</span> <span class="o">*</span> <span class="n">m_u</span> <span class="o">/</span> <span class="p">(</span><span class="n">h</span> <span class="o">*</span> <span class="n">c</span><span class="p">)</span><span class="o">**</span><span class="mi">3</span> <span class="o">*</span> <span class="n">Q</span><span class="o">**</span><span class="mi">3</span> <span class="o">/</span> <span class="n">Y_e</span>
+<span class="n">rho</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>926599926.1391867
+</pre></div>
+</div>
+</div>
+</div>
+<p>So we would expect</p>
+<div class="math notranslate nohighlight">
+\[\rho \sim 10^9~\mathrm{g~cm^{-3}} \left (\frac{Q}{4~\mathrm{MeV}}\right )^3 \left (\frac{Y_e}{0.5} \right )^{-1}\]</div>
+<p>This means that we don’t expect electron captures until our density is really high.  We will
+need to accrete a while before the electron-captures kick in.</p>
 </section>
 <section id="sources-for-rates">
 <h2>Sources for rates<a class="headerlink" href="#sources-for-rates" title="Link to this heading">#</a></h2>
+<p>Computing the rates requires knowing the detailed nuclear structure of the nuclei involved.  This means knowing:</p>
+<ul class="simple">
+<li><p>the energy level structure</p></li>
+<li><p>the spins for the different states (to see if transitions are allowed)</p></li>
+<li><p>the half life of excited states / transition widths</p></li>
+</ul>
+<p>These are usually computed via theoretical nuclear structure calculations.</p>
+<p>The paper <a class="reference external" href="https://academic.oup.com/mnras/article/472/3/3390/4093085">The importance of Urca-process cooling in accreting ONe white
+dwarfs</a> (Schwab et al. 2017) gives a bit of detail into the calculations.</p>
+<p>For these labs, we will primarily use the rates from
+<a class="reference external" href="https://ui.adsabs.harvard.edu/abs/2016ApJ...817..163S/abstract"> Electron-capture and β-decay Rates for sd-Shell Nuclei in Stellar Environments Relevant to High-density O-Ne-Mg Cores</a> (Suzuki et al. 2016)</p>
 </section>
 </section>
 
