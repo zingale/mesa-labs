@@ -44,7 +44,9 @@ MESA Summer School Urca Notebooks
    :caption: Integrating Reaction Networks
    :hidden:
 
+   reactions-overview/reactions-101.ipynb
    reactions-overview/ODEs-implicit.ipynb
    reactions-overview/ODEs-implicit-systems.ipynb
    reactions-overview/ODEs-implicit-nonlinear-systems.ipynb
-   reactions-overview/application-CNO-network.ipynb
+   reactions-overview/CNO-example.ipynb
+   reactions-overview/CNO-pynucastro.ipynb
