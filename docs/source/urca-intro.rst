@@ -70,10 +70,12 @@ Beyond the setup in this lab, we can encounter Urca in other contexts:
     <https://ui.adsabs.harvard.edu/abs/2008NewAR..52..381P/abstract>`_
     (Podsiadlowski et al. 2008)
 
-  * `Some Thoughts on the Convective Urca Process <https://arxiv.org/abs/2111.00132>`_ (Schwab 2021)
-
   * `Exploring the Carbon Simmering Phase: Reaction Rates, Mixing, and the Convective Urca Process <https://iopscience.iop.org/article/10.3847/1538-4357/aa9a3c>`_ (Schwab et al. 2017)
 
+
+  * `Some Thoughts on the Convective Urca Process <https://arxiv.org/abs/2111.00132>`_ (Schwab 2021)
+
+  * `3D Convective Urca Process in a Simmering White Dwarf <https://iopscience.iop.org/article/10.3847/1538-4357/ad9bb0>_ (Boyd et al. 2025)
 
 * Neutron star cooling
 
