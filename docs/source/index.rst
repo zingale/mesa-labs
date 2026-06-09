@@ -33,8 +33,8 @@ MESA Summer School Urca Notebooks
    :hidden:
 
    initial_model.ipynb
-   A24.ipynb
    nets.ipynb
+   A24.ipynb
    urca-shells.ipynb
    mesa-net-vis.ipynb
    mesa-missing-rates.ipynb
