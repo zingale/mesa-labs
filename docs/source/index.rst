@@ -51,4 +51,5 @@ MESA Summer School Urca Notebooks
    reactions-overview/CNO-example.ipynb
    reactions-overview/CNO-pynucastro.ipynb
    reactions-overview/aprox13.ipynb
+   reactions-overview/equilibrium.ipynb
 
