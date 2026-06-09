@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Aside: A = 23 vs. A = 24 &#8212; mesa-labs  documentation</title>
+    <title>Lab 1 model revisited &#8212; mesa-labs  documentation</title>
   
   
   
@@ -53,11 +53,11 @@
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'A24';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'initial_model_fermi';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Visualizing Urca shell" href="urca-shells.html" />
-    <link rel="prev" title="Networks used in labs" href="nets.html" />
+    <link rel="next" title="Networks used in labs" href="nets.html" />
+    <link rel="prev" title="Electron-capture / β-decay" href="reactions-ecap-beta.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="1.0" />
@@ -167,9 +167,9 @@
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Putting It Together (pre-lab 3)</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="initial_model_fermi.html">Lab 1 model revisited</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Lab 1 model revisited</a></li>
 <li class="toctree-l1"><a class="reference internal" href="nets.html">Networks used in labs</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Aside: A = 23 vs. A = 24</a></li>
+<li class="toctree-l1"><a class="reference internal" href="A24.html">Aside: A = 23 vs. A = 24</a></li>
 <li class="toctree-l1"><a class="reference internal" href="urca-shells.html">Visualizing Urca shell</a></li>
 <li class="toctree-l1"><a class="reference internal" href="mesa-net-vis.html">Visualizing MESA reactions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="mesa-missing-rates.html">Finding other important rates</a></li>
@@ -243,7 +243,7 @@
       
       
       
-      <li><a href="https://colab.research.google.com/github/zingale/mesa-labs/blob/main/docs/source/A24.ipynb" target="_blank"
+      <li><a href="https://colab.research.google.com/github/zingale/mesa-labs/blob/main/docs/source/initial_model_fermi.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch on Colab"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -291,7 +291,7 @@
       
       
       
-      <li><a href="https://github.com/zingale/mesa-labs/blob/main/docs/source/A24.ipynb?plain=1" target="_blank"
+      <li><a href="https://github.com/zingale/mesa-labs/blob/main/docs/source/initial_model_fermi.ipynb?plain=1" target="_blank"
    class="btn btn-sm btn-source-file-button dropdown-item"
    title="Show source"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -308,7 +308,7 @@
       
       
       
-      <li><a href="https://github.com/zingale/mesa-labs/edit/main/docs/source/A24.ipynb" target="_blank"
+      <li><a href="https://github.com/zingale/mesa-labs/edit/main/docs/source/initial_model_fermi.ipynb" target="_blank"
    class="btn btn-sm btn-source-edit-button dropdown-item"
    title="Suggest edit"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -325,7 +325,7 @@
       
       
       
-      <li><a href="https://github.com/zingale/mesa-labs/issues/new?title=Issue%20on%20page%20%2FA24.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/zingale/mesa-labs/issues/new?title=Issue%20on%20page%20%2Finitial_model_fermi.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -355,7 +355,7 @@
       
       
       
-      <li><a href="_sources/A24.ipynb" target="_blank"
+      <li><a href="_sources/initial_model_fermi.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -431,7 +431,7 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Aside: A = 23 vs. A = 24</h1>
+    <h1>Lab 1 model revisited</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -441,9 +441,8 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#load-the-lab-1-final-model">Load the lab 1 final model</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#look-at-a-23-rates">Look at A = 23 rates</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-24">A = 24</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#finding-the-fermi-energy-in-our-model">Finding the Fermi energy in our model</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#correspondence-with-urca-shell">Correspondence with Urca shell</a></li>
 </ul>
             </nav>
         </div>
@@ -455,87 +454,109 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="aside-a-23-vs-a-24">
-<h1>Aside: A = 23 vs. A = 24<a class="headerlink" href="#aside-a-23-vs-a-24" title="Link to this heading">#</a></h1>
-<p>We already said that only odd-mass numbers participate in Urca.</p>
-<p>But let’s visualize what an even pair looks like.</p>
-<p>Let’s load our model again and look at the rates involved in <span class="math notranslate nohighlight">\(A = 23\)</span> and <span class="math notranslate nohighlight">\(A = 24\)</span></p>
-<section id="load-the-lab-1-final-model">
-<h2>Load the lab 1 final model<a class="headerlink" href="#load-the-lab-1-final-model" title="Link to this heading">#</a></h2>
+  <section class="tex2jax_ignore mathjax_ignore" id="lab-1-model-revisited">
+<h1>Lab 1 model revisited<a class="headerlink" href="#lab-1-model-revisited" title="Link to this heading">#</a></h1>
+<p>Let’s reload the profiles from lab 1 and see what they say about the Fermi energy.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">mesa_reader</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">mr</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">pynucastro</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pyna</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">model</span> <span class="o">=</span> <span class="n">mr</span><span class="o">.</span><span class="n">MesaData</span><span class="p">(</span><span class="s2">&quot;lab1/profile2.data&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">model1</span> <span class="o">=</span> <span class="n">mr</span><span class="o">.</span><span class="n">MesaData</span><span class="p">(</span><span class="s2">&quot;lab1/profile1.data&quot;</span><span class="p">)</span>
+<span class="n">model2</span> <span class="o">=</span> <span class="n">mr</span><span class="o">.</span><span class="n">MesaData</span><span class="p">(</span><span class="s2">&quot;lab1/profile2.data&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">pynucastro</span><span class="w"> </span><span class="kn">import</span> <span class="n">mesa_utils</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">r1</span> <span class="o">=</span> <span class="mf">10.0</span><span class="o">**</span><span class="n">model1</span><span class="o">.</span><span class="n">logR</span>
+<span class="n">m1</span> <span class="o">=</span> <span class="n">model1</span><span class="o">.</span><span class="n">mass</span>
+<span class="n">rho1</span> <span class="o">=</span> <span class="mf">10.0</span><span class="o">**</span><span class="n">model1</span><span class="o">.</span><span class="n">logRho</span>
+<span class="n">T1</span> <span class="o">=</span> <span class="mf">10.0</span><span class="o">**</span><span class="n">model1</span><span class="o">.</span><span class="n">logT</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">r</span> <span class="o">=</span> <span class="mf">10.0</span><span class="o">**</span><span class="n">model</span><span class="o">.</span><span class="n">logR</span>
-<span class="n">m</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">mass</span>
-<span class="n">mesa_zones</span> <span class="o">=</span> <span class="n">mesa_utils</span><span class="o">.</span><span class="n">get_all_data</span><span class="p">(</span><span class="n">model</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">r2</span> <span class="o">=</span> <span class="mf">10.0</span><span class="o">**</span><span class="n">model2</span><span class="o">.</span><span class="n">logR</span>
+<span class="n">m2</span> <span class="o">=</span> <span class="n">model2</span><span class="o">.</span><span class="n">mass</span>
+<span class="n">rho2</span> <span class="o">=</span> <span class="mf">10.0</span><span class="o">**</span><span class="n">model2</span><span class="o">.</span><span class="n">logRho</span>
+<span class="n">T2</span> <span class="o">=</span> <span class="mf">10.0</span><span class="o">**</span><span class="n">model2</span><span class="o">.</span><span class="n">logT</span>
 </pre></div>
 </div>
 </div>
 </div>
-</section>
-<section id="look-at-a-23-rates">
-<h2>Look at A = 23 rates<a class="headerlink" href="#look-at-a-23-rates" title="Link to this heading">#</a></h2>
-<p>We’ll use the rates from the Suzuki library</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sl</span> <span class="o">=</span> <span class="n">pyna</span><span class="o">.</span><span class="n">SuzukiLibrary</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>Below a certain temperature the Suzuki does not provide rate data, so we’ll just zero out the rates.  This helper function handles this for us.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">eval_rate</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="n">rho</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="n">comp</span><span class="p">):</span>
-    <span class="k">try</span><span class="p">:</span>
-        <span class="n">lambda_r</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">eval</span><span class="p">(</span><span class="n">T</span><span class="p">,</span> <span class="n">rho</span><span class="o">=</span><span class="n">rho</span><span class="p">,</span> <span class="n">comp</span><span class="o">=</span><span class="n">comp</span><span class="p">)</span>
-    <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
-        <span class="n">lambda_r</span> <span class="o">=</span> <span class="mf">0.0</span>
-    <span class="k">return</span> <span class="n">lambda_r</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>Get the A = 23 electron-capture and beta-decay rates and evaluate them over the entire model.  Specifically,
-we are looking at:</p>
+<section id="finding-the-fermi-energy-in-our-model">
+<h2>Finding the Fermi energy in our model<a class="headerlink" href="#finding-the-fermi-energy-in-our-model" title="Link to this heading">#</a></h2>
+<p>We can compute the Fermi energy, by getting the degeneracy parameter:</p>
 <div class="math notranslate nohighlight">
-\[{}^{23}\mathrm{Na}(e^-,\nu_e){}^{23}\mathrm{Ne}\]</div>
-<p>and</p>
+\[\eta = \mathcal{E}_F/(kT) = (\mu - m_e c^2)/(kT)\]</div>
+<p>So</p>
 <div class="math notranslate nohighlight">
-\[{}^{23}\mathrm{Ne}(,e^-\nu_e){}^{23}\mathrm{Na}\]</div>
+\[\mathcal{E}_F = \eta k T\]</div>
+<p>Note that this is the kinetic energy, since the rest mass was subtracted off.
+This is the energy that is available to overcome the energy difference in
+nuclei and electron-capture.</p>
+<p>We can compute the Fermi energy from the Fermi-Dirac distribution:</p>
+<div class="math notranslate nohighlight">
+\[n_e = \frac{\rho Y_e}{m_u} = \frac{8\pi}{h^3} \int_0^\infty \frac{p^2}{e^{\mathcal{E}(p)/k_B T - \eta} + 1} dp\]</div>
+<p>with</p>
+<div class="math notranslate nohighlight">
+\[\mathcal{E}(p) = m_e c^2 \left [ \sqrt{1 + \left ( \frac{p}{m_e c} \right )^2 } - 1 \right ]\]</div>
+<p>Given the density and <span class="math notranslate nohighlight">\(Y_e\)</span>, we can root-find on this to get <span class="math notranslate nohighlight">\(\eta\)</span></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rna23ec</span> <span class="o">=</span> <span class="n">sl</span><span class="o">.</span><span class="n">get_rate_by_name</span><span class="p">(</span><span class="s2">&quot;na23(,)ne23&quot;</span><span class="p">)</span>
-<span class="n">lambda_rna23ec</span> <span class="o">=</span> <span class="p">[</span><span class="n">eval_rate</span><span class="p">(</span><span class="n">rna23ec</span><span class="p">,</span> <span class="n">rho</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="n">comp</span><span class="p">)</span> <span class="k">for</span> <span class="n">rho</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="n">comp</span> <span class="ow">in</span> <span class="n">mesa_zones</span><span class="o">.</span><span class="n">values</span><span class="p">()]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pynucastro</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pyna</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pynucastro</span><span class="w"> </span><span class="kn">import</span> <span class="n">mesa_utils</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">eos</span> <span class="o">=</span> <span class="n">pyna</span><span class="o">.</span><span class="n">eos</span><span class="o">.</span><span class="n">ElectronEOS</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">kB</span> <span class="o">=</span> <span class="n">pyna</span><span class="o">.</span><span class="n">constants</span><span class="o">.</span><span class="n">constants</span><span class="o">.</span><span class="n">k</span>
+<span class="n">erg2MeV</span> <span class="o">=</span> <span class="n">pyna</span><span class="o">.</span><span class="n">constants</span><span class="o">.</span><span class="n">constants</span><span class="o">.</span><span class="n">erg2MeV</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>We’ll work with the late time model</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mesa_zones</span> <span class="o">=</span> <span class="n">mesa_utils</span><span class="o">.</span><span class="n">get_all_data</span><span class="p">(</span><span class="n">model2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Note: this is slow cause it’s doing the integration directly.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">E_fermi</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">rho2</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">mesa_zones</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="n">rho</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="n">comp</span> <span class="o">=</span> <span class="n">v</span>
+    <span class="n">es</span><span class="p">,</span> <span class="n">ps</span> <span class="o">=</span> <span class="n">eos</span><span class="o">.</span><span class="n">pe_state</span><span class="p">(</span><span class="n">rho</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="n">comp</span><span class="p">,</span> <span class="n">compute_derivs</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="n">eta</span> <span class="o">=</span> <span class="n">es</span><span class="o">.</span><span class="n">eta</span>
+    <span class="n">E_fermi</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">eta</span> <span class="o">*</span> <span class="n">kB</span> <span class="o">*</span> <span class="n">T</span>
 
-<span class="n">rne23beta</span> <span class="o">=</span> <span class="n">sl</span><span class="o">.</span><span class="n">get_rate_by_name</span><span class="p">(</span><span class="s2">&quot;ne23(,)na23&quot;</span><span class="p">)</span>
-<span class="n">lambda_rne23beta</span> <span class="o">=</span> <span class="p">[</span><span class="n">eval_rate</span><span class="p">(</span><span class="n">rne23beta</span><span class="p">,</span> <span class="n">rho</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="n">comp</span><span class="p">)</span> <span class="k">for</span> <span class="n">rho</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="n">comp</span> <span class="ow">in</span> <span class="n">mesa_zones</span><span class="o">.</span><span class="n">values</span><span class="p">()]</span>
+<span class="n">E_fermi</span> <span class="o">*=</span> <span class="n">erg2MeV</span>
 </pre></div>
 </div>
 </div>
 </div>
-<p>Now let’s plot them.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
@@ -546,83 +567,103 @@ we are looking at:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
-
-<span class="n">ax</span><span class="o">.</span><span class="n">semilogy</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">lambda_rna23ec</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Na23 electron capture&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;C0&quot;</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">semilogy</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">lambda_rne23beta</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Ne23 beta-decay&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;C0&quot;</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s2">&quot;:&quot;</span><span class="p">)</span>
-
-<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;mass (solar masses)&quot;</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;rate&quot;</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="mf">1.e-10</span><span class="p">,</span> <span class="mf">1.e2</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">semilogx</span><span class="p">(</span><span class="n">r2</span><span class="p">,</span> <span class="n">E_fermi</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;radius ($R_\odot$)&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;$\mathcal</span><span class="si">{E}</span><span class="s2">_\mathrm</span><span class="si">{Fermi}</span><span class="s2">$ (MeV)&quot;</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">ls</span><span class="o">=</span><span class="s2">&quot;:&quot;</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7f8eceac4ec0&gt;
-</pre></div>
-</div>
-<img alt="_images/41b44d67899a16966aa88c53a8e27aa79da7e06a152f35948fad2962d04ff38a.png" src="_images/41b44d67899a16966aa88c53a8e27aa79da7e06a152f35948fad2962d04ff38a.png" />
+<img alt="_images/26cf675c92ae78899278e9dbbcb7a64ec7ce0d377f67d241f934f3627fb0cff0.png" src="_images/26cf675c92ae78899278e9dbbcb7a64ec7ce0d377f67d241f934f3627fb0cff0.png" />
 </div>
 </div>
-<p>We see that the rates intersect about halfway through the star—this is the Urca shell.</p>
+<p>Notice that the Fermi energy is highest at the core of the WD, as expected.
+And it is &gt; 7 MeV, which is large comparable to the typical binding energy
+/ nucleon in a nucleus.</p>
 </section>
-<section id="a-24">
-<h2>A = 24<a class="headerlink" href="#a-24" title="Link to this heading">#</a></h2>
-<p>Now let’s look at the <span class="math notranslate nohighlight">\(A = 24\)</span> rates.  We specifically model:</p>
-<div class="math notranslate nohighlight">
-\[{}^{24}\mathrm{Mg}(e^-,\nu_e){}^{24}\mathrm{Na}(e^-,\nu_e){}^{24}\mathrm{Ne}\]</div>
-<p>and</p>
-<div class="math notranslate nohighlight">
-\[{}^{24}\mathrm{Ne}(,e^-\nu_e){}^{24}\mathrm{Na}(,e^-\nu_e){}^{24}\mathrm{Mg}\]</div>
+<section id="correspondence-with-urca-shell">
+<h2>Correspondence with Urca shell<a class="headerlink" href="#correspondence-with-urca-shell" title="Link to this heading">#</a></h2>
+<p>Let’s overlay <span class="math notranslate nohighlight">\(X({}^{23}\mathrm{Na})\)</span> and <span class="math notranslate nohighlight">\(X({}^{23}\mathrm{Ne})\)</span>.  Their mass-fractions are small, so we’ll scale by the maximum to make them <span class="math notranslate nohighlight">\(\mathcal{O}(1)\)</span> in the plot.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rmg24ec</span> <span class="o">=</span> <span class="n">sl</span><span class="o">.</span><span class="n">get_rate_by_name</span><span class="p">(</span><span class="s2">&quot;mg24(,)na24&quot;</span><span class="p">)</span>
-<span class="n">lambda_rmg24ec</span> <span class="o">=</span> <span class="p">[</span><span class="n">eval_rate</span><span class="p">(</span><span class="n">rmg24ec</span><span class="p">,</span> <span class="n">rho</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="n">comp</span><span class="p">)</span> <span class="k">for</span> <span class="n">rho</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="n">comp</span> <span class="ow">in</span> <span class="n">mesa_zones</span><span class="o">.</span><span class="n">values</span><span class="p">()]</span>
-
-<span class="n">rna24beta</span> <span class="o">=</span> <span class="n">sl</span><span class="o">.</span><span class="n">get_rate_by_name</span><span class="p">(</span><span class="s2">&quot;na24(,)mg24&quot;</span><span class="p">)</span>
-<span class="n">lambda_rna24beta</span> <span class="o">=</span> <span class="p">[</span><span class="n">eval_rate</span><span class="p">(</span><span class="n">rna24beta</span><span class="p">,</span> <span class="n">rho</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="n">comp</span><span class="p">)</span> <span class="k">for</span> <span class="n">rho</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="n">comp</span> <span class="ow">in</span> <span class="n">mesa_zones</span><span class="o">.</span><span class="n">values</span><span class="p">()]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X_na23</span> <span class="o">=</span> <span class="n">model2</span><span class="o">.</span><span class="n">na23</span>
+<span class="n">X_ne23</span> <span class="o">=</span> <span class="n">model2</span><span class="o">.</span><span class="n">ne23</span>
+<span class="n">scale</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">X_na23</span><span class="o">.</span><span class="n">max</span><span class="p">(),</span> <span class="n">X_ne23</span><span class="o">.</span><span class="n">max</span><span class="p">())</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rna24ec</span> <span class="o">=</span> <span class="n">sl</span><span class="o">.</span><span class="n">get_rate_by_name</span><span class="p">(</span><span class="s2">&quot;na24(,)ne24&quot;</span><span class="p">)</span>
-<span class="n">lambda_rna24ec</span> <span class="o">=</span> <span class="p">[</span><span class="n">eval_rate</span><span class="p">(</span><span class="n">rna24ec</span><span class="p">,</span> <span class="n">rho</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="n">comp</span><span class="p">)</span> <span class="k">for</span> <span class="n">rho</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="n">comp</span> <span class="ow">in</span> <span class="n">mesa_zones</span><span class="o">.</span><span class="n">values</span><span class="p">()]</span>
-
-<span class="n">rne24beta</span> <span class="o">=</span> <span class="n">sl</span><span class="o">.</span><span class="n">get_rate_by_name</span><span class="p">(</span><span class="s2">&quot;ne24(,)na24&quot;</span><span class="p">)</span>
-<span class="n">lambda_rne24beta</span> <span class="o">=</span> <span class="p">[</span><span class="n">eval_rate</span><span class="p">(</span><span class="n">rne24beta</span><span class="p">,</span> <span class="n">rho</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="n">comp</span><span class="p">)</span> <span class="k">for</span> <span class="n">rho</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="n">comp</span> <span class="ow">in</span> <span class="n">mesa_zones</span><span class="o">.</span><span class="n">values</span><span class="p">()]</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
-
-<span class="n">ax</span><span class="o">.</span><span class="n">semilogy</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">lambda_rmg24ec</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Mg24 electron capture&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;C0&quot;</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">semilogy</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">lambda_rna24beta</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Na24 beta-decay&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;C0&quot;</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s2">&quot;:&quot;</span><span class="p">)</span>
-
-<span class="n">ax</span><span class="o">.</span><span class="n">semilogy</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">lambda_rna24ec</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Na24 electron capture&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;C1&quot;</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">semilogy</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">lambda_rne24beta</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Ne24 beta-decay&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;C1&quot;</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s2">&quot;:&quot;</span><span class="p">)</span>
-
-<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;mass (solar masses)&quot;</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;rate&quot;</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="mf">1.e-10</span><span class="p">,</span> <span class="mf">1.e2</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">ls</span><span class="o">=</span><span class="s2">&quot;:&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ax</span><span class="o">.</span><span class="n">semilogx</span><span class="p">(</span><span class="n">r2</span><span class="p">,</span> <span class="n">X_na23</span><span class="o">/</span><span class="n">scale</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s2">&quot;scaled $X(</span><span class="si">{}</span><span class="s2">^</span><span class="si">{23}</span><span class="s2">\mathrm</span><span class="si">{Na}</span><span class="s2">)$&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">semilogx</span><span class="p">(</span><span class="n">r2</span><span class="p">,</span> <span class="n">X_ne23</span><span class="o">/</span><span class="n">scale</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s2">&quot;scaled $X(</span><span class="si">{}</span><span class="s2">^</span><span class="si">{23}</span><span class="s2">\mathrm</span><span class="si">{Ne}</span><span class="s2">)$&quot;</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">fig</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7f8ece905be0&gt;
+<img alt="_images/870742bdc664dee8e2f7af4ca3b3bab0cdfe011cf5eb1204ffcdabf48eea317a.png" src="_images/870742bdc664dee8e2f7af4ca3b3bab0cdfe011cf5eb1204ffcdabf48eea317a.png" />
+</div>
+</div>
+<p>Now let’s compute the Q-value of the reaction to figure out what Fermi energy should be the threshold</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Na23</span> <span class="o">=</span> <span class="n">pyna</span><span class="o">.</span><span class="n">Nucleus</span><span class="p">(</span><span class="s2">&quot;na23&quot;</span><span class="p">)</span>
+<span class="n">Ne23</span> <span class="o">=</span> <span class="n">pyna</span><span class="o">.</span><span class="n">Nucleus</span><span class="p">(</span><span class="s2">&quot;ne23&quot;</span><span class="p">)</span>
+<span class="n">Q</span> <span class="o">=</span> <span class="n">Ne23</span><span class="o">.</span><span class="n">mass</span> <span class="o">-</span> <span class="n">Na23</span><span class="o">.</span><span class="n">mass</span>
+<span class="n">Q</span>
 </pre></div>
 </div>
-<img alt="_images/d891642e8b5f0d6327b7c3c9f96721302f10fa09662841088e83c2be3b1446ce.png" src="_images/d891642e8b5f0d6327b7c3c9f96721302f10fa09662841088e83c2be3b1446ce.png" />
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4.375803499999165
+</pre></div>
 </div>
 </div>
-<p>Here we see that the electron-capture and beta-decay rates are well-separated.</p>
+</div>
+<p>Note that these are the atomic masses, from Nubase, so they include the electron mass (we’ll neglect the atomic binding energy)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">E_thresh</span> <span class="o">=</span> <span class="n">Q</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now, where is this in our model?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">idx</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">E_fermi</span> <span class="o">&gt;</span> <span class="n">E_thresh</span><span class="p">)[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">idx</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.int64(373)
+</pre></div>
+</div>
+</div>
+</div>
+<p>we’ll draw a vertical line indicating where <span class="math notranslate nohighlight">\(\mathcal{E}_\mathrm{Fermi} \sim Q\)</span></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ax</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">r2</span><span class="p">[</span><span class="n">idx</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;0.25&quot;</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s2">&quot;--&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">r2</span><span class="p">[</span><span class="n">idx</span><span class="p">],</span> <span class="mi">4</span><span class="p">,</span> <span class="sa">r</span><span class="s2">&quot;radius where $\mathcal</span><span class="si">{E}</span><span class="s2">_\mathrm</span><span class="si">{Fermi}</span><span class="s2"> \sim Q$&quot;</span><span class="p">,</span>
+        <span class="n">rotation</span><span class="o">=</span><span class="mi">270</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;0.25&quot;</span><span class="p">,</span> <span class="n">verticalalignment</span><span class="o">=</span><span class="s2">&quot;center&quot;</span><span class="p">)</span>
+<span class="n">fig</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/f4dcf4000f8a34b60faa9100569337a005a0d7dac702e8a0129da2646b09644d.png" src="_images/f4dcf4000f8a34b60faa9100569337a005a0d7dac702e8a0129da2646b09644d.png" />
+</div>
+</div>
+<p>Notice that the location of <span class="math notranslate nohighlight">\(\mathcal{E}_\mathrm{Fermi} = Q\)</span> corresponds to the radius where the <span class="math notranslate nohighlight">\(A=23\)</span> Urca pair nuclei switch abundances.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>This is approximate, since we are ignoring the structure of the nuclei and its energy levels.</p>
+</div>
 </section>
 </section>
 
@@ -638,20 +679,20 @@ we are looking at:</p>
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="nets.html"
+       href="reactions-ecap-beta.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Networks used in labs</p>
+        <p class="prev-next-title">Electron-capture / β-decay</p>
       </div>
     </a>
     <a class="right-next"
-       href="urca-shells.html"
+       href="nets.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Visualizing Urca shell</p>
+        <p class="prev-next-title">Networks used in labs</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -673,9 +714,8 @@ we are looking at:</p>
   </div>
   <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#load-the-lab-1-final-model">Load the lab 1 final model</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#look-at-a-23-rates">Look at A = 23 rates</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-24">A = 24</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#finding-the-fermi-energy-in-our-model">Finding the Fermi energy in our model</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#correspondence-with-urca-shell">Correspondence with Urca shell</a></li>
 </ul>
   </nav></div>
 
