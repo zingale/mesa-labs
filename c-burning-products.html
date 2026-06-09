@@ -558,6 +558,29 @@
 </div>
 </div>
 <p>Now we see that the major products after <span class="math notranslate nohighlight">\({}^{20}\mathrm{Ne}\)</span> are <span class="math notranslate nohighlight">\({}^{24}\mathrm{Mg}\)</span> and then the two Urca nuclei we will focus on: <span class="math notranslate nohighlight">\({}^{23}\mathrm{Na}\)</span> and <span class="math notranslate nohighlight">\({}^{25}\mathrm{Mg}\)</span>.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Our O/Ne WD should have traces abundances of <span class="math notranslate nohighlight">\({}^{23}\mathrm{Na}\)</span>, <span class="math notranslate nohighlight">\({}^{24}\mathrm{Mg}\)</span>,
+and <span class="math notranslate nohighlight">\({}^{25}\mathrm{Mg}\)</span>.</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span> <span class="o">=</span> <span class="n">net</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">rho</span><span class="o">=</span><span class="n">rho</span><span class="p">,</span> <span class="n">T</span><span class="o">=</span><span class="n">T</span><span class="p">,</span> <span class="n">comp</span><span class="o">=</span><span class="n">comp</span><span class="p">,</span> <span class="n">rotated</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+               <span class="n">color_nodes_by_abundance</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+               <span class="n">use_net_rate</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/hostedtoolcache/Python/3.14.5/x64/lib/python3.14/site-packages/pynucastro/rates/derived_rate.py:125: UserWarning: C12 partition function is not supported by tables: set log_pf = 0.0 by default
+  warnings.warn(UserWarning(f&#39;{nuc} partition function is not supported by tables: set log_pf = 0.0 by default&#39;))
+</pre></div>
+</div>
+<img alt="_images/4577513af676a918f96db4dea37d62a83ce5ca1254797a6543c6de9ba69d4d39.png" src="_images/4577513af676a918f96db4dea37d62a83ce5ca1254797a6543c6de9ba69d4d39.png" />
+</div>
+</div>
+<p>We see that <span class="math notranslate nohighlight">\({}^{23}\mathrm{Na}\)</span> is primarily made by <span class="math notranslate nohighlight">\({}^{12}\mathrm{C} + {}^{12}\mathrm{C}\)</span>
+while <span class="math notranslate nohighlight">\({}^{25}\mathrm{Mg}\)</span> is made via <span class="math notranslate nohighlight">\((n,\gamma)\)</span> and <span class="math notranslate nohighlight">\((\alpha, n)\)</span> reactions.</p>
 </section>
 
 
