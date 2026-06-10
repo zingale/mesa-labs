@@ -9,7 +9,7 @@ We need to understand some concepts from astronomy:
 
 * Electron degeneracy and the equation of state
 * The structure of white dwarfs
-* Nuclear reactions, including strong-mediated and weak-interactions (like electron-capture and $\beta$-decay.
+* Nuclear reactions, including strong-mediated and weak-interactions (like electron-capture and $\beta$-decay).
 
 We'll start with a framing of the problem and then discuss the concepts.
 
