@@ -86,6 +86,7 @@ main_doc = 'index'
 
 # General information about the project.
 project = 'mesa-labs'
+author = 'Michael Zingale'
 
 #html_logo = "logo.png"
 
