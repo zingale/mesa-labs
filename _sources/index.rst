@@ -5,8 +5,8 @@ MESA Summer School Urca Notebooks
    :maxdepth: 1
    :hidden:
 
-   using.rst
    urca-intro
+   using.rst
 
 .. toctree::
    :maxdepth: 1
