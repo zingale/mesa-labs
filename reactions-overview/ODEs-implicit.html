@@ -481,6 +481,57 @@
 <section id="explicit-discretization">
 <h3>Explicit discretization<a class="headerlink" href="#explicit-discretization" title="Link to this heading">#</a></h3>
 <p>Let’s solve this using 4th order Runge-Kutta.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>4th-order Runge-Kutta evaluates the righthand side of the ODE four different times
+and builds the update as a linear combination of these.  The figures below
+show this graphically.</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-0">
+Compute k1</label><div class="sd-tab-content docutils">
+<p>The advance begins by estimating the derivatives (righthand side or slope) at time <span class="math notranslate nohighlight">\(t^n\)</span>.  We’ll call this <span class="math notranslate nohighlight">\({\bf k}_1\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[{\bf k}_1 = {\bf f}(t^n, {\bf y}^n)\]</div>
+<p><img alt="4th order Runge-Kutta k1" src="../_images/rk4_k1.png" /></p>
+</div>
+<input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-1">
+Compute k2</label><div class="sd-tab-content docutils">
+<p>We then follow the slope <span class="math notranslate nohighlight">\({\bf k}_1\)</span> to the midpoint in time, <span class="math notranslate nohighlight">\(t^{n+1/2}\)</span> and evaluate the slope there.  We call the new slope <span class="math notranslate nohighlight">\({\bf k}_2\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[{\bf k}_2 = {\bf f}(t^n + \tau/2, {\bf y}^n + (\tau/2) {\bf k}_1)\]</div>
+<p><img alt="4th order Runge-Kutta k2" src="../_images/rk4_k2.png" /></p>
+</div>
+<input id="sd-tab-item-2" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-2">
+Compute k3</label><div class="sd-tab-content docutils">
+<p>We then go back to the start, but this time follow the new slope,
+<span class="math notranslate nohighlight">\({\bf k}_2\)</span> to the midpoint in time, <span class="math notranslate nohighlight">\(t^{n+1/2}\)</span>.  We again evaluate the slope here, and call it <span class="math notranslate nohighlight">\({\bf k}_3\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[{\bf k}_3 = {\bf f}(t^n + \tau/2, {\bf y}^n + (\tau/2) {\bf k}_2)\]</div>
+<p><img alt="4th order Runge-Kutta k3" src="../_images/rk4_k3.png" /></p>
+</div>
+<input id="sd-tab-item-3" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-3">
+Compute k4</label><div class="sd-tab-content docutils">
+<p>Finally, we go back to the start and follow <span class="math notranslate nohighlight">\({\bf k}_3\)</span> for the full
+timestep, to <span class="math notranslate nohighlight">\(t^{n+1}\)</span> and evaluate the slope there, calling it <span class="math notranslate nohighlight">\({\bf k}_4\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[{\bf k}_4 = {\bf f}(t^n + \tau, {\bf y}^n + \tau {\bf k}_3)\]</div>
+<p><img alt="4th order Runge-Kutta k4" src="../_images/rk4_k4.png" /></p>
+</div>
+<input id="sd-tab-item-4" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-4">
+Final update</label><div class="sd-tab-content docutils">
+<p>We then get the updated solution using a linear combination of the 4 slopes:</p>
+<div class="math notranslate nohighlight">
+\[{\bf y}^{n+1} = {\bf y}^n + \frac{\tau}{6} ({\bf k}_1 + 2 {\bf k}_2 + 2 {\bf k}_3 + {\bf k}_4)\]</div>
+<p><img alt="4th order Runge-Kutta final" src="../_images/rk4_final.png" /></p>
+<p>Note the similarity of RK4 to Simpson’s rule for integration.</p>
+</div>
+</div>
+</div>
 <p>First we need the righthand side function:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">

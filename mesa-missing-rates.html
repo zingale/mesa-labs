@@ -483,7 +483,85 @@
 <h2>Read in the MESA model<a class="headerlink" href="#read-in-the-mesa-model" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">model</span> <span class="o">=</span> <span class="n">mr</span><span class="o">.</span><span class="n">MesaData</span><span class="p">(</span><span class="s2">&quot;lab3/profile2.data&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">model</span> <span class="o">=</span> <span class="n">mr</span><span class="o">.</span><span class="n">MesaData</span><span class="p">(</span><span class="s2">&quot;profile2.data&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">model</span> <span class="o">=</span> <span class="n">mr</span><span class="o">.</span><span class="n">MesaData</span><span class="p">(</span><span class="s2">&quot;profile2.data&quot;</span><span class="p">)</span>
+
+<span class="nn">File /opt/hostedtoolcache/Python/3.14.5/x64/lib/python3.14/site-packages/mesa_reader/__init__.py:134,</span> in <span class="ni">MesaData.__init__</span><span class="nt">(self, file_name, file_type)</span>
+<span class="g g-Whitespace">    </span><span class="mi">132</span> <span class="bp">self</span><span class="o">.</span><span class="n">header_data</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="g g-Whitespace">    </span><span class="mi">133</span> <span class="bp">self</span><span class="o">.</span><span class="n">header_names</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="ne">--&gt; </span><span class="mi">134</span> <span class="bp">self</span><span class="o">.</span><span class="n">read_data</span><span class="p">()</span>
+
+<span class="nn">File /opt/hostedtoolcache/Python/3.14.5/x64/lib/python3.14/site-packages/mesa_reader/__init__.py:183,</span> in <span class="ni">MesaData.read_data</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">    </span><span class="mi">181</span>     <span class="bp">self</span><span class="o">.</span><span class="n">read_model_data</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">182</span> <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">file_type</span> <span class="o">==</span> <span class="s2">&quot;log&quot;</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">183</span>     <span class="bp">self</span><span class="o">.</span><span class="n">read_log_data</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">184</span> <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">185</span>     <span class="k">raise</span> <span class="n">UnknownFileTypeError</span><span class="p">(</span><span class="s2">&quot;Unknown file type </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">file_type</span><span class="p">))</span>
+
+<span class="nn">File /opt/hostedtoolcache/Python/3.14.5/x64/lib/python3.14/site-packages/mesa_reader/__init__.py:199,</span> in <span class="ni">MesaData.read_log_data</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">    </span><span class="mi">187</span> <span class="k">def</span><span class="w"> </span><span class="nf">read_log_data</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">188</span><span class="w">     </span><span class="sd">&quot;&quot;&quot;Reads in or update data from the original log (.data or .log) file.</span>
+<span class="g g-Whitespace">    </span><span class="mi">189</span><span class="sd"> </span>
+<span class="g g-Whitespace">    </span><span class="mi">190</span><span class="sd">     This re-reads the data from the originally-provided file name. Mostly</span>
+<span class="sd">   (...)    197     None</span>
+<span class="g g-Whitespace">    </span><span class="mi">198</span><span class="sd">     &quot;&quot;&quot;</span>
+<span class="ne">--&gt; </span><span class="mi">199</span>     <span class="bp">self</span><span class="o">.</span><span class="n">bulk_data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">genfromtxt</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">200</span>         <span class="bp">self</span><span class="o">.</span><span class="n">file_name</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">201</span>         <span class="n">skip_header</span><span class="o">=</span><span class="n">MesaData</span><span class="o">.</span><span class="n">bulk_names_line</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">202</span>         <span class="n">names</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">203</span>         <span class="n">ndmin</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>  <span class="c1"># Make sure a single entry is still a 1D array</span>
+<span class="g g-Whitespace">    </span><span class="mi">204</span>         <span class="n">dtype</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">205</span>     <span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">206</span>     <span class="bp">self</span><span class="o">.</span><span class="n">bulk_names</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">bulk_data</span><span class="o">.</span><span class="n">dtype</span><span class="o">.</span><span class="n">names</span>
+<span class="g g-Whitespace">    </span><span class="mi">207</span>     <span class="n">header_data</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="nn">File /opt/hostedtoolcache/Python/3.14.5/x64/lib/python3.14/site-packages/numpy/lib/_npyio_impl.py:1978,</span> in <span class="ni">genfromtxt</span><span class="nt">(fname, dtype, comments, delimiter, skip_header, skip_footer, converters, missing_values, filling_values, usecols, names, excludelist, deletechars, replace_space, autostrip, case_sensitive, defaultfmt, unpack, usemask, loose, invalid_raise, max_rows, encoding, ndmin, like)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1976</span>     <span class="n">fname</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">fspath</span><span class="p">(</span><span class="n">fname</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1977</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">fname</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+<span class="ne">-&gt; </span><span class="mi">1978</span>     <span class="n">fid</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">lib</span><span class="o">.</span><span class="n">_datasource</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">fname</span><span class="p">,</span> <span class="s1">&#39;rt&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="n">encoding</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1979</span>     <span class="n">fid_ctx</span> <span class="o">=</span> <span class="n">contextlib</span><span class="o">.</span><span class="n">closing</span><span class="p">(</span><span class="n">fid</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1980</span> <span class="k">else</span><span class="p">:</span>
+
+<span class="nn">File /opt/hostedtoolcache/Python/3.14.5/x64/lib/python3.14/site-packages/numpy/lib/_datasource.py:192,</span> in <span class="ni">open</span><span class="nt">(path, mode, destpath, encoding, newline)</span>
+<span class="g g-Whitespace">    </span><span class="mi">155</span><span class="w"> </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">156</span><span class="sd"> Open `path` with `mode` and return the file object.</span>
+<span class="g g-Whitespace">    </span><span class="mi">157</span><span class="sd"> </span>
+<span class="sd">   (...)    188 </span>
+<span class="g g-Whitespace">    </span><span class="mi">189</span><span class="sd"> &quot;&quot;&quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">191</span> <span class="n">ds</span> <span class="o">=</span> <span class="n">DataSource</span><span class="p">(</span><span class="n">destpath</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">192</span> <span class="k">return</span> <span class="n">ds</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">mode</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="n">encoding</span><span class="p">,</span> <span class="n">newline</span><span class="o">=</span><span class="n">newline</span><span class="p">)</span>
+
+<span class="nn">File /opt/hostedtoolcache/Python/3.14.5/x64/lib/python3.14/site-packages/numpy/lib/_datasource.py:529,</span> in <span class="ni">DataSource.open</span><span class="nt">(self, path, mode, encoding, newline)</span>
+<span class="g g-Whitespace">    </span><span class="mi">526</span>     <span class="k">return</span> <span class="n">_file_openers</span><span class="p">[</span><span class="n">ext</span><span class="p">](</span><span class="n">found</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="n">mode</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">527</span>                               <span class="n">encoding</span><span class="o">=</span><span class="n">encoding</span><span class="p">,</span> <span class="n">newline</span><span class="o">=</span><span class="n">newline</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">528</span> <span class="k">else</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">529</span>     <span class="k">raise</span> <span class="ne">FileNotFoundError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">path</span><span class="si">}</span><span class="s2"> not found.&quot;</span><span class="p">)</span>
+
+<span class="ne">FileNotFoundError</span>: profile2.data not found.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">model</span><span class="o">.</span><span class="n">bulk_names</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">model</span><span class="o">.</span><span class="n">bulk_names</span>
+
+<span class="ne">NameError</span>: name &#39;model&#39; is not defined
 </pre></div>
 </div>
 </div>
@@ -494,10 +572,47 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">5</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">nuclei</span> <span class="o">=</span> <span class="n">mesa_utils</span><span class="o">.</span><span class="n">get_nuclei</span><span class="p">(</span><span class="n">model</span><span class="p">)</span>
+
+<span class="ne">NameError</span>: name &#39;model&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nuclei</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">6</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">nuclei</span>
+
+<span class="ne">NameError</span>: name &#39;nuclei&#39; is not defined
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mesa_zones</span> <span class="o">=</span> <span class="n">mesa_utils</span><span class="o">.</span><span class="n">get_all_data</span><span class="p">(</span><span class="n">model</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">7</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">mesa_zones</span> <span class="o">=</span> <span class="n">mesa_utils</span><span class="o">.</span><span class="n">get_all_data</span><span class="p">(</span><span class="n">model</span><span class="p">)</span>
+
+<span class="ne">NameError</span>: name &#39;model&#39; is not defined
 </pre></div>
 </div>
 </div>
@@ -514,6 +629,16 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">8</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">net_full</span> <span class="o">=</span> <span class="n">pyna</span><span class="o">.</span><span class="n">network_helper</span><span class="p">(</span><span class="n">nuclei</span><span class="p">)</span>
+
+<span class="ne">NameError</span>: name &#39;nuclei&#39; is not defined
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -522,27 +647,12 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Network summary
----------------
-  explicitly carried nuclei: 15
-  approximated-out nuclei: 0
-  inert nuclei (included in carried): 0
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">9</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">net_full</span><span class="o">.</span><span class="n">summary</span><span class="p">()</span>
 
-  NSE compatible? False
-
-  total number of rates: 38
-
-  rates explicitly connecting nuclei: 38
-  hidden rates: 0
-
-  reaclib rates: 12
-  starlib rates: 0
-  temperature tabular rates: 0
-  weak tabular rates: 14
-  approximate rates: 0
-  derived rates: 12
-  modified rates: 0
-  custom rates: 0
+<span class="ne">NameError</span>: name &#39;net_full&#39; is not defined
 </pre></div>
 </div>
 </div>
@@ -554,7 +664,14 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/3d38f92b2b02bd171bcbad974c7ad3b8c85554c4e321e3b2983df00acf32d48c.png" src="_images/3d38f92b2b02bd171bcbad974c7ad3b8c85554c4e321e3b2983df00acf32d48c.png" />
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">10</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">fig</span> <span class="o">=</span> <span class="n">net_full</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+
+<span class="ne">NameError</span>: name &#39;net_full&#39; is not defined
+</pre></div>
+</div>
 </div>
 </div>
 </section>
@@ -815,7 +932,12 @@ Si28 + He4 ⟶ n + S31           [Q =  -8.09 MeV] (Si28 + He4 --&gt; n + S31 &lt
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>786
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">24</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="nb">len</span><span class="p">(</span><span class="n">mesa_zones</span><span class="p">)</span>
+
+<span class="ne">NameError</span>: name &#39;mesa_zones&#39; is not defined
 </pre></div>
 </div>
 </div>
@@ -879,6 +1001,39 @@ Si28 + He4 ⟶ n + S31           [Q =  -8.09 MeV] (Si28 + He4 --&gt; n + S31 &lt
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">28</span><span class="p">],</span> <span class="n">line</span> <span class="mi">4</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">possibly_important</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> 
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="k">for</span> <span class="n">izone</span> <span class="ow">in</span> <span class="n">zones</span><span class="p">:</span>
+<span class="ne">----&gt; </span><span class="mi">4</span>     <span class="n">rho</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="n">comp</span> <span class="o">=</span> <span class="n">mesa_zones</span><span class="p">[</span><span class="n">izone</span><span class="p">]</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span>     <span class="k">for</span> <span class="n">nuc</span> <span class="ow">in</span> <span class="n">net</span><span class="o">.</span><span class="n">unique_nuclei</span><span class="p">:</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span>         <span class="c1"># evaluate all existing rates working with this nucleus</span>
+<span class="g g-Whitespace">      </span><span class="mi">7</span>         <span class="n">r_current</span> <span class="o">=</span> <span class="p">{</span><span class="n">r</span> <span class="p">:</span> <span class="n">r</span><span class="o">.</span><span class="n">eval_full_rate</span><span class="p">(</span><span class="n">rho</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="n">comp</span><span class="p">,</span> <span class="n">screen_func</span><span class="o">=</span><span class="n">chugunov_2007</span><span class="p">)</span>
+
+<span class="ne">NameError</span>: name &#39;mesa_zones&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">comp</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">29</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">comp</span>
+
+<span class="ne">NameError</span>: name &#39;comp&#39; is not defined
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -887,31 +1042,7 @@ Si28 + He4 ⟶ n + S31           [Q =  -8.09 MeV] (Si28 + He4 --&gt; n + S31 &lt
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{O16 + He4 ⟶ Ne20 + 𝛾,
- O16 + O16 ⟶ p + P31,
- O16 + O16 ⟶ n + S31,
- O20 + He4 ⟶ p + F23,
- O20 + He4 ⟶ n + Ne23,
- O20 + He4 ⟶ Ne24 + 𝛾,
- F20 + He4 ⟶ p + Ne23,
- F20 + He4 ⟶ n + Na23,
- F20 + He4 ⟶ Na24 + 𝛾,
- Ne20 + He4 ⟶ p + Na23,
- Ne20 + He4 ⟶ Mg24 + 𝛾,
- Ne23 + He4 ⟶ p + Na26,
- Ne23 + He4 ⟶ n + Mg26,
- Ne23 + e⁻ ⟶ F23 + 𝜈,
- Ne23 + He4 ⟶ Mg27 + 𝛾,
- Ne23 ⟶ n + Ne22,
- Ne24 + He4 ⟶ n + Mg27,
- Ne24 + He4 ⟶ Mg28 + 𝛾,
- Ne25 + He4 ⟶ n + Mg28,
- Ne25 + He4 ⟶ Mg29 + 𝛾,
- Ne25 ⟶ n + Ne24,
- Na23 + He4 ⟶ p + Mg26,
- Na25 + He4 ⟶ p + Mg28,
- Na25 + He4 ⟶ n + Al28,
- Na25 + He4 ⟶ Al29 + 𝛾}
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[]
 </pre></div>
 </div>
 </div>
@@ -940,12 +1071,7 @@ Si28 + He4 ⟶ n + S31           [Q =  -8.09 MeV] (Si28 + He4 --&gt; n + S31 &lt
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[F20 + He4 ⟶ p + Ne23,
- O20 + He4 ⟶ Ne24 + 𝛾,
- Ne20 + He4 ⟶ p + Na23,
- Ne20 + He4 ⟶ Mg24 + 𝛾,
- O16 + He4 ⟶ Ne20 + 𝛾,
- F20 + He4 ⟶ Na24 + 𝛾]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[]
 </pre></div>
 </div>
 </div>
@@ -976,21 +1102,21 @@ Si28 + He4 ⟶ n + S31           [Q =  -8.09 MeV] (Si28 + He4 --&gt; n + S31 &lt
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Network summary
 ---------------
-  explicitly carried nuclei: 27
-  approximated-out nuclei: 0
+  explicitly carried nuclei: 14
+  approximated-out nuclei: 1
   inert nuclei (included in carried): 0
 
   NSE compatible? False
 
-  total number of rates: 46
+  total number of rates: 22
 
-  rates explicitly connecting nuclei: 40
-  hidden rates: 6
+  rates explicitly connecting nuclei: 15
+  hidden rates: 7
 
-  reaclib rates: 30
+  reaclib rates: 7
   starlib rates: 0
   temperature tabular rates: 0
-  weak tabular rates: 15
+  weak tabular rates: 14
   approximate rates: 1
   derived rates: 0
   modified rates: 0
@@ -1006,7 +1132,7 @@ Si28 + He4 ⟶ n + S31           [Q =  -8.09 MeV] (Si28 + He4 --&gt; n + S31 &lt
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/f5c0c1f650f9cf6d6289c3eee15df24735a78c7737ca15c4544f64374c59b445.png" src="_images/f5c0c1f650f9cf6d6289c3eee15df24735a78c7737ca15c4544f64374c59b445.png" />
+<img alt="_images/0446512f1632009e68236613e5cff0ab256bb336d71693bf467e5eac86f4da75.png" src="_images/0446512f1632009e68236613e5cff0ab256bb336d71693bf467e5eac86f4da75.png" />
 </div>
 </div>
 <p>what if we restrict it to just the rates that use the same nuclei?</p>
@@ -1033,18 +1159,18 @@ Si28 + He4 ⟶ n + S31           [Q =  -8.09 MeV] (Si28 + He4 --&gt; n + S31 &lt
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Network summary
 ---------------
-  explicitly carried nuclei: 15
+  explicitly carried nuclei: 14
   approximated-out nuclei: 1
   inert nuclei (included in carried): 0
 
   NSE compatible? False
 
-  total number of rates: 28
+  total number of rates: 22
 
-  rates explicitly connecting nuclei: 21
+  rates explicitly connecting nuclei: 15
   hidden rates: 7
 
-  reaclib rates: 13
+  reaclib rates: 7
   starlib rates: 0
   temperature tabular rates: 0
   weak tabular rates: 14
@@ -1063,7 +1189,7 @@ Si28 + He4 ⟶ n + S31           [Q =  -8.09 MeV] (Si28 + He4 --&gt; n + S31 &lt
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/a944896261e6e2c5390ca10acfc17cfc94157cb2a2b41ccbec97b8382a73b357.png" src="_images/a944896261e6e2c5390ca10acfc17cfc94157cb2a2b41ccbec97b8382a73b357.png" />
+<img alt="_images/0446512f1632009e68236613e5cff0ab256bb336d71693bf467e5eac86f4da75.png" src="_images/0446512f1632009e68236613e5cff0ab256bb336d71693bf467e5eac86f4da75.png" />
 </div>
 </div>
 </section>
