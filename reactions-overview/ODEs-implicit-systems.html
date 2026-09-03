@@ -27,21 +27,21 @@
   </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=90905a2f556bf617f1a9" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=90905a2f556bf617f1a9" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=4418a689" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../_static/myfile.css?v=15ab05d9" />
   
   <!-- So that users can add custom icons -->
-  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <script defer src="../_static/scripts/fontawesome.js?digest=90905a2f556bf617f1a9"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=90905a2f556bf617f1a9" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=90905a2f556bf617f1a9" />
 
     <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="../_static/doctools.js?v=fd6eb6e6"></script>
@@ -54,6 +54,7 @@
     <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'reactions-overview/ODEs-implicit-systems';</script>
+    <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Implicit Methods and Nonlinear Systems" href="ODEs-implicit-nonlinear-systems.html" />
@@ -61,20 +62,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="1.0" />
+  
+    
+    <script src="../_static/searchtools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../searchindex.js"></script>
+  
   </head>
-  
-  
-  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
-
+  <body data-default-mode="">
   
   
   <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+
   
   <div id="pst-scroll-pixel-helper"></div>
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
-
+  
+  
+  
   
   <dialog id="pst-search-dialog">
     
@@ -100,7 +107,51 @@
 </div>
 
   
-    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    <header id="pst-header" class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
     </header>
   
 
@@ -408,11 +459,18 @@
 
 
 
-<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
-  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
-  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
-  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
-</button>
+<div class="theme-switch-container dropdown pst-js-only" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Color mode">
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button dropdown-toggle" aria-label="Color mode" data-bs-toggle="dropdown">
+    <i class="theme-switch fa-solid fa-sun fa-lg fa-fw" data-mode="light" title="Light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg fa-fw" data-mode="dark" title="Dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg fa-fw" data-mode="auto" title="System Settings"></i>
+  </button>
+  <ul class="dropdown-menu dropdown-menu-end">
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg fa-fw me-1"></i>System Settings</button></li>
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="light"><i class="fa-solid fa-sun fa-lg fa-fw me-1"></i>Light</button></li>
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="dark"><i class="fa-solid fa-moon fa-lg fa-fw me-1"></i>Dark</button></li>
+  </ul>
+</div>
 
 
 <button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
@@ -440,7 +498,7 @@
                 <h2> Contents </h2>
             </div>
             <nav aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
+                <ul class="pst-show_toc_level nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-system">Linear system</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#discretization">Discretization</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#runge-kutta">Runge-Kutta</a></li>
@@ -530,7 +588,7 @@
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">rhs</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">Y</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot; RHS of the system for explicit methods &quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">""" RHS of the system for explicit methods """</span>
     <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="o">-</span><span class="n">alpha</span><span class="o">*</span><span class="n">Y</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">beta</span><span class="o">*</span><span class="n">Y</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span>
                      <span class="o">+</span><span class="n">alpha</span><span class="o">*</span><span class="n">Y</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="n">beta</span><span class="o">*</span><span class="n">Y</span><span class="p">[</span><span class="mi">1</span><span class="p">]])</span>
 </pre></div>
@@ -541,7 +599,7 @@
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">ode_mat</span><span class="p">():</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot; return the matrix A in the linear system of ODEs &quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">""" return the matrix A in the linear system of ODEs """</span>
     <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="o">-</span><span class="n">alpha</span><span class="p">,</span>  <span class="n">beta</span><span class="p">],</span>
                      <span class="p">[</span><span class="o">+</span><span class="n">alpha</span><span class="p">,</span> <span class="o">-</span><span class="n">beta</span><span class="p">]],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">)</span>
 </pre></div>
@@ -552,7 +610,7 @@
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">integrate</span><span class="p">(</span><span class="n">Y_0</span><span class="p">,</span> <span class="n">dt</span><span class="p">,</span> <span class="n">tmax</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot; perform a backward-Euler integration &quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">""" perform a backward-Euler integration """</span>
 
     <span class="n">XA</span> <span class="o">=</span> <span class="n">Y_0</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
     <span class="n">XB</span> <span class="o">=</span> <span class="n">Y_0</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
@@ -607,11 +665,11 @@
     
     <span class="n">tfine</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">t</span><span class="o">.</span><span class="n">max</span><span class="p">(),</span> <span class="mi">1000</span><span class="p">)</span>
     
-    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">tfine</span><span class="p">,</span> <span class="n">analytic</span><span class="p">(</span><span class="n">tfine</span><span class="p">)</span> <span class="o">/</span> <span class="n">frac_equil</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;analytic&quot;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">tfine</span><span class="p">,</span> <span class="n">analytic</span><span class="p">(</span><span class="n">tfine</span><span class="p">)</span> <span class="o">/</span> <span class="n">frac_equil</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">"analytic"</span><span class="p">)</span>
     <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="p">(</span><span class="n">XB</span><span class="o">/</span><span class="n">XA</span><span class="p">)</span> <span class="o">/</span> <span class="n">frac_equil</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="n">label</span><span class="p">)</span>
     
-    <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;t&quot;</span><span class="p">)</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;$(X_B/X_A) / (\alpha/\beta)$&quot;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">"t"</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s2">"$(X_B/X_A) / (\alpha/\beta)$"</span><span class="p">)</span>
     
     <span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">frameon</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">fig</span>
@@ -636,7 +694,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/e692f21dc5477c2bd2b8c8619f76f3bc8b79bff77b1d522a0f76d774f1eed79c.png" src="../_images/e692f21dc5477c2bd2b8c8619f76f3bc8b79bff77b1d522a0f76d774f1eed79c.png" />
+<img alt="../_images/c4894a6f8f00184a0d8e6391db3afd2f8bdce40dcbe0d008ff4f63c17fa18a86.png" src="../_images/c4894a6f8f00184a0d8e6391db3afd2f8bdce40dcbe0d008ff4f63c17fa18a86.png" />
 </div>
 </div>
 <p>Now let’s see what happens with <span class="math notranslate nohighlight">\(\tau &gt; \tau_\mathrm{ref}\)</span></p>
@@ -648,7 +706,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/011833c1144bf7e4dbeefe6ab3a48c4d4eb9f0a6d5ec87d5949b945c6d0a6992.png" src="../_images/011833c1144bf7e4dbeefe6ab3a48c4d4eb9f0a6d5ec87d5949b945c6d0a6992.png" />
+<img alt="../_images/36d2fe0d410abbad9124bafb44f05b12b453f6d228b907314300a1f46de3f37b.png" src="../_images/36d2fe0d410abbad9124bafb44f05b12b453f6d228b907314300a1f46de3f37b.png" />
 </div>
 </div>
 <p>We see that we don’t get the position of the rise correct for either size timestep, but we do get the asymptotic limit correct at the end.</p>
@@ -659,7 +717,7 @@
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">rk4_integrate</span><span class="p">(</span><span class="n">Y_0</span><span class="p">,</span> <span class="n">dt</span><span class="p">,</span> <span class="n">tmax</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot; 4th-order explicit Runge-Kutta for comparison &quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">""" 4th-order explicit Runge-Kutta for comparison """</span>
 
     <span class="n">XA</span> <span class="o">=</span> <span class="n">Y_0</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
     <span class="n">XB</span> <span class="o">=</span> <span class="n">Y_0</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
@@ -699,7 +757,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/ef4593959d5cbd7a7a21714361cfa068fa1fa0880deb3cc3db9217ff9cb8ed61.png" src="../_images/ef4593959d5cbd7a7a21714361cfa068fa1fa0880deb3cc3db9217ff9cb8ed61.png" />
+<img alt="../_images/93cc206bda39e5667a163311ec41426bcf1a29eb8e61d4db4317c18ebf98f824.png" src="../_images/93cc206bda39e5667a163311ec41426bcf1a29eb8e61d4db4317c18ebf98f824.png" />
 </div>
 </div>
 <p>Now we see that we completely miss the correct long time solution.</p>
@@ -722,7 +780,7 @@
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sol</span> <span class="o">=</span> <span class="n">solve_ivp</span><span class="p">(</span><span class="n">rhs</span><span class="p">,</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">200</span><span class="o">*</span><span class="n">tref</span><span class="p">],</span> <span class="p">[</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">],</span>
-                <span class="n">method</span><span class="o">=</span><span class="s2">&quot;RK45&quot;</span><span class="p">,</span> <span class="n">dense_output</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                <span class="n">method</span><span class="o">=</span><span class="s2">"RK45"</span><span class="p">,</span> <span class="n">dense_output</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
                 <span class="n">rtol</span><span class="o">=</span><span class="mf">1.e-4</span><span class="p">,</span> <span class="n">atol</span><span class="o">=</span><span class="mf">1.e-17</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -741,7 +799,7 @@
         t: [ 0.000e+00  1.000e-22 ...  1.969e-07  2.000e-07]
         y: [[ 1.000e+00  1.000e+00 ...  1.001e-14  1.001e-14]
             [ 0.000e+00  1.000e-13 ...  1.000e+00  1.000e+00]]
-      sol: &lt;scipy.integrate._ivp.common.OdeSolution object at 0x7f24b9233380&gt;
+      sol: &lt;scipy.integrate._ivp.common.OdeSolution object at 0x7f76a80adfd0&gt;
  t_events: None
  y_events: None
      nfev: 734
@@ -758,7 +816,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/482fb7a8cd504672e201f96b2f163687b596facd9b8017c5063bfa1b0c4c2a50.png" src="../_images/482fb7a8cd504672e201f96b2f163687b596facd9b8017c5063bfa1b0c4c2a50.png" />
+<img alt="../_images/7b7c25c361123be9c4622472936c2ba5d32a5ed662655fc4a38c74442034cfdd.png" src="../_images/7b7c25c361123be9c4622472936c2ba5d32a5ed662655fc4a38c74442034cfdd.png" />
 </div>
 </div>
 <p>We can see how many steps it took, but looking at the shape of the stored solution:</p>
@@ -783,18 +841,18 @@
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">sympy</span><span class="w"> </span><span class="kn">import</span> <span class="n">init_session</span>
-<span class="n">init_session</span><span class="p">(</span><span class="n">use_latex</span><span class="o">=</span><span class="s2">&quot;mathjax&quot;</span><span class="p">)</span>
+<span class="n">init_session</span><span class="p">(</span><span class="n">use_latex</span><span class="o">=</span><span class="s2">"mathjax"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>IPython console for SymPy 1.14.0 (Python 3.14.5-64-bit) (ground types: python)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>IPython console for SymPy 1.14.0 (Python 3.14.7-64-bit) (ground types: python)
 
 These commands were executed:
 &gt;&gt;&gt; from sympy import *
-&gt;&gt;&gt; x, y, z, t = symbols(&#39;x y z t&#39;)
-&gt;&gt;&gt; k, m, n = symbols(&#39;k m n&#39;, integer=True)
-&gt;&gt;&gt; f, g, h = symbols(&#39;f g h&#39;, cls=Function)
+&gt;&gt;&gt; x, y, z, t = symbols('x y z t')
+&gt;&gt;&gt; k, m, n = symbols('k m n', integer=True)
+&gt;&gt;&gt; f, g, h = symbols('f g h', cls=Function)
 &gt;&gt;&gt; init_printing()
 
 Documentation can be found at https://docs.sympy.org/1.14.0/
@@ -804,7 +862,7 @@ Documentation can be found at https://docs.sympy.org/1.14.0/
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">alpha</span><span class="p">,</span> <span class="n">beta</span> <span class="o">=</span> <span class="n">symbols</span><span class="p">(</span><span class="s2">&quot;alpha beta&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">alpha</span><span class="p">,</span> <span class="n">beta</span> <span class="o">=</span> <span class="n">symbols</span><span class="p">(</span><span class="s2">"alpha beta"</span><span class="p">)</span>
 
 <span class="n">J</span> <span class="o">=</span> <span class="n">Matrix</span><span class="p">([[</span><span class="o">-</span><span class="n">alpha</span><span class="p">,</span> <span class="n">beta</span><span class="p">],</span> <span class="p">[</span><span class="n">alpha</span><span class="p">,</span> <span class="o">-</span><span class="n">beta</span><span class="p">]])</span>
 <span class="n">J</span><span class="o">.</span><span class="n">eigenvals</span><span class="p">()</span>
@@ -878,7 +936,7 @@ the problem was stiff.</p>
     <i class="fa-solid fa-list"></i> Contents
   </div>
   <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
-    <ul class="visible nav section-nav flex-column">
+    <ul class="pst-show_toc_level nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-system">Linear system</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#discretization">Discretization</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#runge-kutta">Runge-Kutta</a></li>
@@ -927,8 +985,8 @@ By Michael Zingale
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
-<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+  <script defer src="../_static/scripts/bootstrap.js?digest=90905a2f556bf617f1a9"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=90905a2f556bf617f1a9"></script>
 
   <footer class="bd-footer">
   </footer>

@@ -27,21 +27,21 @@
   </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=90905a2f556bf617f1a9" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=90905a2f556bf617f1a9" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=4418a689" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="_static/myfile.css?v=15ab05d9" />
   
   <!-- So that users can add custom icons -->
-  <script src="_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <script defer src="_static/scripts/fontawesome.js?digest=90905a2f556bf617f1a9"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=90905a2f556bf617f1a9" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=90905a2f556bf617f1a9" />
 
     <script src="_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="_static/doctools.js?v=fd6eb6e6"></script>
@@ -54,6 +54,7 @@
     <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'mesa-missing-rates';</script>
+    <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Reaction Networks 101" href="reactions-overview/reactions-101.html" />
@@ -61,20 +62,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="1.0" />
+  
+    
+    <script src="_static/searchtools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="searchindex.js"></script>
+  
   </head>
-  
-  
-  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
-
+  <body data-default-mode="">
   
   
   <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+
   
   <div id="pst-scroll-pixel-helper"></div>
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
-
+  
+  
+  
   
   <dialog id="pst-search-dialog">
     
@@ -100,7 +107,51 @@
 </div>
 
   
-    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    <header id="pst-header" class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
     </header>
   
 
@@ -408,11 +459,18 @@
 
 
 
-<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
-  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
-  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
-  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
-</button>
+<div class="theme-switch-container dropdown pst-js-only" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Color mode">
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button dropdown-toggle" aria-label="Color mode" data-bs-toggle="dropdown">
+    <i class="theme-switch fa-solid fa-sun fa-lg fa-fw" data-mode="light" title="Light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg fa-fw" data-mode="dark" title="Dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg fa-fw" data-mode="auto" title="System Settings"></i>
+  </button>
+  <ul class="dropdown-menu dropdown-menu-end">
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg fa-fw me-1"></i>System Settings</button></li>
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="light"><i class="fa-solid fa-sun fa-lg fa-fw me-1"></i>Light</button></li>
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="dark"><i class="fa-solid fa-moon fa-lg fa-fw me-1"></i>Dark</button></li>
+  </ul>
+</div>
 
 
 <button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
@@ -440,7 +498,7 @@
                 <h2> Contents </h2>
             </div>
             <nav aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
+                <ul class="pst-show_toc_level nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#read-in-the-mesa-model">Read in the MESA model</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-the-network-using-the-same-species-as-the-mesa-model">Create the network using the same species as the MESA model</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#full-network">Full network</a></li>
@@ -483,85 +541,7 @@
 <h2>Read in the MESA model<a class="headerlink" href="#read-in-the-mesa-model" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">model</span> <span class="o">=</span> <span class="n">mr</span><span class="o">.</span><span class="n">MesaData</span><span class="p">(</span><span class="s2">&quot;profile2.data&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">model</span> <span class="o">=</span> <span class="n">mr</span><span class="o">.</span><span class="n">MesaData</span><span class="p">(</span><span class="s2">&quot;profile2.data&quot;</span><span class="p">)</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.14.5/x64/lib/python3.14/site-packages/mesa_reader/__init__.py:134,</span> in <span class="ni">MesaData.__init__</span><span class="nt">(self, file_name, file_type)</span>
-<span class="g g-Whitespace">    </span><span class="mi">132</span> <span class="bp">self</span><span class="o">.</span><span class="n">header_data</span> <span class="o">=</span> <span class="kc">None</span>
-<span class="g g-Whitespace">    </span><span class="mi">133</span> <span class="bp">self</span><span class="o">.</span><span class="n">header_names</span> <span class="o">=</span> <span class="kc">None</span>
-<span class="ne">--&gt; </span><span class="mi">134</span> <span class="bp">self</span><span class="o">.</span><span class="n">read_data</span><span class="p">()</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.14.5/x64/lib/python3.14/site-packages/mesa_reader/__init__.py:183,</span> in <span class="ni">MesaData.read_data</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">181</span>     <span class="bp">self</span><span class="o">.</span><span class="n">read_model_data</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">182</span> <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">file_type</span> <span class="o">==</span> <span class="s2">&quot;log&quot;</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">183</span>     <span class="bp">self</span><span class="o">.</span><span class="n">read_log_data</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">184</span> <span class="k">else</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">185</span>     <span class="k">raise</span> <span class="n">UnknownFileTypeError</span><span class="p">(</span><span class="s2">&quot;Unknown file type </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">file_type</span><span class="p">))</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.14.5/x64/lib/python3.14/site-packages/mesa_reader/__init__.py:199,</span> in <span class="ni">MesaData.read_log_data</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">187</span> <span class="k">def</span><span class="w"> </span><span class="nf">read_log_data</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">188</span><span class="w">     </span><span class="sd">&quot;&quot;&quot;Reads in or update data from the original log (.data or .log) file.</span>
-<span class="g g-Whitespace">    </span><span class="mi">189</span><span class="sd"> </span>
-<span class="g g-Whitespace">    </span><span class="mi">190</span><span class="sd">     This re-reads the data from the originally-provided file name. Mostly</span>
-<span class="sd">   (...)    197     None</span>
-<span class="g g-Whitespace">    </span><span class="mi">198</span><span class="sd">     &quot;&quot;&quot;</span>
-<span class="ne">--&gt; </span><span class="mi">199</span>     <span class="bp">self</span><span class="o">.</span><span class="n">bulk_data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">genfromtxt</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">200</span>         <span class="bp">self</span><span class="o">.</span><span class="n">file_name</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">201</span>         <span class="n">skip_header</span><span class="o">=</span><span class="n">MesaData</span><span class="o">.</span><span class="n">bulk_names_line</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">202</span>         <span class="n">names</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">203</span>         <span class="n">ndmin</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>  <span class="c1"># Make sure a single entry is still a 1D array</span>
-<span class="g g-Whitespace">    </span><span class="mi">204</span>         <span class="n">dtype</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">205</span>     <span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">206</span>     <span class="bp">self</span><span class="o">.</span><span class="n">bulk_names</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">bulk_data</span><span class="o">.</span><span class="n">dtype</span><span class="o">.</span><span class="n">names</span>
-<span class="g g-Whitespace">    </span><span class="mi">207</span>     <span class="n">header_data</span> <span class="o">=</span> <span class="p">[]</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.14.5/x64/lib/python3.14/site-packages/numpy/lib/_npyio_impl.py:1978,</span> in <span class="ni">genfromtxt</span><span class="nt">(fname, dtype, comments, delimiter, skip_header, skip_footer, converters, missing_values, filling_values, usecols, names, excludelist, deletechars, replace_space, autostrip, case_sensitive, defaultfmt, unpack, usemask, loose, invalid_raise, max_rows, encoding, ndmin, like)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1976</span>     <span class="n">fname</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">fspath</span><span class="p">(</span><span class="n">fname</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1977</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">fname</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
-<span class="ne">-&gt; </span><span class="mi">1978</span>     <span class="n">fid</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">lib</span><span class="o">.</span><span class="n">_datasource</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">fname</span><span class="p">,</span> <span class="s1">&#39;rt&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="n">encoding</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1979</span>     <span class="n">fid_ctx</span> <span class="o">=</span> <span class="n">contextlib</span><span class="o">.</span><span class="n">closing</span><span class="p">(</span><span class="n">fid</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1980</span> <span class="k">else</span><span class="p">:</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.14.5/x64/lib/python3.14/site-packages/numpy/lib/_datasource.py:192,</span> in <span class="ni">open</span><span class="nt">(path, mode, destpath, encoding, newline)</span>
-<span class="g g-Whitespace">    </span><span class="mi">155</span><span class="w"> </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">156</span><span class="sd"> Open `path` with `mode` and return the file object.</span>
-<span class="g g-Whitespace">    </span><span class="mi">157</span><span class="sd"> </span>
-<span class="sd">   (...)    188 </span>
-<span class="g g-Whitespace">    </span><span class="mi">189</span><span class="sd"> &quot;&quot;&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">191</span> <span class="n">ds</span> <span class="o">=</span> <span class="n">DataSource</span><span class="p">(</span><span class="n">destpath</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">192</span> <span class="k">return</span> <span class="n">ds</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">mode</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="n">encoding</span><span class="p">,</span> <span class="n">newline</span><span class="o">=</span><span class="n">newline</span><span class="p">)</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.14.5/x64/lib/python3.14/site-packages/numpy/lib/_datasource.py:529,</span> in <span class="ni">DataSource.open</span><span class="nt">(self, path, mode, encoding, newline)</span>
-<span class="g g-Whitespace">    </span><span class="mi">526</span>     <span class="k">return</span> <span class="n">_file_openers</span><span class="p">[</span><span class="n">ext</span><span class="p">](</span><span class="n">found</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="n">mode</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">527</span>                               <span class="n">encoding</span><span class="o">=</span><span class="n">encoding</span><span class="p">,</span> <span class="n">newline</span><span class="o">=</span><span class="n">newline</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">528</span> <span class="k">else</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">529</span>     <span class="k">raise</span> <span class="ne">FileNotFoundError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">path</span><span class="si">}</span><span class="s2"> not found.&quot;</span><span class="p">)</span>
-
-<span class="ne">FileNotFoundError</span>: profile2.data not found.
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">model</span><span class="o">.</span><span class="n">bulk_names</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">model</span><span class="o">.</span><span class="n">bulk_names</span>
-
-<span class="ne">NameError</span>: name &#39;model&#39; is not defined
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">model</span> <span class="o">=</span> <span class="n">mr</span><span class="o">.</span><span class="n">MesaData</span><span class="p">(</span><span class="s2">"lab3/profile2.data"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -569,16 +549,6 @@
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nuclei</span> <span class="o">=</span> <span class="n">mesa_utils</span><span class="o">.</span><span class="n">get_nuclei</span><span class="p">(</span><span class="n">model</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">5</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">nuclei</span> <span class="o">=</span> <span class="n">mesa_utils</span><span class="o">.</span><span class="n">get_nuclei</span><span class="p">(</span><span class="n">model</span><span class="p">)</span>
-
-<span class="ne">NameError</span>: name &#39;model&#39; is not defined
 </pre></div>
 </div>
 </div>
@@ -590,29 +560,28 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">6</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">nuclei</span>
-
-<span class="ne">NameError</span>: name &#39;nuclei&#39; is not defined
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[H1,
+ He4,
+ O16,
+ O20,
+ F20,
+ Ne20,
+ Ne23,
+ Ne24,
+ Ne25,
+ Na23,
+ Na24,
+ Na25,
+ Mg24,
+ Mg25,
+ Si28]
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mesa_zones</span> <span class="o">=</span> <span class="n">mesa_utils</span><span class="o">.</span><span class="n">get_all_data</span><span class="p">(</span><span class="n">model</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">7</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">mesa_zones</span> <span class="o">=</span> <span class="n">mesa_utils</span><span class="o">.</span><span class="n">get_all_data</span><span class="p">(</span><span class="n">model</span><span class="p">)</span>
-
-<span class="ne">NameError</span>: name &#39;model&#39; is not defined
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mesa_zones</span> <span class="o">=</span> <span class="n">mesa_utils</span><span class="o">.</span><span class="n">MesaModel</span><span class="p">(</span><span class="n">model</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -629,16 +598,6 @@
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">8</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">net_full</span> <span class="o">=</span> <span class="n">pyna</span><span class="o">.</span><span class="n">network_helper</span><span class="p">(</span><span class="n">nuclei</span><span class="p">)</span>
-
-<span class="ne">NameError</span>: name &#39;nuclei&#39; is not defined
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -647,12 +606,28 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">9</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">net_full</span><span class="o">.</span><span class="n">summary</span><span class="p">()</span>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Network summary
+---------------
+  explicitly carried nuclei: 15
+  approximated-out nuclei: 0
+  inert nuclei (included in carried): 0
 
-<span class="ne">NameError</span>: name &#39;net_full&#39; is not defined
+  NSE compatible? False
+
+  total number of rates: 38
+
+  rates explicitly connecting nuclei: 38
+  hidden rates: 0
+
+  reaclib rates: 12
+  starlib rates: 0
+  temperature tabular rates: 0
+  weak tabular rates: 14
+  approximate rates: 0
+  derived rates: 12
+  branched rates: 0
+  modified rates: 0
+  custom rates: 0
 </pre></div>
 </div>
 </div>
@@ -664,14 +639,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">10</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">fig</span> <span class="o">=</span> <span class="n">net_full</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
-
-<span class="ne">NameError</span>: name &#39;net_full&#39; is not defined
-</pre></div>
-</div>
+<img alt="_images/660b2d8384bd72884962c2130f2ddd0d6602fdc3582a5cbf44ee3e6bee1204a7.png" src="_images/660b2d8384bd72884962c2130f2ddd0d6602fdc3582a5cbf44ee3e6bee1204a7.png" />
 </div>
 </div>
 </section>
@@ -686,14 +654,20 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_2672/94239008.py:2: DeprecationWarning: TabularLibrary is deprecated; use TabularWeakLibrary instead.
+  tl = pyna.TabularLibrary()
+</pre></div>
+</div>
+</div>
 </div>
 <p>The MESA run uses a rate that approximates the <span class="math notranslate nohighlight">\({}^{16}\mathrm{O} + {}^{16}\mathrm{O}\)</span> burning through <span class="math notranslate nohighlight">\({}^{31}\mathrm{P}\)</span>.  We’ll create that rate first.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">pynucastro.rates.aprox_family_rates</span><span class="w"> </span><span class="kn">import</span> <span class="n">make_CO_approx_rates</span>
-<span class="n">o_rates</span> <span class="o">=</span> <span class="n">make_CO_approx_rates</span><span class="p">(</span><span class="n">rl</span><span class="o">.</span><span class="n">get_rates</span><span class="p">(),</span> <span class="s2">&quot;O&quot;</span><span class="p">)</span>
+<span class="n">o_rates</span> <span class="o">=</span> <span class="n">make_CO_approx_rates</span><span class="p">(</span><span class="n">rl</span><span class="o">.</span><span class="n">get_rates</span><span class="p">(),</span> <span class="s2">"O"</span><span class="p">)</span>
 <span class="n">o_lib</span> <span class="o">=</span> <span class="n">pyna</span><span class="o">.</span><span class="n">Library</span><span class="p">(</span><span class="n">rates</span><span class="o">=</span><span class="n">o_rates</span><span class="p">)</span>
-<span class="n">r1616</span> <span class="o">=</span> <span class="n">o_lib</span><span class="o">.</span><span class="n">get_rate_by_name</span><span class="p">(</span><span class="s2">&quot;o16(o16,a)si28&quot;</span><span class="p">)</span>
+<span class="n">r1616</span> <span class="o">=</span> <span class="n">o_lib</span><span class="o">.</span><span class="n">get_rate_by_name</span><span class="p">(</span><span class="s2">"o16(o16,a)si28"</span><span class="p">)</span>
 <span class="nb">type</span><span class="p">(</span><span class="n">r1616</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -708,13 +682,13 @@
 <p>Now get all the weak rates we used in the MESA simulation</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rate_names</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;ne20(,)f20&quot;</span><span class="p">,</span> <span class="s2">&quot;f20(,)ne20&quot;</span><span class="p">,</span>
-              <span class="s2">&quot;f20(,)o20&quot;</span><span class="p">,</span> <span class="s2">&quot;o20(,)f20&quot;</span><span class="p">,</span>
-              <span class="s2">&quot;mg24(,)na24&quot;</span><span class="p">,</span> <span class="s2">&quot;na24(,)mg24&quot;</span><span class="p">,</span>
-              <span class="s2">&quot;na24(,)ne24&quot;</span><span class="p">,</span> <span class="s2">&quot;ne24(,)na24&quot;</span><span class="p">,</span>
-              <span class="s2">&quot;na23(,)ne23&quot;</span><span class="p">,</span> <span class="s2">&quot;ne23(,)na23&quot;</span><span class="p">,</span>
-              <span class="s2">&quot;mg25(,)na25&quot;</span><span class="p">,</span> <span class="s2">&quot;na25(,)mg25&quot;</span><span class="p">,</span>
-              <span class="s2">&quot;na25(,)ne25&quot;</span><span class="p">,</span> <span class="s2">&quot;ne25(,)na25&quot;</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rate_names</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"ne20(,)f20"</span><span class="p">,</span> <span class="s2">"f20(,)ne20"</span><span class="p">,</span>
+              <span class="s2">"f20(,)o20"</span><span class="p">,</span> <span class="s2">"o20(,)f20"</span><span class="p">,</span>
+              <span class="s2">"mg24(,)na24"</span><span class="p">,</span> <span class="s2">"na24(,)mg24"</span><span class="p">,</span>
+              <span class="s2">"na24(,)ne24"</span><span class="p">,</span> <span class="s2">"ne24(,)na24"</span><span class="p">,</span>
+              <span class="s2">"na23(,)ne23"</span><span class="p">,</span> <span class="s2">"ne23(,)na23"</span><span class="p">,</span>
+              <span class="s2">"mg25(,)na25"</span><span class="p">,</span> <span class="s2">"na25(,)mg25"</span><span class="p">,</span>
+              <span class="s2">"na25(,)ne25"</span><span class="p">,</span> <span class="s2">"ne25(,)na25"</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
@@ -768,6 +742,7 @@
   weak tabular rates: 14
   approximate rates: 1
   derived rates: 0
+  branched rates: 0
   modified rates: 0
   custom rates: 0
 </pre></div>
@@ -781,7 +756,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/0446512f1632009e68236613e5cff0ab256bb336d71693bf467e5eac86f4da75.png" src="_images/0446512f1632009e68236613e5cff0ab256bb336d71693bf467e5eac86f4da75.png" />
+<img alt="_images/8b0b7d7ff4889eb2e6ebd25e40efbf0bfa1388a5f6c26750f3bf0452aa9d989e.png" src="_images/8b0b7d7ff4889eb2e6ebd25e40efbf0bfa1388a5f6c26750f3bf0452aa9d989e.png" />
 </div>
 </div>
 </section>
@@ -815,108 +790,28 @@ validation: He4 produced in O16 + O16 ⟶ Si28 + He4 never consumed.
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>82
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>162
 </pre></div>
 </div>
 </div>
 </div>
-<p>This finds 82 other potential rates</p>
+<p>This finds 162 other potential rates.  But this includes a lot of duplicates (like StarLib rates vs. ReacLib rates).  Let’s eliminate the StarLib rates</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">lib</span> <span class="o">=</span> <span class="n">pyna</span><span class="o">.</span><span class="n">Library</span><span class="p">(</span><span class="n">rates</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="n">missing_rates</span><span class="o">.</span><span class="n">keys</span><span class="p">()))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">trimmed_rates</span> <span class="o">=</span> <span class="p">[</span><span class="n">r</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">missing_rates</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
+                 <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="n">pyna</span><span class="o">.</span><span class="n">rates</span><span class="o">.</span><span class="n">StarLibRate</span><span class="p">)]</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">lib</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">trimmed_rates</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>O16 + He4 ⟶ Ne20 + 𝛾           [Q =   4.73 MeV] (O16 + He4 --&gt; Ne20 &lt;reaclib_co10&gt;)
-O16 + O16 ⟶ p + P31            [Q =   7.68 MeV] (O16 + O16 --&gt; p + P31 &lt;reaclib_cf88&gt;)
-O16 + O16 ⟶ n + S31            [Q =   1.50 MeV] (O16 + O16 --&gt; n + S31 &lt;reaclib_cf88&gt;)
-O20 + He4 ⟶ n + Ne23           [Q =   3.30 MeV] (O20 + He4 --&gt; n + Ne23 &lt;reaclib_rpsm&gt;)
-O20 + He4 ⟶ Ne24 + 𝛾           [Q =  12.17 MeV] (O20 + He4 --&gt; Ne24 &lt;reaclib_rpsm&gt;)
-F20 + He4 ⟶ p + Ne23           [Q =   0.27 MeV] (F20 + He4 --&gt; p + Ne23 &lt;reaclib_rpsm&gt;)
-F20 + He4 ⟶ n + Na23           [Q =   3.87 MeV] (F20 + He4 --&gt; n + Na23 &lt;reaclib_rpsm&gt;)
-F20 + He4 ⟶ Na24 + 𝛾           [Q =  10.82 MeV] (F20 + He4 --&gt; Na24 &lt;reaclib_rpsm&gt;)
-Ne20 + He4 ⟶ Mg24 + 𝛾          [Q =   9.32 MeV] (Ne20 + He4 --&gt; Mg24 &lt;reaclib_il10&gt;)
-Ne23 + He4 ⟶ n + Mg26          [Q =   5.42 MeV] (Ne23 + He4 --&gt; n + Mg26 &lt;reaclib_rath&gt;)
-Ne23 + He4 ⟶ Mg27 + 𝛾          [Q =  11.86 MeV] (Ne23 + He4 --&gt; Mg27 &lt;reaclib_rath&gt;)
-Ne24 + He4 ⟶ n + Mg27          [Q =   2.99 MeV] (Ne24 + He4 --&gt; n + Mg27 &lt;reaclib_rath&gt;)
-Ne24 + He4 ⟶ Mg28 + 𝛾          [Q =  11.50 MeV] (Ne24 + He4 --&gt; Mg28 &lt;reaclib_rath&gt;)
-Ne25 + He4 ⟶ n + Mg28          [Q =   7.31 MeV] (Ne25 + He4 --&gt; n + Mg28 &lt;reaclib_rath&gt;)
-Ne25 + He4 ⟶ Mg29 + 𝛾          [Q =  11.03 MeV] (Ne25 + He4 --&gt; Mg29 &lt;reaclib_rath&gt;)
-Na23 + He4 ⟶ p + Mg26          [Q =   1.82 MeV] (Na23 + He4 --&gt; p + Mg26 &lt;reaclib_ths8&gt;)
-Na23 + He4 ⟶ Al27 + 𝛾          [Q =  10.09 MeV] (Na23 + He4 --&gt; Al27 &lt;reaclib_ths8&gt;)
-Na24 + He4 ⟶ p + Mg27          [Q =   1.30 MeV] (Na24 + He4 --&gt; p + Mg27 &lt;reaclib_rath&gt;)
-Na24 + He4 ⟶ n + Al27          [Q =   3.13 MeV] (Na24 + He4 --&gt; n + Al27 &lt;reaclib_rath&gt;)
-Na24 + He4 ⟶ Al28 + 𝛾          [Q =  10.86 MeV] (Na24 + He4 --&gt; Al28 &lt;reaclib_rath&gt;)
-Na25 + He4 ⟶ p + Mg28          [Q =   0.80 MeV] (Na25 + He4 --&gt; p + Mg28 &lt;reaclib_rath&gt;)
-Na25 + He4 ⟶ n + Al28          [Q =   1.85 MeV] (Na25 + He4 --&gt; n + Al28 &lt;reaclib_rath&gt;)
-Na25 + He4 ⟶ Al29 + 𝛾          [Q =  11.28 MeV] (Na25 + He4 --&gt; Al29 &lt;reaclib_rath&gt;)
-Mg24 + He4 ⟶ Si28 + 𝛾          [Q =   9.98 MeV] (Mg24 + He4 --&gt; Si28 &lt;reaclib_st08&gt;)
-Mg25 + He4 ⟶ n + Si28          [Q =   2.65 MeV] (Mg25 + He4 --&gt; n + Si28 &lt;reaclib_nacr&gt;)
-Mg25 + He4 ⟶ Si29 + 𝛾          [Q =  11.13 MeV] (Mg25 + He4 --&gt; Si29 &lt;reaclib_cf88&gt;)
-Si28 + He4 ⟶ S32 + 𝛾           [Q =   6.95 MeV] (Si28 + He4 --&gt; S32 &lt;reaclib_ths8&gt;)
-He4 + He4 ⟶ p + Li7            [Q = -17.35 MeV] (He4 + He4 --&gt; p + Li7 &lt;reaclib_de04&gt;)
-He4 + He4 ⟶ n + Be7            [Q = -18.99 MeV] (He4 + He4 --&gt; n + Be7 &lt;reaclib_wag&gt;)
-O16 + He4 ⟶ p + F19            [Q =  -8.11 MeV] (O16 + He4 --&gt; p + F19 &lt;reaclib_nacr&gt;)
-O16 + He4 ⟶ n + Ne19           [Q = -12.13 MeV] (O16 + He4 --&gt; n + Ne19 &lt;reaclib_ths8&gt;)
-O20 + He4 ⟶ p + F23            [Q =  -4.40 MeV] (O20 + He4 --&gt; p + F23 &lt;reaclib_rpsm&gt;)
-O20 ⟶ n + O19                  [Q =  -7.61 MeV] (O20 --&gt; n + O19 &lt;reaclib_wies&gt;)
-F20 ⟶ p + O19                  [Q = -10.64 MeV] (F20 --&gt; p + O19 &lt;reaclib_rpsm&gt;)
-F20 ⟶ n + F19                  [Q =  -6.60 MeV] (F20 --&gt; n + F19 &lt;reaclib_ks03&gt;)
-Ne20 + He4 ⟶ C12 + C12         [Q =  -4.62 MeV] (Ne20 + He4 --&gt; C12 + C12 &lt;reaclib_cf88&gt;)
-Ne20 + He4 ⟶ p + Na23          [Q =  -2.38 MeV] (Ne20 + He4 --&gt; p + Na23 &lt;reaclib_il10&gt;)
-Ne20 + He4 ⟶ n + Mg23          [Q =  -7.21 MeV] (Ne20 + He4 --&gt; n + Mg23 &lt;reaclib_ths8&gt;)
-Ne20 ⟶ He4 + O16               [Q =  -4.73 MeV] (Ne20 --&gt; He4 + O16 &lt;reaclib_co10&gt;)
-Ne20 ⟶ p + F19                 [Q = -12.84 MeV] (Ne20 --&gt; p + F19 &lt;reaclib_nacr&gt;)
-Ne20 ⟶ n + Ne19                [Q = -16.86 MeV] (Ne20 --&gt; n + Ne19 &lt;reaclib_ths8&gt;)
-Ne20 ⟶ Na20 + e⁻ + 𝜈           [Q = -13.89 MeV] (Ne20 --&gt; Na20 &lt;weaktab_oda&gt;)
-Ne23 + He4 ⟶ p + Na26          [Q =  -3.12 MeV] (Ne23 + He4 --&gt; p + Na26 &lt;reaclib_rath&gt;)
-Ne23 ⟶ He4 + O19               [Q = -10.91 MeV] (Ne23 --&gt; He4 + O19 &lt;reaclib_rpsm&gt;)
-Ne23 ⟶ p + F22                 [Q = -15.24 MeV] (Ne23 --&gt; p + F22 &lt;reaclib_rpsm&gt;)
-Ne23 + e⁻ ⟶ F23 + 𝜈            [Q =  -8.44 MeV] (Ne23 --&gt; F23 &lt;weaktab_oda&gt;)
-Ne23 ⟶ n + Ne22                [Q =  -5.20 MeV] (Ne23 --&gt; n + Ne22 &lt;reaclib_ks03&gt;)
-Ne24 + He4 ⟶ p + Na27          [Q =  -5.23 MeV] (Ne24 + He4 --&gt; p + Na27 &lt;reaclib_rath&gt;)
-Ne24 ⟶ He4 + O20               [Q = -12.17 MeV] (Ne24 --&gt; He4 + O20 &lt;reaclib_rpsm&gt;)
-Ne24 ⟶ p + F23                 [Q = -16.57 MeV] (Ne24 --&gt; p + F23 &lt;reaclib_rpsm&gt;)
-Ne24 ⟶ n + Ne23                [Q =  -8.87 MeV] (Ne24 --&gt; n + Ne23 &lt;reaclib_wies&gt;)
-Ne25 + He4 ⟶ p + Na28          [Q =  -5.89 MeV] (Ne25 + He4 --&gt; p + Na28 &lt;reaclib_rath&gt;)
-Ne25 ⟶ He4 + O21               [Q = -12.54 MeV] (Ne25 --&gt; He4 + O21 &lt;reaclib_rpsm&gt;)
-Ne25 ⟶ p + F24                 [Q = -16.89 MeV] (Ne25 --&gt; p + F24 &lt;reaclib_rpsm&gt;)
-Ne25 ⟶ n + Ne24                [Q =  -4.28 MeV] (Ne25 --&gt; n + Ne24 &lt;reaclib_wies&gt;)
-Na23 + He4 ⟶ n + Al26          [Q =  -2.97 MeV] (Na23 + He4 --&gt; n + Al26 &lt;reaclib_ol11&gt;)
-Na23 ⟶ He4 + F19               [Q = -10.47 MeV] (Na23 --&gt; He4 + F19 &lt;reaclib_rpsm&gt;)
-Na23 ⟶ p + Ne22                [Q =  -8.79 MeV] (Na23 --&gt; p + Ne22 &lt;reaclib_ke17&gt;)
-Na23 ⟶ n + Na22                [Q = -12.42 MeV] (Na23 --&gt; n + Na22 &lt;reaclib_ths8&gt;)
-Na23 ⟶ Mg23 + e⁻ + 𝜈           [Q =  -4.06 MeV] (Na23 --&gt; Mg23 &lt;weaktab_oda&gt;)
-Na24 ⟶ He4 + F20               [Q = -10.82 MeV] (Na24 --&gt; He4 + F20 &lt;reaclib_rpsm&gt;)
-Na24 ⟶ p + Ne23                [Q = -10.55 MeV] (Na24 --&gt; p + Ne23 &lt;reaclib_rath&gt;)
-Na24 ⟶ n + Na23                [Q =  -6.96 MeV] (Na24 --&gt; n + Na23 &lt;reaclib_ks03&gt;)
-Na25 ⟶ He4 + F21               [Q = -11.73 MeV] (Na25 --&gt; He4 + F21 &lt;reaclib_rpsm&gt;)
-Na25 ⟶ p + Ne24                [Q = -10.70 MeV] (Na25 --&gt; p + Ne24 &lt;reaclib_rath&gt;)
-Na25 ⟶ n + Na24                [Q =  -9.01 MeV] (Na25 --&gt; n + Na24 &lt;reaclib_rath&gt;)
-Mg24 + He4 ⟶ C12 + O16         [Q =  -6.77 MeV] (Mg24 + He4 --&gt; C12 + O16 &lt;reaclib_cf88&gt;)
-Mg24 + He4 ⟶ p + Al27          [Q =  -1.60 MeV] (Mg24 + He4 --&gt; p + Al27 &lt;reaclib_il10&gt;)
-Mg24 + He4 ⟶ n + Si27          [Q =  -7.20 MeV] (Mg24 + He4 --&gt; n + Si27 &lt;reaclib_ths8&gt;)
-Mg24 ⟶ He4 + Ne20              [Q =  -9.32 MeV] (Mg24 --&gt; He4 + Ne20 &lt;reaclib_il10&gt;)
-Mg24 ⟶ p + Na23                [Q = -11.69 MeV] (Mg24 --&gt; p + Na23 &lt;reaclib_il10&gt;)
-Mg24 ⟶ n + Mg23                [Q = -16.53 MeV] (Mg24 --&gt; n + Mg23 &lt;reaclib_ths8&gt;)
-Mg24 ⟶ Al24 + e⁻ + 𝜈           [Q = -13.88 MeV] (Mg24 --&gt; Al24 &lt;weaktab_oda&gt;)
-Mg25 + He4 ⟶ p + Al28          [Q =  -1.21 MeV] (Mg25 + He4 --&gt; p + Al28 &lt;reaclib_cf88&gt;)
-Mg25 ⟶ He4 + Ne21              [Q =  -9.88 MeV] (Mg25 --&gt; He4 + Ne21 &lt;reaclib_cf88&gt;)
-Mg25 ⟶ p + Na24                [Q = -12.06 MeV] (Mg25 --&gt; p + Na24 &lt;reaclib_rath&gt;)
-Mg25 ⟶ n + Mg24                [Q =  -7.33 MeV] (Mg25 --&gt; n + Mg24 &lt;reaclib_ks03&gt;)
-Mg25 ⟶ Al25 + e⁻ + 𝜈           [Q =  -4.28 MeV] (Mg25 --&gt; Al25 &lt;weaktab_oda&gt;)
-Si28 + He4 ⟶ O16 + O16         [Q =  -9.59 MeV] (Si28 + He4 --&gt; O16 + O16 &lt;reaclib_cf88&gt;)
-Si28 + He4 ⟶ C12 + Ne20        [Q = -12.02 MeV] (Si28 + He4 --&gt; C12 + Ne20 &lt;reaclib_rolf&gt;)
-Si28 + He4 ⟶ p + P31           [Q =  -1.92 MeV] (Si28 + He4 --&gt; p + P31 &lt;reaclib_il10&gt;)
-Si28 + He4 ⟶ n + S31           [Q =  -8.09 MeV] (Si28 + He4 --&gt; n + S31 &lt;reaclib_ths8&gt;)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>82
 </pre></div>
 </div>
 </div>
@@ -925,23 +820,6 @@ Si28 + He4 ⟶ n + S31           [Q =  -8.09 MeV] (Si28 + He4 --&gt; n + S31 &lt
 <section id="determine-if-any-missing-rates-are-important">
 <h2>Determine if any missing rates are important<a class="headerlink" href="#determine-if-any-missing-rates-are-important" title="Link to this heading">#</a></h2>
 <p>We’ll pick some zones from the MESA model to consider</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">mesa_zones</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">24</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="nb">len</span><span class="p">(</span><span class="n">mesa_zones</span><span class="p">)</span>
-
-<span class="ne">NameError</span>: name &#39;mesa_zones&#39; is not defined
-</pre></div>
-</div>
-</div>
-</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
@@ -976,15 +854,21 @@ Si28 + He4 ⟶ n + S31           [Q =  -8.09 MeV] (Si28 + He4 --&gt; n + S31 &lt
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">possibly_important</span> <span class="o">=</span> <span class="p">[]</span>
 
 <span class="k">for</span> <span class="n">izone</span> <span class="ow">in</span> <span class="n">zones</span><span class="p">:</span>
-    <span class="n">rho</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="n">comp</span> <span class="o">=</span> <span class="n">mesa_zones</span><span class="p">[</span><span class="n">izone</span><span class="p">]</span>
+    <span class="n">state</span> <span class="o">=</span> <span class="n">mesa_zones</span><span class="o">.</span><span class="n">get_zone_data</span><span class="p">(</span><span class="n">izone</span><span class="p">)</span>
     <span class="k">for</span> <span class="n">nuc</span> <span class="ow">in</span> <span class="n">net</span><span class="o">.</span><span class="n">unique_nuclei</span><span class="p">:</span>
+        <span class="n">thermo</span> <span class="o">=</span> <span class="n">pyna</span><span class="o">.</span><span class="n">ThermoState</span><span class="p">(</span><span class="n">rho</span><span class="o">=</span><span class="n">state</span><span class="o">.</span><span class="n">rho</span><span class="p">,</span>
+                                  <span class="n">T</span><span class="o">=</span><span class="n">state</span><span class="o">.</span><span class="n">T</span><span class="p">,</span>
+                                  <span class="n">comp</span><span class="o">=</span><span class="n">state</span><span class="o">.</span><span class="n">comp</span><span class="p">)</span>
+        
         <span class="c1"># evaluate all existing rates working with this nucleus</span>
-        <span class="n">r_current</span> <span class="o">=</span> <span class="p">{</span><span class="n">r</span> <span class="p">:</span> <span class="n">r</span><span class="o">.</span><span class="n">eval_full_rate</span><span class="p">(</span><span class="n">rho</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="n">comp</span><span class="p">,</span> <span class="n">screen_func</span><span class="o">=</span><span class="n">chugunov_2007</span><span class="p">)</span>
+        <span class="n">r_current</span> <span class="o">=</span> <span class="p">{</span><span class="n">r</span> <span class="p">:</span> <span class="n">r</span><span class="o">.</span><span class="n">eval_full_rate</span><span class="p">(</span><span class="n">thermo</span><span class="p">,</span>
+                                          <span class="n">screen_func</span><span class="o">=</span><span class="n">chugunov_2007</span><span class="p">)</span>
                      <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">net</span><span class="o">.</span><span class="n">get_rates</span><span class="p">()</span> <span class="k">if</span> <span class="n">nuc</span> <span class="o">==</span> <span class="nb">max</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">reactants</span><span class="p">)}</span>
 
         <span class="c1"># evaluate all missing rates working with this nucleus</span>
-        <span class="n">r_missing</span> <span class="o">=</span> <span class="p">{</span><span class="n">r</span> <span class="p">:</span> <span class="n">r</span><span class="o">.</span><span class="n">eval_full_rate</span><span class="p">(</span><span class="n">rho</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="n">comp</span><span class="p">,</span> <span class="n">screen_func</span><span class="o">=</span><span class="n">chugunov_2007</span><span class="p">)</span>
-                     <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">missing_rates</span> <span class="k">if</span> <span class="n">nuc</span> <span class="o">==</span> <span class="nb">max</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">reactants</span><span class="p">)}</span>
+        <span class="n">r_missing</span> <span class="o">=</span> <span class="p">{</span><span class="n">r</span> <span class="p">:</span> <span class="n">r</span><span class="o">.</span><span class="n">eval_full_rate</span><span class="p">(</span><span class="n">thermo</span><span class="p">,</span>
+                                          <span class="n">screen_func</span><span class="o">=</span><span class="n">chugunov_2007</span><span class="p">)</span>
+                     <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">trimmed_rates</span> <span class="k">if</span> <span class="n">nuc</span> <span class="o">==</span> <span class="nb">max</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">reactants</span><span class="p">)}</span>
 
         <span class="c1"># compute the fastest (abs value) current rate consuming this nucleus</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="n">r_current</span> <span class="ow">and</span> <span class="n">r_missing</span><span class="p">):</span>
@@ -1001,39 +885,6 @@ Si28 + He4 ⟶ n + S31           [Q =  -8.09 MeV] (Si28 + He4 --&gt; n + S31 &lt
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">28</span><span class="p">],</span> <span class="n">line</span> <span class="mi">4</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">possibly_important</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> 
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="k">for</span> <span class="n">izone</span> <span class="ow">in</span> <span class="n">zones</span><span class="p">:</span>
-<span class="ne">----&gt; </span><span class="mi">4</span>     <span class="n">rho</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="n">comp</span> <span class="o">=</span> <span class="n">mesa_zones</span><span class="p">[</span><span class="n">izone</span><span class="p">]</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span>     <span class="k">for</span> <span class="n">nuc</span> <span class="ow">in</span> <span class="n">net</span><span class="o">.</span><span class="n">unique_nuclei</span><span class="p">:</span>
-<span class="g g-Whitespace">      </span><span class="mi">6</span>         <span class="c1"># evaluate all existing rates working with this nucleus</span>
-<span class="g g-Whitespace">      </span><span class="mi">7</span>         <span class="n">r_current</span> <span class="o">=</span> <span class="p">{</span><span class="n">r</span> <span class="p">:</span> <span class="n">r</span><span class="o">.</span><span class="n">eval_full_rate</span><span class="p">(</span><span class="n">rho</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="n">comp</span><span class="p">,</span> <span class="n">screen_func</span><span class="o">=</span><span class="n">chugunov_2007</span><span class="p">)</span>
-
-<span class="ne">NameError</span>: name &#39;mesa_zones&#39; is not defined
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">comp</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">29</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">comp</span>
-
-<span class="ne">NameError</span>: name &#39;comp&#39; is not defined
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1042,7 +893,31 @@ Si28 + He4 ⟶ n + S31           [Q =  -8.09 MeV] (Si28 + He4 --&gt; n + S31 &lt
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{O16 + He4 ⟶ Ne20 + 𝛾,
+ O16 + O16 ⟶ p + P31,
+ O16 + O16 ⟶ n + S31,
+ O20 + He4 ⟶ p + F23,
+ O20 + He4 ⟶ n + Ne23,
+ O20 + He4 ⟶ Ne24 + 𝛾,
+ F20 + He4 ⟶ p + Ne23,
+ F20 + He4 ⟶ n + Na23,
+ F20 + He4 ⟶ Na24 + 𝛾,
+ Ne20 + He4 ⟶ p + Na23,
+ Ne20 + He4 ⟶ Mg24 + 𝛾,
+ Ne23 + e⁻ ⟶ F23 + 𝜈,
+ Ne23 + He4 ⟶ p + Na26,
+ Ne23 + He4 ⟶ n + Mg26,
+ Ne23 + He4 ⟶ Mg27 + 𝛾,
+ Ne23 ⟶ n + Ne22,
+ Ne24 + He4 ⟶ n + Mg27,
+ Ne24 + He4 ⟶ Mg28 + 𝛾,
+ Ne25 + He4 ⟶ n + Mg28,
+ Ne25 ⟶ n + Ne24,
+ Ne25 + He4 ⟶ Mg29 + 𝛾,
+ Na23 + He4 ⟶ p + Mg26,
+ Na25 + He4 ⟶ p + Mg28,
+ Na25 + He4 ⟶ n + Al28,
+ Na25 + He4 ⟶ Al29 + 𝛾}
 </pre></div>
 </div>
 </div>
@@ -1050,7 +925,7 @@ Si28 + He4 ⟶ n + S31           [Q =  -8.09 MeV] (Si28 + He4 --&gt; n + S31 &lt
 <p>which of these involve only the nuclei we are already carrying? (also allow protons)</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">okay_nuc</span> <span class="o">=</span> <span class="n">net</span><span class="o">.</span><span class="n">unique_nuclei</span> <span class="o">+</span> <span class="p">[</span><span class="n">pyna</span><span class="o">.</span><span class="n">Nucleus</span><span class="p">(</span><span class="s2">&quot;p&quot;</span><span class="p">)]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">okay_nuc</span> <span class="o">=</span> <span class="n">net</span><span class="o">.</span><span class="n">unique_nuclei</span> <span class="o">+</span> <span class="p">[</span><span class="n">pyna</span><span class="o">.</span><span class="n">Nucleus</span><span class="p">(</span><span class="s2">"p"</span><span class="p">)]</span>
 <span class="n">filtered_rates</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">possibly_important</span><span class="p">:</span>
     <span class="n">okay</span> <span class="o">=</span> <span class="kc">True</span>
@@ -1066,12 +941,18 @@ Si28 + He4 ⟶ n + S31           [Q =  -8.09 MeV] (Si28 + He4 --&gt; n + S31 &lt
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">filtered_rates</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">filtered_rates</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">r</span><span class="si">!s:</span><span class="s2">25</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">r</span><span class="p">)</span><span class="o">.</span><span class="vm">__name__</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>O20 + He4 ⟶ Ne24 + 𝛾      ReacLibRate
+F20 + He4 ⟶ p + Ne23      ReacLibRate
+F20 + He4 ⟶ Na24 + 𝛾      ReacLibRate
+Ne20 + He4 ⟶ p + Na23     ReacLibRate
+Ne20 + He4 ⟶ Mg24 + 𝛾     ReacLibRate
+O16 + He4 ⟶ Ne20 + 𝛾      ReacLibRate
 </pre></div>
 </div>
 </div>
@@ -1102,23 +983,24 @@ Si28 + He4 ⟶ n + S31           [Q =  -8.09 MeV] (Si28 + He4 --&gt; n + S31 &lt
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Network summary
 ---------------
-  explicitly carried nuclei: 14
-  approximated-out nuclei: 1
+  explicitly carried nuclei: 27
+  approximated-out nuclei: 0
   inert nuclei (included in carried): 0
 
   NSE compatible? False
 
-  total number of rates: 22
+  total number of rates: 46
 
-  rates explicitly connecting nuclei: 15
-  hidden rates: 7
+  rates explicitly connecting nuclei: 40
+  hidden rates: 6
 
-  reaclib rates: 7
+  reaclib rates: 30
   starlib rates: 0
   temperature tabular rates: 0
-  weak tabular rates: 14
+  weak tabular rates: 15
   approximate rates: 1
   derived rates: 0
+  branched rates: 0
   modified rates: 0
   custom rates: 0
 </pre></div>
@@ -1132,7 +1014,7 @@ Si28 + He4 ⟶ n + S31           [Q =  -8.09 MeV] (Si28 + He4 --&gt; n + S31 &lt
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/0446512f1632009e68236613e5cff0ab256bb336d71693bf467e5eac86f4da75.png" src="_images/0446512f1632009e68236613e5cff0ab256bb336d71693bf467e5eac86f4da75.png" />
+<img alt="_images/3291d624e224b2467366ac0a677e73cda7024ae3c3d0ad00643c15474187865d.png" src="_images/3291d624e224b2467366ac0a677e73cda7024ae3c3d0ad00643c15474187865d.png" />
 </div>
 </div>
 <p>what if we restrict it to just the rates that use the same nuclei?</p>
@@ -1159,23 +1041,24 @@ Si28 + He4 ⟶ n + S31           [Q =  -8.09 MeV] (Si28 + He4 --&gt; n + S31 &lt
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Network summary
 ---------------
-  explicitly carried nuclei: 14
+  explicitly carried nuclei: 15
   approximated-out nuclei: 1
   inert nuclei (included in carried): 0
 
   NSE compatible? False
 
-  total number of rates: 22
+  total number of rates: 28
 
-  rates explicitly connecting nuclei: 15
+  rates explicitly connecting nuclei: 21
   hidden rates: 7
 
-  reaclib rates: 7
+  reaclib rates: 13
   starlib rates: 0
   temperature tabular rates: 0
   weak tabular rates: 14
   approximate rates: 1
   derived rates: 0
+  branched rates: 0
   modified rates: 0
   custom rates: 0
 </pre></div>
@@ -1189,7 +1072,7 @@ Si28 + He4 ⟶ n + S31           [Q =  -8.09 MeV] (Si28 + He4 --&gt; n + S31 &lt
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/0446512f1632009e68236613e5cff0ab256bb336d71693bf467e5eac86f4da75.png" src="_images/0446512f1632009e68236613e5cff0ab256bb336d71693bf467e5eac86f4da75.png" />
+<img alt="_images/c66959e2ce52e9d4cd3602173a55d93f18ef967adc4b3f4e38a55259db031a34.png" src="_images/c66959e2ce52e9d4cd3602173a55d93f18ef967adc4b3f4e38a55259db031a34.png" />
 </div>
 </div>
 </section>
@@ -1241,7 +1124,7 @@ Si28 + He4 ⟶ n + S31           [Q =  -8.09 MeV] (Si28 + He4 --&gt; n + S31 &lt
     <i class="fa-solid fa-list"></i> Contents
   </div>
   <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
-    <ul class="visible nav section-nav flex-column">
+    <ul class="pst-show_toc_level nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#read-in-the-mesa-model">Read in the MESA model</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-the-network-using-the-same-species-as-the-mesa-model">Create the network using the same species as the MESA model</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#full-network">Full network</a></li>
@@ -1292,8 +1175,8 @@ By Michael Zingale
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
-<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+  <script defer src="_static/scripts/bootstrap.js?digest=90905a2f556bf617f1a9"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=90905a2f556bf617f1a9"></script>
 
   <footer class="bd-footer">
   </footer>

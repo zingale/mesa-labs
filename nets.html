@@ -27,21 +27,21 @@
   </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=90905a2f556bf617f1a9" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=90905a2f556bf617f1a9" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=4418a689" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="_static/myfile.css?v=15ab05d9" />
   
   <!-- So that users can add custom icons -->
-  <script src="_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <script defer src="_static/scripts/fontawesome.js?digest=90905a2f556bf617f1a9"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=90905a2f556bf617f1a9" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=90905a2f556bf617f1a9" />
 
     <script src="_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="_static/doctools.js?v=fd6eb6e6"></script>
@@ -54,6 +54,7 @@
     <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'nets';</script>
+    <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Aside: A = 23 vs. A = 24" href="A24.html" />
@@ -61,20 +62,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="1.0" />
+  
+    
+    <script src="_static/searchtools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="searchindex.js"></script>
+  
   </head>
-  
-  
-  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
-
+  <body data-default-mode="">
   
   
   <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+
   
   <div id="pst-scroll-pixel-helper"></div>
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
-
+  
+  
+  
   
   <dialog id="pst-search-dialog">
     
@@ -100,7 +107,51 @@
 </div>
 
   
-    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    <header id="pst-header" class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
     </header>
   
 
@@ -408,11 +459,18 @@
 
 
 
-<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
-  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
-  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
-  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
-</button>
+<div class="theme-switch-container dropdown pst-js-only" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Color mode">
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button dropdown-toggle" aria-label="Color mode" data-bs-toggle="dropdown">
+    <i class="theme-switch fa-solid fa-sun fa-lg fa-fw" data-mode="light" title="Light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg fa-fw" data-mode="dark" title="Dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg fa-fw" data-mode="auto" title="System Settings"></i>
+  </button>
+  <ul class="dropdown-menu dropdown-menu-end">
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg fa-fw me-1"></i>System Settings</button></li>
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="light"><i class="fa-solid fa-sun fa-lg fa-fw me-1"></i>Light</button></li>
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="dark"><i class="fa-solid fa-moon fa-lg fa-fw me-1"></i>Dark</button></li>
+  </ul>
+</div>
 
 
 <button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
@@ -440,7 +498,7 @@
                 <h2> Contents </h2>
             </div>
             <nav aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
+                <ul class="pst-show_toc_level nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-odd-mass-numbers-for-urca">Why odd-mass numbers for Urca?</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#o-o-rate">O+O rate</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lab-1">Lab 1</a></li>
@@ -486,7 +544,7 @@
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rl</span> <span class="o">=</span> <span class="n">pyna</span><span class="o">.</span><span class="n">ReacLibLibrary</span><span class="p">()</span>
-<span class="n">o_rates</span> <span class="o">=</span> <span class="n">make_CO_approx_rates</span><span class="p">(</span><span class="n">rl</span><span class="o">.</span><span class="n">get_rates</span><span class="p">(),</span> <span class="s2">&quot;O&quot;</span><span class="p">)</span>
+<span class="n">o_rates</span> <span class="o">=</span> <span class="n">make_CO_approx_rates</span><span class="p">(</span><span class="n">rl</span><span class="o">.</span><span class="n">get_rates</span><span class="p">(),</span> <span class="s2">"O"</span><span class="p">)</span>
 <span class="n">o_rates</span>
 </pre></div>
 </div>
@@ -510,13 +568,13 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/54a88648b344d142d02ca5992736a461708fe562d61f4bbb593a75a4b9858e7b.png" src="_images/54a88648b344d142d02ca5992736a461708fe562d61f4bbb593a75a4b9858e7b.png" />
+<img alt="_images/8d8fc6c387dcfff9638d2a949aa66e6b3397f35c55e4f02dab15f32a105f7bd3.png" src="_images/8d8fc6c387dcfff9638d2a949aa66e6b3397f35c55e4f02dab15f32a105f7bd3.png" />
 </div>
 </div>
 <p>We see that we can go from <span class="math notranslate nohighlight">\({}^{16}\mathrm{O}\)</span> to <span class="math notranslate nohighlight">\({}^{28}\mathrm{Si}\)</span> either directly, or through <span class="math notranslate nohighlight">\({}^{31}\mathrm{P}\)</span>.  We’ll use an approximate rate that represents both of these paths</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">r1616</span> <span class="o">=</span> <span class="n">net</span><span class="o">.</span><span class="n">get_rate_by_name</span><span class="p">(</span><span class="s2">&quot;o16(o16,he4)si28&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">r1616</span> <span class="o">=</span> <span class="n">net</span><span class="o">.</span><span class="n">get_rate_by_name</span><span class="p">(</span><span class="s2">"o16(o16,he4)si28"</span><span class="p">)</span>
 <span class="n">r1616</span>
 </pre></div>
 </div>
@@ -552,10 +610,10 @@
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rate_names</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;ne20(,)f20&quot;</span><span class="p">,</span>
-              <span class="s2">&quot;f20(,)ne20&quot;</span><span class="p">,</span>
-              <span class="s2">&quot;f20(,)o20&quot;</span><span class="p">,</span>
-              <span class="s2">&quot;o20(,)f20&quot;</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rate_names</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"ne20(,)f20"</span><span class="p">,</span>
+              <span class="s2">"f20(,)ne20"</span><span class="p">,</span>
+              <span class="s2">"f20(,)o20"</span><span class="p">,</span>
+              <span class="s2">"o20(,)f20"</span><span class="p">]</span>
 <span class="n">rates</span> <span class="o">=</span> <span class="n">sl</span><span class="o">.</span><span class="n">get_rate_by_name</span><span class="p">(</span><span class="n">rate_names</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -575,7 +633,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/f1ff90325a7ab1fb43fbb5fbd9b1d179d52e5e76ff0230796035235d273536e0.png" src="_images/f1ff90325a7ab1fb43fbb5fbd9b1d179d52e5e76ff0230796035235d273536e0.png" />
+<img alt="_images/ef271e2a6318c73ac523b1ce1ff3154d54cab2b4a415cebf9ea1e674197fc8e5.png" src="_images/ef271e2a6318c73ac523b1ce1ff3154d54cab2b4a415cebf9ea1e674197fc8e5.png" />
 </div>
 </div>
 </section>
@@ -585,8 +643,8 @@
 <h3>first Urca pair<a class="headerlink" href="#first-urca-pair" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rate_names</span> <span class="o">+=</span> <span class="p">[</span><span class="s2">&quot;na23(,)ne23&quot;</span><span class="p">,</span>
-               <span class="s2">&quot;ne23(,)na23&quot;</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rate_names</span> <span class="o">+=</span> <span class="p">[</span><span class="s2">"na23(,)ne23"</span><span class="p">,</span>
+               <span class="s2">"ne23(,)na23"</span><span class="p">]</span>
 <span class="n">rates</span> <span class="o">=</span> <span class="n">sl</span><span class="o">.</span><span class="n">get_rate_by_name</span><span class="p">(</span><span class="n">rate_names</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -600,7 +658,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/5e1cc1fc0586de2e21a8312e481258ccb3841d08066a8bfab8186e2cd342906e.png" src="_images/5e1cc1fc0586de2e21a8312e481258ccb3841d08066a8bfab8186e2cd342906e.png" />
+<img alt="_images/55b781266d5a3919c6193e21f2b2bc69a29ffff35105cfbcf9fab516cc544863.png" src="_images/55b781266d5a3919c6193e21f2b2bc69a29ffff35105cfbcf9fab516cc544863.png" />
 </div>
 </div>
 </section>
@@ -608,8 +666,8 @@
 <h3>second Urca pair<a class="headerlink" href="#second-urca-pair" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rate_names</span> <span class="o">+=</span> <span class="p">[</span><span class="s2">&quot;mg25(,)na25&quot;</span><span class="p">,</span>
-               <span class="s2">&quot;na25(,)mg25&quot;</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rate_names</span> <span class="o">+=</span> <span class="p">[</span><span class="s2">"mg25(,)na25"</span><span class="p">,</span>
+               <span class="s2">"na25(,)mg25"</span><span class="p">]</span>
 <span class="n">rates</span> <span class="o">=</span> <span class="n">sl</span><span class="o">.</span><span class="n">get_rate_by_name</span><span class="p">(</span><span class="n">rate_names</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -623,7 +681,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/a2f4e8dc2da9f8acb5242185dfb406491061eab0aa0365aa674cac6add954ab4.png" src="_images/a2f4e8dc2da9f8acb5242185dfb406491061eab0aa0365aa674cac6add954ab4.png" />
+<img alt="_images/6a48aadce29dd99caea740cdcbfb274d1edeb7d12b6279ec4dd232aaee43878d.png" src="_images/6a48aadce29dd99caea740cdcbfb274d1edeb7d12b6279ec4dd232aaee43878d.png" />
 </div>
 </div>
 </section>
@@ -633,12 +691,12 @@
 <p>We add a second <span class="math notranslate nohighlight">\(A=25\)</span> urca pair and some <span class="math notranslate nohighlight">\(A = 24\)</span> rates</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rate_names</span> <span class="o">+=</span> <span class="p">[</span><span class="s2">&quot;mg24(,)na24&quot;</span><span class="p">,</span>
-               <span class="s2">&quot;na24(,)mg24&quot;</span><span class="p">,</span>
-               <span class="s2">&quot;na24(,)ne24&quot;</span><span class="p">,</span>
-               <span class="s2">&quot;ne24(,)na24&quot;</span><span class="p">,</span>
-               <span class="s2">&quot;na25(,)ne25&quot;</span><span class="p">,</span>
-               <span class="s2">&quot;ne25(,)na25&quot;</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rate_names</span> <span class="o">+=</span> <span class="p">[</span><span class="s2">"mg24(,)na24"</span><span class="p">,</span>
+               <span class="s2">"na24(,)mg24"</span><span class="p">,</span>
+               <span class="s2">"na24(,)ne24"</span><span class="p">,</span>
+               <span class="s2">"ne24(,)na24"</span><span class="p">,</span>
+               <span class="s2">"na25(,)ne25"</span><span class="p">,</span>
+               <span class="s2">"ne25(,)na25"</span><span class="p">]</span>
 <span class="n">rates</span> <span class="o">=</span> <span class="n">sl</span><span class="o">.</span><span class="n">get_rate_by_name</span><span class="p">(</span><span class="n">rate_names</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -652,7 +710,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/0bd4f4afcb2673af702e4a510b4652fa23ce5f2777fb4c3f5bf8135287e52001.png" src="_images/0bd4f4afcb2673af702e4a510b4652fa23ce5f2777fb4c3f5bf8135287e52001.png" />
+<img alt="_images/5e2c5b2fe4d1e8226d027e88a8872a6a85fd0b3cc342554b99caccccdabf62f6.png" src="_images/5e2c5b2fe4d1e8226d027e88a8872a6a85fd0b3cc342554b99caccccdabf62f6.png" />
 </div>
 </div>
 </section>
@@ -704,7 +762,7 @@
     <i class="fa-solid fa-list"></i> Contents
   </div>
   <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
-    <ul class="visible nav section-nav flex-column">
+    <ul class="pst-show_toc_level nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-odd-mass-numbers-for-urca">Why odd-mass numbers for Urca?</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#o-o-rate">O+O rate</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lab-1">Lab 1</a></li>
@@ -755,8 +813,8 @@ By Michael Zingale
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
-<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+  <script defer src="_static/scripts/bootstrap.js?digest=90905a2f556bf617f1a9"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=90905a2f556bf617f1a9"></script>
 
   <footer class="bd-footer">
   </footer>
