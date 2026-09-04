@@ -595,17 +595,7 @@ nuclei and electron-capture.</p>
 <p>We’ll work with the late time model</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mesa_zones</span> <span class="o">=</span> <span class="n">mesa_utils</span><span class="o">.</span><span class="n">get_all_data</span><span class="p">(</span><span class="n">model2</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">AttributeError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">8</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">mesa_zones</span> <span class="o">=</span> <span class="n">mesa_utils</span><span class="o">.</span><span class="n">get_all_data</span><span class="p">(</span><span class="n">model2</span><span class="p">)</span>
-
-<span class="ne">AttributeError</span>: module 'pynucastro.mesa_utils' has no attribute 'get_all_data'
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mesa_model</span> <span class="o">=</span> <span class="n">mesa_utils</span><span class="o">.</span><span class="n">MesaModel</span><span class="p">(</span><span class="n">model2</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -614,27 +604,14 @@ nuclei and electron-capture.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">E_fermi</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">rho2</span><span class="p">)</span>
-<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">mesa_zones</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
-    <span class="n">rho</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="n">comp</span> <span class="o">=</span> <span class="n">v</span>
-    <span class="n">es</span><span class="p">,</span> <span class="n">ps</span> <span class="o">=</span> <span class="n">eos</span><span class="o">.</span><span class="n">pe_state</span><span class="p">(</span><span class="n">rho</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="n">comp</span><span class="p">,</span> <span class="n">compute_derivs</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">state</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">mesa_model</span><span class="p">):</span>
+    <span class="n">es</span><span class="p">,</span> <span class="n">ps</span> <span class="o">=</span> <span class="n">eos</span><span class="o">.</span><span class="n">pe_state</span><span class="p">(</span><span class="n">rho</span><span class="o">=</span><span class="n">state</span><span class="o">.</span><span class="n">rho</span><span class="p">,</span> <span class="n">T</span><span class="o">=</span><span class="n">state</span><span class="o">.</span><span class="n">T</span><span class="p">,</span> <span class="n">comp</span><span class="o">=</span><span class="n">state</span><span class="o">.</span><span class="n">comp</span><span class="p">,</span>
+                          <span class="n">compute_derivs</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
     <span class="n">eta</span> <span class="o">=</span> <span class="n">es</span><span class="o">.</span><span class="n">eta</span>
-    <span class="n">E_fermi</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">eta</span> <span class="o">*</span> <span class="n">kB</span> <span class="o">*</span> <span class="n">T</span>
+    <span class="n">E_fermi</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">eta</span> <span class="o">*</span> <span class="n">kB</span> <span class="o">*</span> <span class="n">state</span><span class="o">.</span><span class="n">T</span>
 
 <span class="n">E_fermi</span> <span class="o">*=</span> <span class="n">erg2MeV</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">9</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">E_fermi</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">rho2</span><span class="p">)</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">mesa_zones</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span>     <span class="n">rho</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="n">comp</span> <span class="o">=</span> <span class="n">v</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span>     <span class="n">es</span><span class="p">,</span> <span class="n">ps</span> <span class="o">=</span> <span class="n">eos</span><span class="o">.</span><span class="n">pe_state</span><span class="p">(</span><span class="n">rho</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="n">comp</span><span class="p">,</span> <span class="n">compute_derivs</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span>     <span class="n">eta</span> <span class="o">=</span> <span class="n">es</span><span class="o">.</span><span class="n">eta</span>
-
-<span class="ne">NameError</span>: name 'mesa_zones' is not defined
 </pre></div>
 </div>
 </div>
@@ -657,7 +634,7 @@ nuclei and electron-capture.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/2378305b8440e4992269108d7c6dc21251e979f7a73696fbfc313b4af56c0bfc.png" src="_images/2378305b8440e4992269108d7c6dc21251e979f7a73696fbfc313b4af56c0bfc.png" />
+<img alt="_images/9f24eae2c8a960f2af797e329d8d7938c201fab375bb06b9975fe17bca0ca01d.png" src="_images/9f24eae2c8a960f2af797e329d8d7938c201fab375bb06b9975fe17bca0ca01d.png" />
 </div>
 </div>
 <p>Notice that the Fermi energy is highest at the core of the WD, as expected.
@@ -686,7 +663,7 @@ And it is &gt; 7 MeV, which is large comparable to the typical binding energy
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/bcd915d855ff22a75f589824b6148db708d80bd6bb72c251b2d2e116951f5716.png" src="_images/bcd915d855ff22a75f589824b6148db708d80bd6bb72c251b2d2e116951f5716.png" />
+<img alt="_images/3d248a2729304502b1e4457b8fe3c5d9a04a998ef029bb284bc3f4662deb79bb.png" src="_images/3d248a2729304502b1e4457b8fe3c5d9a04a998ef029bb284bc3f4662deb79bb.png" />
 </div>
 </div>
 <p>Now let’s compute the Q-value of the reaction to figure out what Fermi energy should be the threshold</p>
@@ -722,13 +699,7 @@ And it is &gt; 7 MeV, which is large comparable to the typical binding energy
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">IndexError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">16</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">idx</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">E_fermi</span> <span class="o">&gt;</span> <span class="n">E_thresh</span><span class="p">)[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">idx</span>
-
-<span class="ne">IndexError</span>: index 0 is out of bounds for axis 0 with size 0
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.int64(373)
 </pre></div>
 </div>
 </div>
@@ -744,17 +715,7 @@ And it is &gt; 7 MeV, which is large comparable to the typical binding energy
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">17</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">ax</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">r2</span><span class="p">[</span><span class="n">idx</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s2">"0.25"</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s2">"--"</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">r2</span><span class="p">[</span><span class="n">idx</span><span class="p">],</span> <span class="mi">4</span><span class="p">,</span> <span class="sa">r</span><span class="s2">"radius where $\mathcal</span><span class="si">{E}</span><span class="s2">_\mathrm</span><span class="si">{Fermi}</span><span class="s2"> \sim Q$"</span><span class="p">,</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span>         <span class="n">rotation</span><span class="o">=</span><span class="mi">270</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">"0.25"</span><span class="p">,</span> <span class="n">verticalalignment</span><span class="o">=</span><span class="s2">"center"</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">fig</span>
-
-<span class="ne">NameError</span>: name 'idx' is not defined
-</pre></div>
-</div>
+<img alt="_images/6f21c5f7b259fbbd1d9cf5ad135fb5b181bf58885cbf04baa00913de30397799.png" src="_images/6f21c5f7b259fbbd1d9cf5ad135fb5b181bf58885cbf04baa00913de30397799.png" />
 </div>
 </div>
 <p>Notice that the location of <span class="math notranslate nohighlight">\(\mathcal{E}_\mathrm{Fermi} = Q\)</span> corresponds to the radius where the <span class="math notranslate nohighlight">\(A=23\)</span> Urca pair nuclei switch abundances.</p>

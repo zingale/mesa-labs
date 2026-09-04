@@ -581,7 +581,7 @@
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mesa_zones</span> <span class="o">=</span> <span class="n">mesa_utils</span><span class="o">.</span><span class="n">MesaModel</span><span class="p">(</span><span class="n">model</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mesa_model</span> <span class="o">=</span> <span class="n">mesa_utils</span><span class="o">.</span><span class="n">MesaModel</span><span class="p">(</span><span class="n">model</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -655,7 +655,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_2672/94239008.py:2: DeprecationWarning: TabularLibrary is deprecated; use TabularWeakLibrary instead.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_2727/94239008.py:2: DeprecationWarning: TabularLibrary is deprecated; use TabularWeakLibrary instead.
   tl = pyna.TabularLibrary()
 </pre></div>
 </div>
@@ -854,7 +854,7 @@ validation: He4 produced in O16 + O16 ⟶ Si28 + He4 never consumed.
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">possibly_important</span> <span class="o">=</span> <span class="p">[]</span>
 
 <span class="k">for</span> <span class="n">izone</span> <span class="ow">in</span> <span class="n">zones</span><span class="p">:</span>
-    <span class="n">state</span> <span class="o">=</span> <span class="n">mesa_zones</span><span class="o">.</span><span class="n">get_zone_data</span><span class="p">(</span><span class="n">izone</span><span class="p">)</span>
+    <span class="n">state</span> <span class="o">=</span> <span class="n">mesa_model</span><span class="o">.</span><span class="n">get_zone_data</span><span class="p">(</span><span class="n">izone</span><span class="p">)</span>
     <span class="k">for</span> <span class="n">nuc</span> <span class="ow">in</span> <span class="n">net</span><span class="o">.</span><span class="n">unique_nuclei</span><span class="p">:</span>
         <span class="n">thermo</span> <span class="o">=</span> <span class="n">pyna</span><span class="o">.</span><span class="n">ThermoState</span><span class="p">(</span><span class="n">rho</span><span class="o">=</span><span class="n">state</span><span class="o">.</span><span class="n">rho</span><span class="p">,</span>
                                   <span class="n">T</span><span class="o">=</span><span class="n">state</span><span class="o">.</span><span class="n">T</span><span class="p">,</span>
@@ -907,12 +907,12 @@ validation: He4 produced in O16 + O16 ⟶ Si28 + He4 never consumed.
  Ne23 + e⁻ ⟶ F23 + 𝜈,
  Ne23 + He4 ⟶ p + Na26,
  Ne23 + He4 ⟶ n + Mg26,
- Ne23 + He4 ⟶ Mg27 + 𝛾,
  Ne23 ⟶ n + Ne22,
+ Ne23 + He4 ⟶ Mg27 + 𝛾,
  Ne24 + He4 ⟶ n + Mg27,
  Ne24 + He4 ⟶ Mg28 + 𝛾,
- Ne25 + He4 ⟶ n + Mg28,
  Ne25 ⟶ n + Ne24,
+ Ne25 + He4 ⟶ n + Mg28,
  Ne25 + He4 ⟶ Mg29 + 𝛾,
  Na23 + He4 ⟶ p + Mg26,
  Na25 + He4 ⟶ p + Mg28,
@@ -947,12 +947,12 @@ validation: He4 produced in O16 + O16 ⟶ Si28 + He4 never consumed.
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>O20 + He4 ⟶ Ne24 + 𝛾      ReacLibRate
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>O16 + He4 ⟶ Ne20 + 𝛾      ReacLibRate
+Ne20 + He4 ⟶ Mg24 + 𝛾     ReacLibRate
 F20 + He4 ⟶ p + Ne23      ReacLibRate
 F20 + He4 ⟶ Na24 + 𝛾      ReacLibRate
+O20 + He4 ⟶ Ne24 + 𝛾      ReacLibRate
 Ne20 + He4 ⟶ p + Na23     ReacLibRate
-Ne20 + He4 ⟶ Mg24 + 𝛾     ReacLibRate
-O16 + He4 ⟶ Ne20 + 𝛾      ReacLibRate
 </pre></div>
 </div>
 </div>
@@ -1014,7 +1014,7 @@ O16 + He4 ⟶ Ne20 + 𝛾      ReacLibRate
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/3291d624e224b2467366ac0a677e73cda7024ae3c3d0ad00643c15474187865d.png" src="_images/3291d624e224b2467366ac0a677e73cda7024ae3c3d0ad00643c15474187865d.png" />
+<img alt="_images/dc8d1ce4a4ebcdc02c222334b035eaa20d80b47c1a0ba2a6becde215aba65c6d.png" src="_images/dc8d1ce4a4ebcdc02c222334b035eaa20d80b47c1a0ba2a6becde215aba65c6d.png" />
 </div>
 </div>
 <p>what if we restrict it to just the rates that use the same nuclei?</p>
